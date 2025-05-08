@@ -8,10 +8,26 @@ using System.Text.Json;
 
 namespace PencatatanNilaiMahasiswa
 {
-    public class Program
+    public class User
+    {
+        public string Username { get; set; }
+        public string PasswordHash { get; set; }
+    }
+
+    public class NilaiMahasiswa
+    {
+        public string Username { get; set; }
+        public string MataKuliah { get; set; }
+        public double NilaiAngka { get; set; }
+    }
+
+    public class Program6
+
     {
         static string filePath = "users.json";
+        static string nilaiFilePath = "nilai_mahasiswa.json";
         static List<User> users = new List<User>();
+        static User currentUser; 
 
         static void Main(string[] args)
         {
@@ -27,7 +43,6 @@ namespace PencatatanNilaiMahasiswa
             Console.Write("Pilih: ");
             try
             {
-                //int choice = Console.WriteLine();
                 int choice = Convert.ToInt32(Console.ReadLine());
                 if (choice == 1)
                 {
@@ -77,7 +92,6 @@ namespace PencatatanNilaiMahasiswa
                 Console.WriteLine("Terjadi Kesalahan : " + e);
                 Register();
             }
-
         }
 
         static void Login()
@@ -92,6 +106,7 @@ namespace PencatatanNilaiMahasiswa
             {
                 if (user != null && user.PasswordHash == HashPassword(password))
                 {
+                    currentUser = user;
                     Console.WriteLine("Login berhasil!");
                     MainApp();
                 }
@@ -105,7 +120,6 @@ namespace PencatatanNilaiMahasiswa
             {
                 Console.WriteLine("Terjadi kesalahan : " + e);
                 Login();
-
             }
         }
 
@@ -118,6 +132,7 @@ namespace PencatatanNilaiMahasiswa
             Console.WriteLine("(4) Hitung IPK");
             Console.WriteLine("(5) Tampilkan Rangking");
             Console.WriteLine("(6) Keluar");
+            Console.WriteLine("Pilih : ");
             try
             {
                 int choice = Convert.ToInt32(Console.ReadLine());
@@ -133,7 +148,7 @@ namespace PencatatanNilaiMahasiswa
                         HapusNilai();
                         break;
                     case 4:
-                        HitungNilai();
+                        HitungIPK();
                         break;
                     case 5:
                         TampilkanRangking();
@@ -141,55 +156,72 @@ namespace PencatatanNilaiMahasiswa
                     case 6:
                         Keluar();
                         break;
+                    default:
+                        Console.WriteLine("Pilihan tidak valid.");
+                        MainApp();
+                        break;
                 }
             }
             catch (Exception e)
             {
                 Console.WriteLine("Terjadi Kesalahan : " + e);
+                MainApp();
             }
-
         }
 
-        static void InputNilai ()
+        static void InputNilai()
         {
-            Console.WriteLine("Input Nilai");
+            var semuaNilai = LoadNilai();
+
+            Console.Write("Masukkan nama mata kuliah: ");
+            string mk = Console.ReadLine();
+
+            Console.Write("Masukkan nilai angka (0-100): ");
+            if (double.TryParse(Console.ReadLine(), out double nilaiAngka))
+            {
+                semuaNilai.Add(new NilaiMahasiswa
+                {
+                    Username = currentUser.Username,
+                    MataKuliah = mk,
+                    NilaiAngka = nilaiAngka
+                });
+
+                SaveNilai(semuaNilai);
+                Console.WriteLine("Nilai berhasil disimpan.");
+            }
+            else
+            {
+                Console.WriteLine("Nilai tidak valid.");
+            }
+
+            MainApp();
         }
 
         static void EditNilai()
         {
             Console.WriteLine("Edit Nilai");
+            MainApp();
         }
 
         static void HapusNilai()
         {
             Console.WriteLine("Hapus Nilai");
+            MainApp();
         }
 
-        static void HitungNilai()
+        static void HitungIPK()
         {
-            Console.WriteLine("Hitung Nilai");
+
         }
 
         static void TampilkanRangking()
         {
-            Console.WriteLine("Tampilkan Rangking");
+
         }
 
         static void Keluar()
         {
             Console.WriteLine("Anda Telah Keluar.");
-        }
-
-
-        //
-
-        static string HashPassword(string password)
-        {
-            using (var sha256 = SHA256.Create())
-            {
-                byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
-                return Convert.ToBase64String(bytes);
-            }
         }
 
         static List<User> LoadUsers()
@@ -206,11 +238,29 @@ namespace PencatatanNilaiMahasiswa
             string json = JsonSerializer.Serialize(users, new JsonSerializerOptions { WriteIndented = true });
             File.WriteAllText(filePath, json);
         }
-    }
 
-    public class User
-    {
-        public string Username { get; set; }
-        public string PasswordHash { get; set; }
+        static List<NilaiMahasiswa> LoadNilai()
+        {
+            if (!File.Exists(nilaiFilePath))
+                return new List<NilaiMahasiswa>();
+
+            string json = File.ReadAllText(nilaiFilePath);
+            return JsonSerializer.Deserialize<List<NilaiMahasiswa>>(json);
+        }
+
+        static void SaveNilai(List<NilaiMahasiswa> daftarNilai)
+        {
+            string json = JsonSerializer.Serialize(daftarNilai, new JsonSerializerOptions { WriteIndented = true });
+            File.WriteAllText(nilaiFilePath, json);
+        }
+
+        static string HashPassword(string password)
+        {
+            using (var sha256 = SHA256.Create())
+            {
+                byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
+                return Convert.ToBase64String(bytes);
+            }
+        }
     }
 }
