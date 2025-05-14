@@ -199,7 +199,44 @@ namespace PencatatanNilaiMahasiswa
 
         static void EditNilai()
         {
-            Console.WriteLine("Edit Nilai");
+
+            var semuaNilai = LoadNilai();
+            Console.Write("Masukkan nama mata kuliah: ");
+            string mk = Console.ReadLine();
+
+            // mencari nilai 
+            var nilaiMahasiswa = semuaNilai.FirstOrDefault(n => n.Username == currentUser.Username && n.MataKuliah == mk);
+
+            if (nilaiMahasiswa != null)
+            {
+                Console.WriteLine($"Nilai saat ini untuk mata kuliah {mk} adalah {nilaiMahasiswa.NilaiAngka}");
+                Console.Write("Masukkan nilai baru (0-100: )");
+
+                if (double.TryParse(Console.ReadLine(), out double nilaiBaru))
+                {
+                    // precondition
+                    if (nilaiBaru < 0 || nilaiBaru > 100)
+                    {
+                        Console.WriteLine("Nilai tidak valid, nilai harys dalam rentang 0 - 100");
+                    }
+                    else
+                    {
+                        // update nilai
+                        nilaiMahasiswa.NilaiAngka = nilaiBaru;
+                        SaveNilai(semuaNilai);
+                        Console.WriteLine("Nilai diperbarui");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Inputan tidak valid");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Nilai mata kuliah tidak ditemukan ");
+            }
+
             MainApp();
         }
 

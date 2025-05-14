@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GitHub\\konstruksi-pencatatan-nilai-mahasiswa\\PencatatanNilaiMahasiswa\\PencatatanNilaiMahasiswa\\PencatatanNilaiMahasiswa.csproj": {}
+    "D:\\Full Sm 3&4\\Sm 4\\Konstruksi Perangkat Lunak\\konstruksi-pencatatan-nilai-mahasiswa\\PencatatanNilaiMahasiswa\\PencatatanNilaiMahasiswa\\PencatatanNilaiMahasiswa.csproj": {}
   },
   "projects": {
-    "D:\\GitHub\\konstruksi-pencatatan-nilai-mahasiswa\\PencatatanNilaiMahasiswa\\PencatatanNilaiMahasiswa\\PencatatanNilaiMahasiswa.csproj": {
+    "D:\\Full Sm 3&4\\Sm 4\\Konstruksi Perangkat Lunak\\konstruksi-pencatatan-nilai-mahasiswa\\PencatatanNilaiMahasiswa\\PencatatanNilaiMahasiswa\\PencatatanNilaiMahasiswa.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\konstruksi-pencatatan-nilai-mahasiswa\\PencatatanNilaiMahasiswa\\PencatatanNilaiMahasiswa\\PencatatanNilaiMahasiswa.csproj",
+        "projectUniqueName": "D:\\Full Sm 3&4\\Sm 4\\Konstruksi Perangkat Lunak\\konstruksi-pencatatan-nilai-mahasiswa\\PencatatanNilaiMahasiswa\\PencatatanNilaiMahasiswa\\PencatatanNilaiMahasiswa.csproj",
         "projectName": "PencatatanNilaiMahasiswa",
-        "projectPath": "D:\\GitHub\\konstruksi-pencatatan-nilai-mahasiswa\\PencatatanNilaiMahasiswa\\PencatatanNilaiMahasiswa\\PencatatanNilaiMahasiswa.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\konstruksi-pencatatan-nilai-mahasiswa\\PencatatanNilaiMahasiswa\\PencatatanNilaiMahasiswa\\obj\\",
+        "projectPath": "D:\\Full Sm 3&4\\Sm 4\\Konstruksi Perangkat Lunak\\konstruksi-pencatatan-nilai-mahasiswa\\PencatatanNilaiMahasiswa\\PencatatanNilaiMahasiswa\\PencatatanNilaiMahasiswa.csproj",
+        "packagesPath": "C:\\Users\\arian\\.nuget\\packages\\",
+        "outputPath": "D:\\Full Sm 3&4\\Sm 4\\Konstruksi Perangkat Lunak\\konstruksi-pencatatan-nilai-mahasiswa\\PencatatanNilaiMahasiswa\\PencatatanNilaiMahasiswa\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\arian\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
