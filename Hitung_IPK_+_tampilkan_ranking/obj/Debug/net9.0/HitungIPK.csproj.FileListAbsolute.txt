@@ -1,0 +1,29 @@
+E:\My Repo\Learning-C\Hitung_IPK_+_tampilkan_ranking\HitungIPK\bin\Debug\net9.0\HitungIPK.exe
+E:\My Repo\Learning-C\Hitung_IPK_+_tampilkan_ranking\HitungIPK\bin\Debug\net9.0\HitungIPK.deps.json
+E:\My Repo\Learning-C\Hitung_IPK_+_tampilkan_ranking\HitungIPK\bin\Debug\net9.0\HitungIPK.runtimeconfig.json
+E:\My Repo\Learning-C\Hitung_IPK_+_tampilkan_ranking\HitungIPK\bin\Debug\net9.0\HitungIPK.dll
+E:\My Repo\Learning-C\Hitung_IPK_+_tampilkan_ranking\HitungIPK\bin\Debug\net9.0\HitungIPK.pdb
+E:\My Repo\Learning-C\Hitung_IPK_+_tampilkan_ranking\HitungIPK\obj\Debug\net9.0\HitungIPK.GeneratedMSBuildEditorConfig.editorconfig
+E:\My Repo\Learning-C\Hitung_IPK_+_tampilkan_ranking\HitungIPK\obj\Debug\net9.0\HitungIPK.AssemblyInfoInputs.cache
+E:\My Repo\Learning-C\Hitung_IPK_+_tampilkan_ranking\HitungIPK\obj\Debug\net9.0\HitungIPK.AssemblyInfo.cs
+E:\My Repo\Learning-C\Hitung_IPK_+_tampilkan_ranking\HitungIPK\obj\Debug\net9.0\HitungIPK.csproj.CoreCompileInputs.cache
+E:\My Repo\Learning-C\Hitung_IPK_+_tampilkan_ranking\HitungIPK\obj\Debug\net9.0\HitungIPK.dll
+E:\My Repo\Learning-C\Hitung_IPK_+_tampilkan_ranking\HitungIPK\obj\Debug\net9.0\refint\HitungIPK.dll
+E:\My Repo\Learning-C\Hitung_IPK_+_tampilkan_ranking\HitungIPK\obj\Debug\net9.0\HitungIPK.pdb
+E:\My Repo\Learning-C\Hitung_IPK_+_tampilkan_ranking\HitungIPK\obj\Debug\net9.0\HitungIPK.genruntimeconfig.cache
+E:\My Repo\Learning-C\Hitung_IPK_+_tampilkan_ranking\HitungIPK\obj\Debug\net9.0\ref\HitungIPK.dll
+C:\Users\LENOVO\konstruksi-pencatatan-nilai-mahasiswa\Hitung_IPK_+_tampilkan_ranking\bin\Debug\net9.0\HitungIPK.exe
+C:\Users\LENOVO\konstruksi-pencatatan-nilai-mahasiswa\Hitung_IPK_+_tampilkan_ranking\bin\Debug\net9.0\HitungIPK.deps.json
+C:\Users\LENOVO\konstruksi-pencatatan-nilai-mahasiswa\Hitung_IPK_+_tampilkan_ranking\bin\Debug\net9.0\HitungIPK.runtimeconfig.json
+C:\Users\LENOVO\konstruksi-pencatatan-nilai-mahasiswa\Hitung_IPK_+_tampilkan_ranking\bin\Debug\net9.0\HitungIPK.dll
+C:\Users\LENOVO\konstruksi-pencatatan-nilai-mahasiswa\Hitung_IPK_+_tampilkan_ranking\bin\Debug\net9.0\HitungIPK.pdb
+C:\Users\LENOVO\konstruksi-pencatatan-nilai-mahasiswa\Hitung_IPK_+_tampilkan_ranking\obj\Debug\net9.0\HitungIPK.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LENOVO\konstruksi-pencatatan-nilai-mahasiswa\Hitung_IPK_+_tampilkan_ranking\obj\Debug\net9.0\HitungIPK.AssemblyInfoInputs.cache
+C:\Users\LENOVO\konstruksi-pencatatan-nilai-mahasiswa\Hitung_IPK_+_tampilkan_ranking\obj\Debug\net9.0\HitungIPK.AssemblyInfo.cs
+C:\Users\LENOVO\konstruksi-pencatatan-nilai-mahasiswa\Hitung_IPK_+_tampilkan_ranking\obj\Debug\net9.0\HitungIPK.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\konstruksi-pencatatan-nilai-mahasiswa\Hitung_IPK_+_tampilkan_ranking\obj\Debug\net9.0\HitungIPK.sourcelink.json
+C:\Users\LENOVO\konstruksi-pencatatan-nilai-mahasiswa\Hitung_IPK_+_tampilkan_ranking\obj\Debug\net9.0\HitungIPK.dll
+C:\Users\LENOVO\konstruksi-pencatatan-nilai-mahasiswa\Hitung_IPK_+_tampilkan_ranking\obj\Debug\net9.0\refint\HitungIPK.dll
+C:\Users\LENOVO\konstruksi-pencatatan-nilai-mahasiswa\Hitung_IPK_+_tampilkan_ranking\obj\Debug\net9.0\HitungIPK.pdb
+C:\Users\LENOVO\konstruksi-pencatatan-nilai-mahasiswa\Hitung_IPK_+_tampilkan_ranking\obj\Debug\net9.0\HitungIPK.genruntimeconfig.cache
+C:\Users\LENOVO\konstruksi-pencatatan-nilai-mahasiswa\Hitung_IPK_+_tampilkan_ranking\obj\Debug\net9.0\ref\HitungIPK.dll
