@@ -19,7 +19,6 @@ namespace PencatatanNilaiMahasiswa
         public string Username { get; set; }
         public string NamaMahasiswa { get; set; }
         public string MataKuliah { get; set; }
-        public string NamaMahasiswa { get; set; }
         public double NilaiAngka { get; set; }
 
     }
@@ -68,7 +67,7 @@ namespace PencatatanNilaiMahasiswa
         static string filePath = "users.json";
         static string nilaiFilePath = "nilai_mahasiswa.json";
         static List<User> users = new List<User>();
-        static User currentUser; 
+        static User currentUser;
 
         static void Main(string[] args)
         {
@@ -148,6 +147,7 @@ namespace PencatatanNilaiMahasiswa
                 if (user != null && user.PasswordHash == HashPassword(password))
                 {
                     currentUser = user;
+                    ClearScreen();
                     Console.WriteLine("Login berhasil!");
                     MainApp();
                 }
@@ -224,17 +224,13 @@ namespace PencatatanNilaiMahasiswa
 
         static void InputNilai()
         {
+            Console.WriteLine("Input Nilai");
             var semuaNilai = LoadNilai();
             Console.Write("Masukkan nama mahasiswa: ");
             string namaMahasiswa = Console.ReadLine();
 
             Console.Write("Masukkan nama mata kuliah: ");
             string mk = Console.ReadLine();
-
-
-
-            Console.Write("Masukkan nama mahasiswa: ");
-            string namaMahasiswa = Console.ReadLine();
 
             Console.Write("Masukkan nilai angka (0-100): ");
             if (double.TryParse(Console.ReadLine(), out double nilaiAngka))
@@ -252,7 +248,7 @@ namespace PencatatanNilaiMahasiswa
             }
             else
             {
-                Console.WriteLine("Nilai tidak valid.");
+                Console.WriteLine("Nilai gagal disimpan");
             }
 
             MainApp();
@@ -260,48 +256,76 @@ namespace PencatatanNilaiMahasiswa
 
         static void EditNilai()
         {
-<<<<<<< HEAD
-
+            Console.WriteLine("Edit Nilai");
             var semuaNilai = LoadNilai();
-            Console.Write("Masukkan nama mata kuliah: ");
-            string mk = Console.ReadLine();
+            var nilaiUser = semuaNilai
+                .Where(n => n.Username == currentUser.Username)
+                .ToList();
 
-            // mencari nilai 
-            var nilaiMahasiswa = semuaNilai.FirstOrDefault(n => n.Username == currentUser.Username && n.MataKuliah == mk);
-
-            if (nilaiMahasiswa != null)
+            if (nilaiUser.Count == 0)
             {
-                Console.WriteLine($"Nilai saat ini untuk mata kuliah {mk} adalah {nilaiMahasiswa.NilaiAngka}");
-                Console.Write("Masukkan nilai baru (0-100: )");
+                Console.WriteLine("Belum ada nilai yang dapat diedit.");
+                MainApp();
+                return;
+            }
 
+            // Table-driven construction: Menampilkan data dalam bentuk tabel
+            Console.WriteLine("Daftar Nilai Anda:");
+            Console.WriteLine("---------------------------------------------------------------------------------");
+            Console.WriteLine("| No | Nama Mahasiswa       | Mata Kuliah            | Nilai                   |");
+            Console.WriteLine("---------------------------------------------------------------------------------");
+
+            for (int i = 0; i < nilaiUser.Count; i++)
+            {
+                Console.WriteLine($"| {i + 1,2} | {nilaiUser[i].NamaMahasiswa,-20} | {nilaiUser[i].MataKuliah,-22} | {nilaiUser[i].NilaiAngka,5}                   |");
+            }
+
+            Console.WriteLine("---------------------------------------------------------------------------------");
+            Console.Write("Pilih nomor data yang ingin diedit: ");
+            if (int.TryParse(Console.ReadLine(), out int index) && index >= 1 && index <= nilaiUser.Count)
+            {
+                var nilaiDipilih = nilaiUser[index - 1];
+
+                Console.WriteLine($"Mengedit Nilai:");
+                Console.WriteLine($"Nama Mahasiswa : {nilaiDipilih.NamaMahasiswa}");
+                Console.WriteLine($"Mata Kuliah    : {nilaiDipilih.MataKuliah}");
+                Console.WriteLine($"Nilai Saat Ini : {nilaiDipilih.NilaiAngka}");
+
+                Console.Write("Masukkan nilai baru (0-100): ");
                 if (double.TryParse(Console.ReadLine(), out double nilaiBaru))
                 {
-                    // precondition
+                    // Design by Contract: Precondition
                     if (nilaiBaru < 0 || nilaiBaru > 100)
                     {
-                        Console.WriteLine("Nilai tidak valid, nilai harus dalam rentang 0 - 100");
+                        Console.WriteLine("❌ Nilai harus berada dalam rentang 0 - 100.");
                     }
                     else
                     {
-                        // update nilai
-                        nilaiMahasiswa.NilaiAngka = nilaiBaru;
+                        // Update nilai
+                        nilaiDipilih.NilaiAngka = nilaiBaru;
+
+                        // Postcondition: Pastikan nilai benar-benar diperbarui
+                        var nilaiTersimpan = semuaNilai.First(n =>
+                            n.Username == currentUser.Username &&
+                            n.MataKuliah == nilaiDipilih.MataKuliah &&
+                            n.NamaMahasiswa == nilaiDipilih.NamaMahasiswa);
+
+                        nilaiTersimpan.NilaiAngka = nilaiBaru;
+
                         SaveNilai(semuaNilai);
-                        Console.WriteLine("Nilai diperbarui");
+                        Console.WriteLine("✅ Nilai berhasil diperbarui.");
                     }
                 }
                 else
                 {
-                    Console.WriteLine("Inputan tidak valid");
+                    Console.WriteLine("❌ Input tidak valid.");
                 }
             }
             else
             {
-                Console.WriteLine("Nilai mata kuliah tidak ditemukan ");
+                Console.WriteLine("❌ Pilihan tidak valid.");
             }
 
-=======
-            Console.WriteLine("Edit Nilai");
->>>>>>> 9e44900772cea4dbad953da8ee29bf1a3e1046a6
             MainApp();
         }
 
@@ -321,39 +345,60 @@ namespace PencatatanNilaiMahasiswa
                 return;
             }
 
-            Console.WriteLine("Daftar Mata Kuliah Anda:");
+            // Tampilkan tabel daftar nilai user
+            Console.WriteLine("Daftar Nilai Anda:");
+            Console.WriteLine("---------------------------------------------------------------------------------");
+            Console.WriteLine("| No | Nama Mahasiswa       | Mata Kuliah            | Nilai                   |");
+            Console.WriteLine("---------------------------------------------------------------------------------");
+
             for (int i = 0; i < semuaNilai.Count; i++)
             {
-                Console.WriteLine($"{i + 1}. {semuaNilai[i].MataKuliah} - {semuaNilai[i].NilaiAngka}");
+                Console.WriteLine($"| {i + 1,2} | {semuaNilai[i].NamaMahasiswa,-20} | {semuaNilai[i].MataKuliah,-22} | {semuaNilai[i].NilaiAngka,5}                   |");
             }
 
-            Console.Write("Pilih nomor yang ingin dihapus: ");
-            if (int.TryParse(Console.ReadLine(), out int pilih) && pilih > 0 && pilih <= semuaNilai.Count)
+            Console.WriteLine("---------------------------------------------------------------------------------");
+            Console.Write("Pilih nomor data yang ingin dihapus: ");
+
+            if (int.TryParse(Console.ReadLine(), out int index) && index >= 1 && index <= semuaNilai.Count)
             {
-                var matkulDipilih = semuaNilai[pilih - 1].MataKuliah;
+                var nilaiDipilih = semuaNilai[index - 1];
 
-                nilaiService.Remove(n =>
-                    n.Username == currentUser.Username &&
-                    n.MataKuliah.Equals(matkulDipilih, StringComparison.OrdinalIgnoreCase)
-                );
+                Console.WriteLine($"Anda yakin ingin menghapus nilai berikut? (y/n)");
+                Console.WriteLine($"Nama Mahasiswa : {nilaiDipilih.NamaMahasiswa}");
+                Console.WriteLine($"Mata Kuliah    : {nilaiDipilih.MataKuliah}");
+                Console.WriteLine($"Nilai          : {nilaiDipilih.NilaiAngka}");
 
-                Console.WriteLine("Nilai berhasil dihapus.");
+                string konfirmasi = Console.ReadLine();
+                if (konfirmasi?.ToLower() == "y")
+                {
+                    nilaiService.Remove(n =>
+                        n.Username == currentUser.Username &&
+                        n.MataKuliah.Equals(nilaiDipilih.MataKuliah, StringComparison.OrdinalIgnoreCase) &&
+                        n.NamaMahasiswa.Equals(nilaiDipilih.NamaMahasiswa, StringComparison.OrdinalIgnoreCase)
+                    );
+
+                    Console.WriteLine("Nilai berhasil dihapus.");
+                }
+                else
+                {
+                    Console.WriteLine("Penghapusan dibatalkan.");
+                }
             }
             else
             {
-                Console.WriteLine("Pilihan tidak valid.");
+                Console.WriteLine("❌ Pilihan tidak valid.");
             }
 
             MainApp();
         }
 
-
         static void HitungIPK()
         {
+            Console.WriteLine("Hitung IPK");
 
         }
 
-        static void LihatNilai ()
+        static void LihatNilai()
         {
             Console.WriteLine("Lihat Nilai");
             var semuaNilai = LoadNilai();
@@ -362,7 +407,8 @@ namespace PencatatanNilaiMahasiswa
             if (nilaiUser.Count == 0)
             {
                 Console.WriteLine("Belum ada nilai yang tersimpan");
-            } else
+            }
+            else
             {
                 foreach (var nilai in nilaiUser)
                 {
@@ -370,7 +416,7 @@ namespace PencatatanNilaiMahasiswa
                 }
             }
 
-                MainApp();
+            MainApp();
         }
 
         static void TampilkanRangking()

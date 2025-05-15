@@ -14,11 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PencatatanNilaiMahasiswa")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-<<<<<<< HEAD
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+11dc361e8e67ace27d610c35e764b730a531f5d4")]
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+333a70b7df3c6bd2f4a977dc54a64f7e3b851c77")]
->>>>>>> 9e44900772cea4dbad953da8ee29bf1a3e1046a6
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c0b1496b78f384f1e35c3c92a157f88faf4f365b")]
 [assembly: System.Reflection.AssemblyProductAttribute("PencatatanNilaiMahasiswa")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PencatatanNilaiMahasiswa")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

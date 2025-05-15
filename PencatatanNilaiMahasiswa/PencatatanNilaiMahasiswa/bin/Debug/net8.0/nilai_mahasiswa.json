@@ -1,60 +1,32 @@
 [
   {
     "Username": "jarwo",
-<<<<<<< HEAD
-=======
-    "NamaMahasiswa": null,
-    "MataKuliah": "Matematika",
-    "NilaiAngka": 80
-  },
-  {
-    "Username": "jarwo",
-    "NamaMahasiswa": null,
-    "MataKuliah": "Bahasa Inggris",
-    "NilaiAngka": 85
-  },
-  {
-    "Username": "jarwo",
-    "NamaMahasiswa": null,
-    "MataKuliah": "inggris",
-    "NilaiAngka": 99
-  },
-  {
-    "Username": "yanto",
-    "NamaMahasiswa": null,
->>>>>>> 9e44900772cea4dbad953da8ee29bf1a3e1046a6
-    "MataKuliah": "bahasa indonesia",
-    "NamaMahasiswa": "jarwo",
-    "NilaiAngka": 90
-  },
-  {
-    "Username": "jarwo",
-<<<<<<< HEAD
-    "MataKuliah": "mtk",
-    "NamaMahasiswa": "adit",
-    "NilaiAngka": 99
-  },
-  {
-    "Username": "jarwo",
-    "MataKuliah": "pjok",
     "NamaMahasiswa": "budi",
+    "MataKuliah": "pjok",
     "NilaiAngka": 88
-=======
-    "NamaMahasiswa": null,
-    "MataKuliah": "konstruksi",
-    "NilaiAngka": 80
-  },
-  {
-    "Username": "jarwo",
-    "NamaMahasiswa": null,
-    "MataKuliah": "adpl",
-    "NilaiAngka": 90
   },
   {
     "Username": "jarwo",
     "NamaMahasiswa": "farid",
     "MataKuliah": "adpl",
     "NilaiAngka": 70
->>>>>>> 9e44900772cea4dbad953da8ee29bf1a3e1046a6
+  },
+  {
+    "Username": "jarwo",
+    "NamaMahasiswa": "budiii",
+    "MataKuliah": "discrite",
+    "NilaiAngka": 99
+  },
+  {
+    "Username": "jarwo",
+    "NamaMahasiswa": "adit",
+    "MataKuliah": "indonesia",
+    "NilaiAngka": 99
+  },
+  {
+    "Username": "jarwo",
+    "NamaMahasiswa": "NamaSayaBudi",
+    "MataKuliah": "japan",
+    "NilaiAngka": 99
   }
 ]
