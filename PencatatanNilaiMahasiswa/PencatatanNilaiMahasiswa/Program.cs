@@ -180,27 +180,35 @@ namespace PencatatanNilaiMahasiswa
                 switch (choice)
                 {
                     case 1:
+                        ClearScreen();
                         InputNilai();
                         break;
                     case 2:
+                        ClearScreen();
                         EditNilai();
                         break;
                     case 3:
+                        ClearScreen();
                         HapusNilai();
                         break;
                     case 4:
+                        ClearScreen();
                         HitungIPK();
                         break;
                     case 5:
+                        ClearScreen();
                         LihatNilai();
                         break;
                     case 6:
+                        ClearScreen();
                         TampilkanRangking();
                         break;
                     case 7:
+                        ClearScreen();
                         Keluar();
                         break;
                     default:
+                        ClearScreen();
                         Console.WriteLine("Pilihan tidak valid.");
                         MainApp();
                         break;
@@ -216,12 +224,12 @@ namespace PencatatanNilaiMahasiswa
         static void InputNilai()
         {
             var semuaNilai = LoadNilai();
-            ClearScreen();
+            Console.Write("Masukkan nama mahasiswa: ");
+            string namaMahasiswa = Console.ReadLine();
+
             Console.Write("Masukkan nama mata kuliah: ");
             string mk = Console.ReadLine();
 
-            Console.Write("Masukkan nama mahasiswa: ");
-            string namaMahasiswa = Console.ReadLine();
 
             Console.Write("Masukkan nilai angka (0-100): ");
             if (double.TryParse(Console.ReadLine(), out double nilaiAngka))
@@ -247,7 +255,7 @@ namespace PencatatanNilaiMahasiswa
 
         static void EditNilai()
         {
-            Console.WriteLine("Edit Nilai");
+
             var semuaNilai = LoadNilai();
             Console.Write("Masukkan nama mata kuliah: ");
             string mk = Console.ReadLine();
@@ -265,7 +273,7 @@ namespace PencatatanNilaiMahasiswa
                     // precondition
                     if (nilaiBaru < 0 || nilaiBaru > 100)
                     {
-                        Console.WriteLine("Nilai tidak valid, nilai harys dalam rentang 0 - 100");
+                        Console.WriteLine("Nilai tidak valid, nilai harus dalam rentang 0 - 100");
                     }
                     else
                     {
@@ -284,6 +292,7 @@ namespace PencatatanNilaiMahasiswa
             {
                 Console.WriteLine("Nilai mata kuliah tidak ditemukan ");
             }
+
             MainApp();
         }
 
@@ -346,7 +355,7 @@ namespace PencatatanNilaiMahasiswa
             {
                 foreach (var nilai in nilaiUser)
                 {
-                    Console.WriteLine($"Mata Kuliah : {nilai.MataKuliah}, Nilai : {nilai.NilaiAngka}");
+                    Console.WriteLine($"Nama Mahasiswa :{nilai.NamaMahasiswa} ,Mata Kuliah : {nilai.MataKuliah}, Nilai : {nilai.NilaiAngka}");
                 }
             }
 
@@ -403,9 +412,9 @@ namespace PencatatanNilaiMahasiswa
             }
         }
 
-        static void ClearScreen ()
+        static void ClearScreen()
         {
-            ClearScreen();
+            Console.Clear();
         }
     }
 }
