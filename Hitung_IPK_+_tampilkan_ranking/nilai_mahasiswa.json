@@ -1,7 +1,104 @@
 [
   {
     "Username": "kokop",
+    "NamaMahasiswa": null,
     "MataKuliah": "MK gajelas",
     "NilaiAngka": 10
+  },
+  {
+    "Username": "cece",
+    "NamaMahasiswa": "kocag",
+    "MataKuliah": "Mk Pemodelan",
+    "NilaiAngka": 50
+  },
+  {
+    "Username": "cece",
+    "NamaMahasiswa": "cece",
+    "MataKuliah": "MK rekayasa Perangakt Lunak",
+    "NilaiAngka": 50
+  },
+  {
+    "Username": "cece",
+    "NamaMahasiswa": "cece",
+    "MataKuliah": "MK memasak",
+    "NilaiAngka": 80
+  },
+  {
+    "Username": "caca",
+    "NamaMahasiswa": "MK garo",
+    "MataKuliah": "caca",
+    "NilaiAngka": 90
+  },
+  {
+    "Username": "caca",
+    "NamaMahasiswa": "MK gaseneng",
+    "MataKuliah": "caca",
+    "NilaiAngka": 80
+  },
+  {
+    "Username": "caca",
+    "NamaMahasiswa": "caca",
+    "MataKuliah": "MK siap",
+    "NilaiAngka": 100
+  },
+  {
+    "Username": "cucu",
+    "NamaMahasiswa": "cucu",
+    "MataKuliah": "MK warkop",
+    "NilaiAngka": 90
+  },
+  {
+    "Username": "cucu",
+    "NamaMahasiswa": "caca marica",
+    "MataKuliah": "MK wes bengi",
+    "NilaiAngka": 45
+  },
+  {
+    "Username": "cucu",
+    "NamaMahasiswa": "kacong",
+    "MataKuliah": "MK madura",
+    "NilaiAngka": 100
+  },
+  {
+    "Username": "yanto",
+    "NamaMahasiswa": "yanto ",
+    "MataKuliah": "MK Pemodelan",
+    "NilaiAngka": 100
+  },
+  {
+    "Username": "yanto",
+    "NamaMahasiswa": "yanto",
+    "MataKuliah": "MK Kontruski",
+    "NilaiAngka": 100
+  },
+  {
+    "Username": "yanto",
+    "NamaMahasiswa": "riski",
+    "MataKuliah": "MK sembarang",
+    "NilaiAngka": 90
+  },
+  {
+    "Username": "yanto",
+    "NamaMahasiswa": "farid",
+    "MataKuliah": "MK Sapi",
+    "NilaiAngka": 78
+  },
+  {
+    "Username": "yanto",
+    "NamaMahasiswa": "farid",
+    "MataKuliah": "MK gajelas",
+    "NilaiAngka": 25
+  },
+  {
+    "Username": "yanto",
+    "NamaMahasiswa": "farid",
+    "MataKuliah": "MK mbuh",
+    "NilaiAngka": 21
+  },
+  {
+    "Username": "yanto",
+    "NamaMahasiswa": "riski",
+    "MataKuliah": "MK Stress",
+    "NilaiAngka": 79
   }
 ]
