@@ -220,7 +220,21 @@ namespace PencatatanNilaiMahasiswa
         static void LihatNilai ()
         {
             Console.WriteLine("Lihat Nilai");
-            MainApp();
+            var semuaNilai = LoadNilai();
+
+            var nilaiUser = semuaNilai.Where(n => n.Username == currentUser.Username).ToList();
+            if (nilaiUser.Count == 0)
+            {
+                Console.WriteLine("Belum ada nilai yang tersimpan");
+            } else
+            {
+                foreach (var nilai in nilaiUser)
+                {
+                    Console.WriteLine($"Mata Kuliah : {nilai.MataKuliah}, Nilai : {nilai.NilaiAngka}");
+                }
+            }
+
+                MainApp();
         }
 
         static void TampilkanRangking()
