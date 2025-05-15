@@ -1,12 +1,20 @@
 [
   {
     "Username": "jarwo",
-    "MataKuliah": "Matematika",
-    "NilaiAngka": 80
+    "MataKuliah": "Bahasa Inggris",
+    "NamaMahasiswa": null,
+    "NilaiAngka": 85
   },
   {
     "Username": "jarwo",
-    "MataKuliah": "Bahasa Inggris",
-    "NilaiAngka": 85
+    "MataKuliah": "bindo",
+    "NamaMahasiswa": null,
+    "NilaiAngka": 99
+  },
+  {
+    "Username": "jarwo",
+    "MataKuliah": "kontruksi",
+    "NamaMahasiswa": "yanto",
+    "NilaiAngka": 95
   }
 ]
