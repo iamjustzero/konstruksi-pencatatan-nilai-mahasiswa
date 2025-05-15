@@ -8,14 +8,12 @@ using System.Text.Json;
 
 namespace PencatatanNilaiMahasiswa
 {
-    // Kelas untuk menyimpan data pengguna
     public class User
     {
         public string Username { get; set; }
         public string PasswordHash { get; set; }
     }
 
-    // Kelas untuk menyimpan data nilai mahasiswa
     public class NilaiMahasiswa
     {
         public string Username { get; set; }
@@ -23,7 +21,6 @@ namespace PencatatanNilaiMahasiswa
         public double NilaiAngka { get; set; }
     }
 
-    // Kelas utama untuk Main aplikasi
     public class Program6
 
     {
@@ -38,14 +35,11 @@ namespace PencatatanNilaiMahasiswa
             Welcome();
         }
 
-        //Menu tampilan awal
         static void Welcome()
         {
-            Console.Clear();
             Console.WriteLine("- - - Welcome - - -");
-            Console.WriteLine("(1) Register");
-            Console.WriteLine("(2) Login");
-            Console.WriteLine("(3) Exit");
+            Console.WriteLine("(1)Register");
+            Console.WriteLine("(2)Login");
             Console.Write("Pilih: ");
             try
             {
@@ -58,20 +52,15 @@ namespace PencatatanNilaiMahasiswa
                 {
                     Login();
                 }
-                else if (choice == 3)
-                {
-                    Keluar();
-                }
                 else
                 {
-                    Console.WriteLine("Input Tidak Valid, Masukkan dengan Benar!");
+                    Console.WriteLine("Input Tidak Valid");
                     Welcome();
-                    Console.Clear();
                 }
             }
             catch (Exception e)
             {
-                Console.WriteLine("Terjadi Kesalahan masukkan dengan benar!: " + e);
+                Console.WriteLine("Terjadi Kesalahan : " + e);
                 Welcome();
             }
         }
@@ -89,17 +78,14 @@ namespace PencatatanNilaiMahasiswa
                 if (users.Any(u => u.Username == username))
                 {
                     Console.WriteLine("Username sudah ada.");
-                    BackToHome();
                     return;
                 }
 
                 users.Add(new User { Username = username, PasswordHash = HashPassword(password) });
                 SaveUsers(users);
 
-                Clearscreen();
-                Console.WriteLine("\n[User berhasil terdaftar.]/n");
+                Console.WriteLine("User berhasil terdaftar.");
                 Login();
-                Clearscreen();
             }
             catch (Exception e)
             {
@@ -126,9 +112,8 @@ namespace PencatatanNilaiMahasiswa
                 }
                 else
                 {
-                    Console.WriteLine("Username atau password salah, Masukkan dengan Benar!");
+                    Console.WriteLine("Username atau password salah.");
                     Login();
-                    BackToHome();
                 }
             }
             catch (Exception e)
@@ -138,7 +123,6 @@ namespace PencatatanNilaiMahasiswa
             }
         }
 
-        // menu mahasiswa
         static void MainApp()
         {
             Console.WriteLine("~ Pencatatan Nilai Mahasiswa ~");
@@ -232,7 +216,7 @@ namespace PencatatanNilaiMahasiswa
 
         static void TampilkanRangking()
         {
-            //TODO: ME @duriskifeb
+
         }
 
         static void Keluar()
@@ -277,20 +261,6 @@ namespace PencatatanNilaiMahasiswa
                 byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
                 return Convert.ToBase64String(bytes);
             }
-        }
-
-        //clear screen bersihkan dengan yang sebelumnya
-        static void Clearscreen()
-        {
-            Clearscreen(); 
-        }
-
-        //back to Home Welcome
-        static void BackToHome()
-        {
-            Console.WriteLine("Tekan Enter untuk kembali ke menu utama...");
-            Console.ReadLine();
-            Welcome();
         }
     }
 }
