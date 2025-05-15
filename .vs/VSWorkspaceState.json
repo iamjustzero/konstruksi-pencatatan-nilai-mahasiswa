@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\PencatatanNilaiMahasiswa",
-    "\\PencatatanNilaiMahasiswa\\PencatatanNilaiMahasiswa"
+    "\\PencatatanNilaiMahasiswa\\PencatatanNilaiMahasiswa",
+    "\\PencatatanNilaiMahasiswa\\PencatatanNilaiMahasiswa\\bin"
   ],
-  "SelectedNode": "\\PencatatanNilaiMahasiswa\\PencatatanNilaiMahasiswa",
+  "SelectedNode": "\\PencatatanNilaiMahasiswa\\PencatatanNilaiMahasiswa\\Program.cs",
   "PreviewInSolutionExplorer": false
 }
