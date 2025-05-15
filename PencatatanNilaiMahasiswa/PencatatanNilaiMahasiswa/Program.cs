@@ -62,8 +62,7 @@ namespace PencatatanNilaiMahasiswa
         }
     }
 
-    public class Program6
-
+    public class Program
     {
         static string filePath = "users.json";
         static string nilaiFilePath = "nilai_mahasiswa.json";
