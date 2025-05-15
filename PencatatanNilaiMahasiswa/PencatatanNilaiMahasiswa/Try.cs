@@ -11,7 +11,7 @@
 //        static void Main(string[] args)
 //        {
 //            Welcome();
-//        }
+//        }//
 
 //        static void Welcome()
 //        {
@@ -24,3 +24,5 @@
 //        }
 //    }
 //}
+
+//ini segera hapus
