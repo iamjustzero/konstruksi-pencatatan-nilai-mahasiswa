@@ -17,6 +17,7 @@ namespace PencatatanNilaiMahasiswa
     public class NilaiMahasiswa
     {
         public string Username { get; set; }
+        public string NamaMahasiswa { get; set; }
         public string MataKuliah { get; set; }
         public string NamaMahasiswa { get; set; }
         public double NilaiAngka { get; set; }
@@ -231,6 +232,10 @@ namespace PencatatanNilaiMahasiswa
             string mk = Console.ReadLine();
 
 
+
+            Console.Write("Masukkan nama mahasiswa: ");
+            string namaMahasiswa = Console.ReadLine();
+
             Console.Write("Masukkan nilai angka (0-100): ");
             if (double.TryParse(Console.ReadLine(), out double nilaiAngka))
             {
@@ -255,6 +260,7 @@ namespace PencatatanNilaiMahasiswa
 
         static void EditNilai()
         {
+<<<<<<< HEAD
 
             var semuaNilai = LoadNilai();
             Console.Write("Masukkan nama mata kuliah: ");
@@ -293,8 +299,13 @@ namespace PencatatanNilaiMahasiswa
                 Console.WriteLine("Nilai mata kuliah tidak ditemukan ");
             }
 
+=======
+            Console.WriteLine("Edit Nilai");
+>>>>>>> 9e44900772cea4dbad953da8ee29bf1a3e1046a6
             MainApp();
         }
+
+
 
         static void HapusNilai()
         {
