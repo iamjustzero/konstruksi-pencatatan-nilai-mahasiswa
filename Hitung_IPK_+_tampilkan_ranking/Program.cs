@@ -1,104 +1,295 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
+using System.Text.Json;
 
-namespace HitungIPKRanking
+namespace PencatatanNilaiMahasiswa
 {
-    class Program
+    // Kelas untuk menyimpan data pengguna
+    public class User
     {
-        // Table-driven: konversi nilai huruf ke bobot
-        static readonly Dictionary<string, double> gradeToPoint = new()
-        {
-            { "A", 4.0 },
-            { "B", 3.0 },
-            { "C", 2.0 },
-            { "D", 1.0 },
-            { "E", 0.0 }
-        };
+        public string Username { get; set; }
+        public string PasswordHash { get; set; }
+    }
 
-        // Data nilai mahasiswa (nama, list nilai [matkul, huruf])
-        static List<Mahasiswa> mahasiswaList = new()
-        {
-            new Mahasiswa("Farid", new List<Nilai> {
-                new("Matematika", "A"),
-                new("Pemrograman", "B"),
-                new("Statistika", "A"),
-            }),
-            new Mahasiswa("Ariana", new List<Nilai> {
-                new("Matematika", "B"),
-                new("Pemrograman", "B"),
-                new("Statistika", "C"),
-            }),
-            new Mahasiswa("Rizky", new List<Nilai> {
-                new("Matematika", "A"),
-                new("Pemrograman", "A"),
-                new("Statistika", "A"),
-            })
-        };
+    // Kelas untuk menyimpan data nilai mahasiswa
+    public class NilaiMahasiswa
+    {
+        public string Username { get; set; }
+        public string MataKuliah { get; set; }
+        public double NilaiAngka { get; set; }
+    }
+
+    // Kelas utama untuk Main aplikasi
+    public class Program6
+
+    {
+        static string filePath = "users.json";
+        static string nilaiFilePath = "nilai_mahasiswa.json";
+        static List<User> users = new List<User>();
+        static User currentUser; 
 
         static void Main(string[] args)
         {
-            Console.WriteLine("=== PERHITUNGAN IPK & RANKING ===");
-
-            foreach (var mhs in mahasiswaList)
-            {
-                mhs.IPK = HitungIPK(mhs.NilaiList);
-            }
-
-            // Urutkan berdasarkan IPK (descending)
-            var ranking = mahasiswaList.OrderByDescending(m => m.IPK).ToList();
-
-            // Tampilkan
-            int posisi = 1;
-            foreach (var mhs in ranking)
-            {
-                Console.WriteLine($"{posisi++}. {mhs.Nama} - IPK: {mhs.IPK:F2}");
-            }
+            users = LoadUsers();
+            Welcome();
         }
 
-        // Code reuse: fungsi menghitung IPK
-        static double HitungIPK(List<Nilai> nilaiList)
+        //Menu tampilan awal
+        static void Welcome()
         {
-            double total = 0;
-            foreach (var n in nilaiList)
+            Console.Clear();
+            Console.WriteLine("- - - Welcome - - -");
+            Console.WriteLine("(1) Register");
+            Console.WriteLine("(2) Login");
+            Console.WriteLine("(3) Exit");
+            Console.Write("Pilih: ");
+            try
             {
-                if (gradeToPoint.TryGetValue(n.NilaiHuruf.ToUpper(), out double point))
+                int choice = Convert.ToInt32(Console.ReadLine());
+                if (choice == 1)
                 {
-                    total += point;
+                    Register();
+                }
+                else if (choice == 2)
+                {
+                    Login();
+                }
+                else if (choice == 3)
+                {
+                    Keluar();
                 }
                 else
                 {
-                    Console.WriteLine($"Nilai tidak valid: {n.NilaiHuruf}");
+                    Console.WriteLine("Input Tidak Valid, Masukkan dengan Benar!");
+                    Welcome();
+                    Console.Clear();
                 }
             }
-
-            return nilaiList.Count > 0 ? total / nilaiList.Count : 0;
+            catch (Exception e)
+            {
+                Console.WriteLine("Terjadi Kesalahan masukkan dengan benar!: " + e);
+                Welcome();
+            }
         }
-    }
 
-    // Reusable class
-    class Mahasiswa
-    {
-        public string Nama { get; set; }
-        public List<Nilai> NilaiList { get; set; }
-        public double IPK { get; set; }
-
-        public Mahasiswa(string nama, List<Nilai> nilaiList)
+        static void Register()
         {
-            Nama = nama;
-            NilaiList = nilaiList;
+            Console.WriteLine(" - Register - ");
+            Console.Write("Username: ");
+            string username = Console.ReadLine();
+            Console.Write("Password: ");
+            string password = Console.ReadLine();
+
+            try
+            {
+                if (users.Any(u => u.Username == username))
+                {
+                    Console.WriteLine("Username sudah ada.");
+                    BackToHome();
+                    return;
+                }
+
+                users.Add(new User { Username = username, PasswordHash = HashPassword(password) });
+                SaveUsers(users);
+
+                Console.WriteLine("User berhasil terdaftar.");
+                Clearscreen();
+                Login();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Terjadi Kesalahan : " + e);
+                Register();
+            }
         }
-    }
 
-    class Nilai
-    {
-        public string MataKuliah { get; set; }
-        public string NilaiHuruf { get; set; }
-
-        public Nilai(string matkul, string nilaiHuruf)
+        static void Login()
         {
-            MataKuliah = matkul;
-            NilaiHuruf = nilaiHuruf;
+            Console.WriteLine(" - Login - ");
+            Console.Write("Username: ");
+            string username = Console.ReadLine();
+            Console.Write("Password: ");
+            string password = Console.ReadLine();
+            var user = users.FirstOrDefault(u => u.Username == username);
+            try
+            {
+                if (user != null && user.PasswordHash == HashPassword(password))
+                {
+                    currentUser = user;
+                    Console.WriteLine("Login berhasil!");
+                    MainApp();
+                }
+                else
+                {
+                    Console.WriteLine("Username atau password salah, Masukkan dengan Benar!");
+                    BackToHome();
+                    Login();
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Terjadi kesalahan : " + e);
+                Login();
+            }
+        }
+
+        // menu mahasiswa
+        static void MainApp()
+        {
+            Console.WriteLine("~ Pencatatan Nilai Mahasiswa ~");
+            Console.WriteLine("(1) Input Nilai Mata Kuliah");
+            Console.WriteLine("(2) Edit Nilai Mata Kuliah");
+            Console.WriteLine("(3) Hapus Nilai Mata Kuliah");
+            Console.WriteLine("(4) Hitung IPK");
+            Console.WriteLine("(5) Tampilkan Rangking");
+            Console.WriteLine("(6) Keluar");
+            Console.WriteLine("Pilih : ");
+            try
+            {
+                int choice = Convert.ToInt32(Console.ReadLine());
+                switch (choice)
+                {
+                    case 1:
+                        InputNilai();
+                        break;
+                    case 2:
+                        EditNilai();
+                        break;
+                    case 3:
+                        HapusNilai();
+                        break;
+                    case 4:
+                        HitungIPK();
+                        break;
+                    case 5:
+                        TampilkanRangking();
+                        break;
+                    case 6:
+                        Keluar();
+                        break;
+                    default:
+                        Console.WriteLine("Pilihan tidak valid.");
+                        MainApp();
+                        break;
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Terjadi Kesalahan : " + e);
+                MainApp();
+            }
+        }
+
+        static void InputNilai()
+        {
+            var semuaNilai = LoadNilai();
+
+            Console.Write("Masukkan nama mata kuliah: ");
+            string mk = Console.ReadLine();
+
+            Console.Write("Masukkan nilai angka (0-100): ");
+            if (double.TryParse(Console.ReadLine(), out double nilaiAngka))
+            {
+                semuaNilai.Add(new NilaiMahasiswa
+                {
+                    Username = currentUser.Username,
+                    MataKuliah = mk,
+                    NilaiAngka = nilaiAngka
+                });
+
+                SaveNilai(semuaNilai);
+                Console.WriteLine("Nilai berhasil disimpan.");
+            }
+            else
+            {
+                Console.WriteLine("Nilai tidak valid.");
+            }
+
+            MainApp();
+        }
+
+        static void EditNilai()
+        {
+            Console.WriteLine("Edit Nilai");
+            MainApp();
+        }
+
+        static void HapusNilai()
+        {
+            Console.WriteLine("Hapus Nilai");
+            MainApp();
+        }
+
+        static void HitungIPK()
+        {
+
+        }
+
+        static void TampilkanRangking()
+        {
+            //TODO: ME @duriskifeb
+        }
+
+        static void Keluar()
+        {
+            Console.WriteLine("Anda Telah Keluar.");
+        }
+
+        static List<User> LoadUsers()
+        {
+            if (!File.Exists(filePath))
+                return new List<User>();
+
+            string json = File.ReadAllText(filePath);
+            return JsonSerializer.Deserialize<List<User>>(json);
+        }
+
+        static void SaveUsers(List<User> users)
+        {
+            string json = JsonSerializer.Serialize(users, new JsonSerializerOptions { WriteIndented = true });
+            File.WriteAllText(filePath, json);
+        }
+
+        static List<NilaiMahasiswa> LoadNilai()
+        {
+            if (!File.Exists(nilaiFilePath))
+                return new List<NilaiMahasiswa>();
+
+            string json = File.ReadAllText(nilaiFilePath);
+            return JsonSerializer.Deserialize<List<NilaiMahasiswa>>(json);
+        }
+
+        static void SaveNilai(List<NilaiMahasiswa> daftarNilai)
+        {
+            string json = JsonSerializer.Serialize(daftarNilai, new JsonSerializerOptions { WriteIndented = true });
+            File.WriteAllText(nilaiFilePath, json);
+        }
+
+        static string HashPassword(string password)
+        {
+            using (var sha256 = SHA256.Create())
+            {
+                byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
+                return Convert.ToBase64String(bytes);
+            }
+        }
+
+        //clear screen bersihkan dengan yang sebelumnya
+        static void Clearscreen()
+        {
+            Clearscreen();
+        }
+
+        //back to Home Welcome
+        static void BackToHome()
+        {
+            Console.WriteLine("Tekan Enter untuk kembali ke menu utama...");
+            Console.ReadLine();
+            Welcome();
         }
     }
 }
