@@ -18,7 +18,48 @@ namespace PencatatanNilaiMahasiswa
     {
         public string Username { get; set; }
         public string MataKuliah { get; set; }
+        public string NamaMahasiswa { get; set; }
         public double NilaiAngka { get; set; }
+
+    }
+
+    public class JsonDataService<T> where T : class
+    {
+        private readonly string _filePath;
+
+        public JsonDataService(string filePath)
+        {
+            _filePath = filePath;
+        }
+
+        public List<T> Load()
+        {
+            if (!File.Exists(_filePath))
+                return new List<T>();
+
+            string json = File.ReadAllText(_filePath);
+            return JsonSerializer.Deserialize<List<T>>(json);
+        }
+
+        public void Save(List<T> data)
+        {
+            string json = JsonSerializer.Serialize(data, new JsonSerializerOptions { WriteIndented = true });
+            File.WriteAllText(_filePath, json);
+        }
+
+        public void Remove(Func<T, bool> predicate)
+        {
+            var data = Load();
+            var toRemove = data.Where(predicate).ToList();
+            if (toRemove.Any())
+            {
+                foreach (var item in toRemove)
+                {
+                    data.Remove(item);
+                }
+                Save(data);
+            }
+        }
     }
 
     public class Program
@@ -175,9 +216,12 @@ namespace PencatatanNilaiMahasiswa
         static void InputNilai()
         {
             var semuaNilai = LoadNilai();
-
+            ClearScreen();
             Console.Write("Masukkan nama mata kuliah: ");
             string mk = Console.ReadLine();
+
+            Console.Write("Masukkan nama mahasiswa: ");
+            string namaMahasiswa = Console.ReadLine();
 
             Console.Write("Masukkan nilai angka (0-100): ");
             if (double.TryParse(Console.ReadLine(), out double nilaiAngka))
@@ -185,6 +229,7 @@ namespace PencatatanNilaiMahasiswa
                 semuaNilai.Add(new NilaiMahasiswa
                 {
                     Username = currentUser.Username,
+                    NamaMahasiswa = namaMahasiswa,
                     MataKuliah = mk,
                     NilaiAngka = nilaiAngka
                 });
@@ -203,14 +248,85 @@ namespace PencatatanNilaiMahasiswa
         static void EditNilai()
         {
             Console.WriteLine("Edit Nilai");
+            var semuaNilai = LoadNilai();
+            Console.Write("Masukkan nama mata kuliah: ");
+            string mk = Console.ReadLine();
+
+            // mencari nilai 
+            var nilaiMahasiswa = semuaNilai.FirstOrDefault(n => n.Username == currentUser.Username && n.MataKuliah == mk);
+
+            if (nilaiMahasiswa != null)
+            {
+                Console.WriteLine($"Nilai saat ini untuk mata kuliah {mk} adalah {nilaiMahasiswa.NilaiAngka}");
+                Console.Write("Masukkan nilai baru (0-100: )");
+
+                if (double.TryParse(Console.ReadLine(), out double nilaiBaru))
+                {
+                    // precondition
+                    if (nilaiBaru < 0 || nilaiBaru > 100)
+                    {
+                        Console.WriteLine("Nilai tidak valid, nilai harys dalam rentang 0 - 100");
+                    }
+                    else
+                    {
+                        // update nilai
+                        nilaiMahasiswa.NilaiAngka = nilaiBaru;
+                        SaveNilai(semuaNilai);
+                        Console.WriteLine("Nilai diperbarui");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Inputan tidak valid");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Nilai mata kuliah tidak ditemukan ");
+            }
             MainApp();
         }
 
         static void HapusNilai()
         {
-            Console.WriteLine("Hapus Nilai");
+            var nilaiService = new JsonDataService<NilaiMahasiswa>(nilaiFilePath);
+            var semuaNilai = nilaiService.Load()
+                .Where(n => n.Username == currentUser.Username)
+                .ToList();
+
+            if (!semuaNilai.Any())
+            {
+                Console.WriteLine("Belum ada nilai yang tercatat.");
+                MainApp();
+                return;
+            }
+
+            Console.WriteLine("Daftar Mata Kuliah Anda:");
+            for (int i = 0; i < semuaNilai.Count; i++)
+            {
+                Console.WriteLine($"{i + 1}. {semuaNilai[i].MataKuliah} - {semuaNilai[i].NilaiAngka}");
+            }
+
+            Console.Write("Pilih nomor yang ingin dihapus: ");
+            if (int.TryParse(Console.ReadLine(), out int pilih) && pilih > 0 && pilih <= semuaNilai.Count)
+            {
+                var matkulDipilih = semuaNilai[pilih - 1].MataKuliah;
+
+                nilaiService.Remove(n =>
+                    n.Username == currentUser.Username &&
+                    n.MataKuliah.Equals(matkulDipilih, StringComparison.OrdinalIgnoreCase)
+                );
+
+                Console.WriteLine("Nilai berhasil dihapus.");
+            }
+            else
+            {
+                Console.WriteLine("Pilihan tidak valid.");
+            }
+
             MainApp();
         }
+
 
         static void HitungIPK()
         {
@@ -285,6 +401,11 @@ namespace PencatatanNilaiMahasiswa
                 byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
                 return Convert.ToBase64String(bytes);
             }
+        }
+
+        static void ClearScreen ()
+        {
+            ClearScreen();
         }
     }
 }
