@@ -8,5 +8,15 @@
     "Username": "jarwo",
     "MataKuliah": "Bahasa Inggris",
     "NilaiAngka": 85
+  },
+  {
+    "Username": "jarwo",
+    "MataKuliah": "inggris",
+    "NilaiAngka": 99
+  },
+  {
+    "Username": "yanto",
+    "MataKuliah": "bahasa indonesia",
+    "NilaiAngka": 90
   }
 ]

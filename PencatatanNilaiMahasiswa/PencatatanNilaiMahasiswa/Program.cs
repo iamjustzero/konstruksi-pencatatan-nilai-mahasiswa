@@ -21,8 +21,7 @@ namespace PencatatanNilaiMahasiswa
         public double NilaiAngka { get; set; }
     }
 
-    public class Program6
-
+    public class Program
     {
         static string filePath = "users.json";
         static string nilaiFilePath = "nilai_mahasiswa.json";
@@ -130,8 +129,9 @@ namespace PencatatanNilaiMahasiswa
             Console.WriteLine("(2) Edit Nilai Mata Kuliah");
             Console.WriteLine("(3) Hapus Nilai Mata Kuliah");
             Console.WriteLine("(4) Hitung IPK");
-            Console.WriteLine("(5) Tampilkan Rangking");
-            Console.WriteLine("(6) Keluar");
+            Console.WriteLine("(5) Lihat Nilai");
+            Console.WriteLine("(6) Tampilkan Rangking");
+            Console.WriteLine("(7) Keluar");
             Console.WriteLine("Pilih : ");
             try
             {
@@ -151,9 +151,12 @@ namespace PencatatanNilaiMahasiswa
                         HitungIPK();
                         break;
                     case 5:
-                        TampilkanRangking();
+                        LihatNilai();
                         break;
                     case 6:
+                        TampilkanRangking();
+                        break;
+                    case 7:
                         Keluar();
                         break;
                     default:
@@ -214,9 +217,16 @@ namespace PencatatanNilaiMahasiswa
 
         }
 
+        static void LihatNilai ()
+        {
+            Console.WriteLine("Lihat Nilai");
+            MainApp();
+        }
+
         static void TampilkanRangking()
         {
-
+            Console.WriteLine("Tampilkan Rangking");
+            MainApp();
         }
 
         static void Keluar()
