@@ -96,9 +96,10 @@ namespace PencatatanNilaiMahasiswa
                 users.Add(new User { Username = username, PasswordHash = HashPassword(password) });
                 SaveUsers(users);
 
-                Console.WriteLine("User berhasil terdaftar.");
                 Clearscreen();
+                Console.WriteLine("\n[User berhasil terdaftar.]/n");
                 Login();
+                Clearscreen();
             }
             catch (Exception e)
             {
@@ -126,8 +127,8 @@ namespace PencatatanNilaiMahasiswa
                 else
                 {
                     Console.WriteLine("Username atau password salah, Masukkan dengan Benar!");
-                    BackToHome();
                     Login();
+                    BackToHome();
                 }
             }
             catch (Exception e)
@@ -281,7 +282,7 @@ namespace PencatatanNilaiMahasiswa
         //clear screen bersihkan dengan yang sebelumnya
         static void Clearscreen()
         {
-            Clearscreen();
+            Clearscreen(); 
         }
 
         //back to Home Welcome
