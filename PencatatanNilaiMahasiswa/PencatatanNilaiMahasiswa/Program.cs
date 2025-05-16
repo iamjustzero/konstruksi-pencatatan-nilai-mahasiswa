@@ -221,7 +221,6 @@ namespace PencatatanNilaiMahasiswa
             Console.WriteLine("=== Hitung IPK ===");
             var semuaNilai = LoadNilai();
 
-            // Ambil daftar nama mahasiswa milik pengguna saat ini
             var daftarMahasiswa = semuaNilai
                 .Where(n => n.Username == currentUser?.Username)
                 .GroupBy(n => n.NamaMahasiswa)
@@ -286,13 +285,12 @@ namespace PencatatanNilaiMahasiswa
             MainApp();
         }
 
-        // Method untuk tampilkan rangking berdasarkan IPK
         static void TampilkanRangking()
         {
             Console.WriteLine("=== Leaderboard - Rangking Berdasarkan IPK ===");
             var semuaNilai = LoadNilai();
 
-            // Ambil daftar nama mahasiswa milik pengguna saat ini
+            
             var daftarMahasiswa = semuaNilai
                 .Where(n => n.Username == currentUser?.Username)
                 .GroupBy(n => n.NamaMahasiswa)
@@ -306,7 +304,7 @@ namespace PencatatanNilaiMahasiswa
                 return;
             }
 
-            var daftarIPK = new List<(string Nama, double IPK)>(); // Tuple untuk simpan pasangan nama & IPK
+            var daftarIPK = new List<(string Nama, double IPK)>();
 
             foreach (var nama in daftarMahasiswa)
             {
@@ -333,7 +331,7 @@ namespace PencatatanNilaiMahasiswa
                 daftarIPK.Add((nama, ipk));
             }
 
-            // Urutkan berdasarkan IPK tertinggi
+            
             daftarIPK = daftarIPK.OrderByDescending(x => x.IPK).ToList();
 
             Console.WriteLine("\nNo\tNama Mahasiswa\t\tIPK");
@@ -377,19 +375,25 @@ namespace PencatatanNilaiMahasiswa
 
         static void LihatNilai()
         {
-            Console.WriteLine("Lihat Nilai");
+            Console.WriteLine("=== Daftar Nilai ===");
             var semuaNilai = LoadNilai();
             var nilaiUser = semuaNilai.Where(n => n.Username == currentUser?.Username).ToList();
-            if (nilaiUser.Count == 0)
+
+            if (!nilaiUser.Any())
             {
-                Console.WriteLine("Belum ada nilai yang tersimpan");
+                Console.WriteLine("Belum ada nilai tersimpan.");
             }
             else
             {
-                foreach (var nilai in nilaiUser)
+                Console.WriteLine("+----+----------------------+----------------------+-----------+");
+                Console.WriteLine("| No | Nama Mahasiswa       | Mata Kuliah          | Nilai     |");
+                Console.WriteLine("+----+----------------------+----------------------+-----------+");
+                for (int i = 0; i < nilaiUser.Count; i++)
                 {
-                    Console.WriteLine($"Nama Mahasiswa :{nilai.NamaMahasiswa} ,Mata Kuliah : {nilai.MataKuliah}, Nilai : {nilai.NilaiAngka}");
+                    var n = nilaiUser[i];
+                    Console.WriteLine($"| {i + 1,2} | {n.NamaMahasiswa,-20} | {n.MataKuliah,-20} | {n.NilaiAngka,5:F2}   |");
                 }
+                Console.WriteLine("+----+----------------------+----------------------+-----------+");
             }
             MainApp();
         }
@@ -524,6 +528,7 @@ namespace PencatatanNilaiMahasiswa
             string json = File.ReadAllText(filePath);
             return JsonSerializer.Deserialize<List<User>>(json) ?? new List<User>();
         }
+
 
         static void SaveUsers(List<User> users)
         {
