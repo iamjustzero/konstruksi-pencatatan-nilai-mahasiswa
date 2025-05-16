@@ -1,0 +1,6 @@
+D:\GitHub\konstruksi-pencatatan-nilai-mahasiswa\TestPencatatanNilaiMahasiswa\TestPencatatanNilaiMahasiswa\obj\Debug\net8.0\TestPencatatanNilaiMahasiswa.csproj.AssemblyReference.cache
+D:\GitHub\konstruksi-pencatatan-nilai-mahasiswa\TestPencatatanNilaiMahasiswa\TestPencatatanNilaiMahasiswa\obj\Debug\net8.0\TestPencatatanNilaiMahasiswa.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub\konstruksi-pencatatan-nilai-mahasiswa\TestPencatatanNilaiMahasiswa\TestPencatatanNilaiMahasiswa\obj\Debug\net8.0\TestPencatatanNilaiMahasiswa.AssemblyInfoInputs.cache
+D:\GitHub\konstruksi-pencatatan-nilai-mahasiswa\TestPencatatanNilaiMahasiswa\TestPencatatanNilaiMahasiswa\obj\Debug\net8.0\TestPencatatanNilaiMahasiswa.AssemblyInfo.cs
+D:\GitHub\konstruksi-pencatatan-nilai-mahasiswa\TestPencatatanNilaiMahasiswa\TestPencatatanNilaiMahasiswa\obj\Debug\net8.0\TestPencatatanNilaiMahasiswa.csproj.CoreCompileInputs.cache
+D:\GitHub\konstruksi-pencatatan-nilai-mahasiswa\TestPencatatanNilaiMahasiswa\TestPencatatanNilaiMahasiswa\obj\Debug\net8.0\TestPencatatanNilaiMahasiswa.sourcelink.json

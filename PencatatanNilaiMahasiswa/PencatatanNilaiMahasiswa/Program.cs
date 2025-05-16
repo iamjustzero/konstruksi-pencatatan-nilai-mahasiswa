@@ -106,9 +106,9 @@ namespace PencatatanNilaiMahasiswa
         {
             Console.WriteLine(" - Register - ");
             Console.Write("Username: ");
-            string username = Console.ReadLine() ?? "";
+            string username = Console.ReadLine();
             Console.Write("Password: ");
-            string password = Console.ReadLine() ?? "";
+            string password = Console.ReadLine();
             try
             {
                 if (users.Any(u => u.Username == username))
@@ -132,9 +132,9 @@ namespace PencatatanNilaiMahasiswa
         {
             Console.WriteLine(" - Login - ");
             Console.Write("Username: ");
-            string username = Console.ReadLine() ?? "";
+            string username = Console.ReadLine() ;
             Console.Write("Password: ");
-            string password = Console.ReadLine() ?? "";
+            string password = Console.ReadLine();
             var user = users.FirstOrDefault(u => u.Username == username);
             try
             {
@@ -216,162 +216,81 @@ namespace PencatatanNilaiMahasiswa
             }
         }
 
-        static void HitungIPK()
-        {
-            Console.WriteLine("=== Hitung IPK ===");
-            var semuaNilai = LoadNilai();
-
-            var daftarMahasiswa = semuaNilai
-                .Where(n => n.Username == currentUser?.Username)
-                .GroupBy(n => n.NamaMahasiswa)
-                .Select(g => g.Key)
-                .ToList();
-
-            if (!daftarMahasiswa.Any())
-            {
-                Console.WriteLine("Belum ada data mahasiswa.");
-                MainApp();
-                return;
-            }
-
-            Console.WriteLine("Pilih Nama Mahasiswa:");
-            for (int i = 0; i < daftarMahasiswa.Count; i++)
-            {
-                Console.WriteLine($"{i + 1}. {daftarMahasiswa[i]}");
-            }
-            Console.Write("Masukkan nomor mahasiswa: ");
-
-            if (int.TryParse(Console.ReadLine(), out int pilihan) &&
-                pilihan >= 1 && pilihan <= daftarMahasiswa.Count)
-            {
-                string namaMahasiswa = daftarMahasiswa[pilihan - 1];
-                var nilaiMahasiswa = semuaNilai
-                    .Where(n => n.NamaMahasiswa == namaMahasiswa && n.Username == currentUser?.Username)
-                    .ToList();
-
-                if (!nilaiMahasiswa.Any())
-                {
-                    Console.WriteLine("Mahasiswa tidak memiliki nilai.");
-                    MainApp();
-                    return;
-                }
-
-                double totalSkorIP = 0;
-
-                foreach (var nilai in nilaiMahasiswa)
-                {
-                    double skorIP = 0;
-                    if (nilai.NilaiAngka >= 80) skorIP = 4.0;
-                    else if (nilai.NilaiAngka >= 70) skorIP = 3.0;
-                    else if (nilai.NilaiAngka >= 60) skorIP = 2.0;
-                    else if (nilai.NilaiAngka >= 50) skorIP = 1.0;
-                    else skorIP = 0.0;
-
-                    totalSkorIP += skorIP;
-                }
-
-                double ipk = totalSkorIP / nilaiMahasiswa.Count;
-
-                Console.WriteLine($"\nMahasiswa: {namaMahasiswa}");
-                Console.WriteLine($"Jumlah Mata Kuliah: {nilaiMahasiswa.Count}");
-                Console.WriteLine($"Total Skor IP: {totalSkorIP:F2}");
-                Console.WriteLine($"IPK: {ipk:F2}");
-            }
-            else
-            {
-                Console.WriteLine("Pilihan tidak valid.");
-            }
-
-            MainApp();
-        }
-
-        static void TampilkanRangking()
-        {
-            Console.WriteLine("=== Leaderboard - Rangking Berdasarkan IPK ===");
-            var semuaNilai = LoadNilai();
-
-            
-            var daftarMahasiswa = semuaNilai
-                .Where(n => n.Username == currentUser?.Username)
-                .GroupBy(n => n.NamaMahasiswa)
-                .Select(g => g.Key)
-                .ToList();
-
-            if (!daftarMahasiswa.Any())
-            {
-                Console.WriteLine("Belum ada data mahasiswa.");
-                MainApp();
-                return;
-            }
-
-            var daftarIPK = new List<(string Nama, double IPK)>();
-
-            foreach (var nama in daftarMahasiswa)
-            {
-                var nilaiMahasiswa = semuaNilai
-                    .Where(n => n.NamaMahasiswa == nama && n.Username == currentUser?.Username)
-                    .ToList();
-
-                double totalSkorIP = 0;
-
-                foreach (var nilai in nilaiMahasiswa)
-                {
-                    double skorIP = 0;
-                    if (nilai.NilaiAngka >= 80) skorIP = 4.0;
-                    else if (nilai.NilaiAngka >= 70) skorIP = 3.0;
-                    else if (nilai.NilaiAngka >= 60) skorIP = 2.0;
-                    else if (nilai.NilaiAngka >= 50) skorIP = 1.0;
-                    else skorIP = 0.0;
-
-                    totalSkorIP += skorIP;
-                }
-
-                double ipk = totalSkorIP / nilaiMahasiswa.Count;
-
-                daftarIPK.Add((nama, ipk));
-            }
-
-            
-            daftarIPK = daftarIPK.OrderByDescending(x => x.IPK).ToList();
-
-            Console.WriteLine("\nNo\tNama Mahasiswa\t\tIPK");
-            Console.WriteLine("----------------------------------------");
-            int no = 1;
-            foreach (var item in daftarIPK)
-            {
-                Console.WriteLine($"{no++}\t{item.Nama,-20} \t{item.IPK:F2}");
-            }
-
-            MainApp();
-        }
-
         static void InputNilai()
         {
             Console.WriteLine("Input Nilai");
             var semuaNilai = LoadNilai();
+
             Console.Write("Masukkan nama mahasiswa: ");
-            string namaMahasiswa = Console.ReadLine() ?? "";
+            string namaMahasiswa = Console.ReadLine();
+            if (string.IsNullOrWhiteSpace(namaMahasiswa))
+            {
+                Console.WriteLine("❌ Nama mahasiswa tidak boleh kosong.");
+                MainApp();
+                return;
+            }
+
             Console.Write("Masukkan nama mata kuliah: ");
-            string mk = Console.ReadLine() ?? "";
+            string mk = Console.ReadLine();
+            if (string.IsNullOrWhiteSpace(mk))
+            {
+                Console.WriteLine("❌ Nama mata kuliah tidak boleh kosong.");
+                MainApp();
+                return;
+            }
+
             Console.Write("Masukkan nilai angka (0-100): ");
             if (double.TryParse(Console.ReadLine(), out double nilaiAngka))
             {
+               
+                if (nilaiAngka < 0 || nilaiAngka > 100)
+                {
+                    Console.WriteLine("❌ Nilai harus antara 0 dan 100.");
+                    MainApp();
+                    return;
+                }
+
+                if (currentUser == null)
+                {
+                    Console.WriteLine("❌ Error: User belum login.");
+                    MainApp();
+                    return;
+                }
+
                 semuaNilai.Add(new NilaiMahasiswa
                 {
-                    Username = currentUser?.Username,
+                    Username = currentUser.Username,
                     NamaMahasiswa = namaMahasiswa,
                     MataKuliah = mk,
                     NilaiAngka = nilaiAngka
                 });
+
                 SaveNilai(semuaNilai);
-                Console.WriteLine("Nilai berhasil disimpan.");
+
+                var inserted = semuaNilai.Any(n =>
+                    n.Username == currentUser.Username &&
+                    n.NamaMahasiswa == namaMahasiswa &&
+                    n.MataKuliah == mk &&
+                    n.NilaiAngka == nilaiAngka
+                );
+
+                if (inserted)
+                {
+                    Console.WriteLine("✅ Nilai berhasil disimpan.");
+                }
+                else
+                {
+                    Console.WriteLine("❌ Gagal menyimpan nilai.");
+                }
             }
             else
             {
-                Console.WriteLine("Nilai gagal disimpan");
+                Console.WriteLine("❌ Nilai harus berupa angka.");
             }
+
             MainApp();
         }
+
 
         static void LihatNilai()
         {
@@ -462,6 +381,136 @@ namespace PencatatanNilaiMahasiswa
             {
                 Console.WriteLine("❌ Pilihan tidak valid.");
             }
+            MainApp();
+        }
+
+        static void HitungIPK()
+        {
+            Console.WriteLine("=== Hitung IPK ===");
+            var semuaNilai = LoadNilai();
+
+            var daftarMahasiswa = semuaNilai
+                .Where(n => n.Username == currentUser?.Username)
+                .GroupBy(n => n.NamaMahasiswa)
+                .Select(g => g.Key)
+                .ToList();
+
+            if (!daftarMahasiswa.Any())
+            {
+                Console.WriteLine("Belum ada data mahasiswa.");
+                MainApp();
+                return;
+            }
+
+            Console.WriteLine("Pilih Nama Mahasiswa:");
+            for (int i = 0; i < daftarMahasiswa.Count; i++)
+            {
+                Console.WriteLine($"{i + 1}. {daftarMahasiswa[i]}");
+            }
+            Console.Write("Masukkan nomor mahasiswa: ");
+
+            if (int.TryParse(Console.ReadLine(), out int pilihan) &&
+                pilihan >= 1 && pilihan <= daftarMahasiswa.Count)
+            {
+                string namaMahasiswa = daftarMahasiswa[pilihan - 1];
+                var nilaiMahasiswa = semuaNilai
+                    .Where(n => n.NamaMahasiswa == namaMahasiswa && n.Username == currentUser?.Username)
+                    .ToList();
+
+                if (!nilaiMahasiswa.Any())
+                {
+                    Console.WriteLine("Mahasiswa tidak memiliki nilai.");
+                    MainApp();
+                    return;
+                }
+
+                double totalSkorIP = 0;
+
+                foreach (var nilai in nilaiMahasiswa)
+                {
+                    double skorIP = 0;
+                    if (nilai.NilaiAngka >= 80) skorIP = 4.0;
+                    else if (nilai.NilaiAngka >= 70) skorIP = 3.0;
+                    else if (nilai.NilaiAngka >= 60) skorIP = 2.0;
+                    else if (nilai.NilaiAngka >= 50) skorIP = 1.0;
+                    else skorIP = 0.0;
+
+                    totalSkorIP += skorIP;
+                }
+
+                double ipk = totalSkorIP / nilaiMahasiswa.Count;
+
+                Console.WriteLine($"\nMahasiswa: {namaMahasiswa}");
+                Console.WriteLine($"Jumlah Mata Kuliah: {nilaiMahasiswa.Count}");
+                Console.WriteLine($"Total Skor IP: {totalSkorIP:F2}");
+                Console.WriteLine($"IPK: {ipk:F2}");
+            }
+            else
+            {
+                Console.WriteLine("Pilihan tidak valid.");
+            }
+
+            MainApp();
+        }
+
+        static void TampilkanRangking()
+        {
+            Console.WriteLine("=== Leaderboard - Rangking Berdasarkan IPK ===");
+            var semuaNilai = LoadNilai();
+
+
+            var daftarMahasiswa = semuaNilai
+                .Where(n => n.Username == currentUser?.Username)
+                .GroupBy(n => n.NamaMahasiswa)
+                .Select(g => g.Key)
+                .ToList();
+
+            if (!daftarMahasiswa.Any())
+            {
+                Console.WriteLine("Belum ada data mahasiswa.");
+                MainApp();
+                return;
+            }
+
+            var daftarIPK = new List<(string Nama, double IPK)>();
+
+            foreach (var nama in daftarMahasiswa)
+            {
+                var nilaiMahasiswa = semuaNilai
+                    .Where(n => n.NamaMahasiswa == nama && n.Username == currentUser?.Username)
+                    .ToList();
+
+                double totalSkorIP = 0;
+
+                foreach (var nilai in nilaiMahasiswa)
+                {
+                    // ini bisa diubah ke table driven
+                    double skorIP = 0;
+                    if (nilai.NilaiAngka >= 80) skorIP = 4.0;
+                    else if (nilai.NilaiAngka >= 70) skorIP = 3.0;
+                    else if (nilai.NilaiAngka >= 60) skorIP = 2.0;
+                    else if (nilai.NilaiAngka >= 50) skorIP = 1.0;
+                    else skorIP = 0.0;
+
+                    totalSkorIP += skorIP;
+                }
+
+                double ipk = totalSkorIP / nilaiMahasiswa.Count;
+
+                daftarIPK.Add((nama, ipk));
+            }
+
+
+            daftarIPK = daftarIPK.OrderByDescending(x => x.IPK).ToList();
+
+            Console.WriteLine("\nNo\tNama Mahasiswa\t\tIPK");
+            Console.WriteLine("----------------------------------------");
+            int no = 1;
+            foreach (var item in daftarIPK)
+            {
+                Console.WriteLine($"{no++}\t{item.Nama,-20} \t{item.IPK:F2}");
+            }
+
             MainApp();
         }
 
