@@ -1,12 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\GitHub\\konstruksi-pencatatan-nilai-mahasiswa\\TestPencatatanNilaiMahasiswa\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{4520ACA9-7550-4700-B926-8895BCD53391}|TestPencatatanNilaiMahasiswa\\TestPencatatanNilaiMahasiswa.csproj|d:\\github\\konstruksi-pencatatan-nilai-mahasiswa\\testpencatatannilaimahasiswa\\testpencatatannilaimahasiswa\\testpencatatannilaimahasiswa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4520ACA9-7550-4700-B926-8895BCD53391}|TestPencatatanNilaiMahasiswa\\TestPencatatanNilaiMahasiswa.csproj|solutionrelative:testpencatatannilaimahasiswa\\testpencatatannilaimahasiswa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -14,24 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TestPencatatanNilaiMahasiswa.cs",
-              "DocumentMoniker": "D:\\GitHub\\konstruksi-pencatatan-nilai-mahasiswa\\TestPencatatanNilaiMahasiswa\\TestPencatatanNilaiMahasiswa\\TestPencatatanNilaiMahasiswa.cs",
-              "RelativeDocumentMoniker": "TestPencatatanNilaiMahasiswa\\TestPencatatanNilaiMahasiswa.cs",
-              "ToolTip": "D:\\GitHub\\konstruksi-pencatatan-nilai-mahasiswa\\TestPencatatanNilaiMahasiswa\\TestPencatatanNilaiMahasiswa\\TestPencatatanNilaiMahasiswa.cs",
-              "RelativeToolTip": "TestPencatatanNilaiMahasiswa\\TestPencatatanNilaiMahasiswa.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T14:47:05.335Z",
-              "EditorCaption": ""
             }
           ]
         }

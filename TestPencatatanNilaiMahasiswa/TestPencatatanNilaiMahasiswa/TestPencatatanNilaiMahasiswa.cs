@@ -11,6 +11,7 @@ namespace TestPencatatanNilaiMahasiswa
     internal class TestPencatatanNilaiMahasiswa
     {
 
+        [TestClass]
         public class User
         {
             public string Username { get; set; }
