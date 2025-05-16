@@ -93,12 +93,48 @@
     "Username": "yanto",
     "NamaMahasiswa": "farid",
     "MataKuliah": "MK mbuh",
-    "NilaiAngka": 21
+    "NilaiAngka": 50
   },
   {
     "Username": "yanto",
     "NamaMahasiswa": "riski",
     "MataKuliah": "MK Stress",
     "NilaiAngka": 79
+  },
+  {
+    "Username": "riski",
+    "NamaMahasiswa": "MK Kontruksi A",
+    "MataKuliah": "15",
+    "NilaiAngka": 10
+  },
+  {
+    "Username": "riski",
+    "NamaMahasiswa": "MK Sangar",
+    "MataKuliah": "asd",
+    "NilaiAngka": 100
+  },
+  {
+    "Username": "riski",
+    "NamaMahasiswa": "riski",
+    "MataKuliah": "MK KOntruksi A",
+    "NilaiAngka": 100
+  },
+  {
+    "Username": "riski",
+    "NamaMahasiswa": "riski",
+    "MataKuliah": "MK model",
+    "NilaiAngka": 100
+  },
+  {
+    "Username": "riski",
+    "NamaMahasiswa": "riski",
+    "MataKuliah": "MK opsional",
+    "NilaiAngka": 60
+  },
+  {
+    "Username": "riski",
+    "NamaMahasiswa": "riski",
+    "MataKuliah": "MK lanjutan",
+    "NilaiAngka": 55
   }
 ]

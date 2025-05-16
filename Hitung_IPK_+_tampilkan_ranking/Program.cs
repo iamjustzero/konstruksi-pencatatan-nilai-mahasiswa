@@ -321,6 +321,7 @@ namespace PencatatanNilaiMahasiswa
                 Console.WriteLine($"Jumlah Mata Kuliah: {nilaiMahasiswa.Count}");
                 Console.WriteLine($"Total Skor IP: {totalSkorIP:F2}");
                 Console.WriteLine($"IPK: {ipk:F2}");
+                Console.WriteLine();
             }
             else
             {
@@ -421,6 +422,7 @@ namespace PencatatanNilaiMahasiswa
 
         static void LihatNilai()
         {
+            ClearScreen();
             Console.WriteLine("Lihat Nilai");
             var semuaNilai = LoadNilai();
             var nilaiUser = semuaNilai.Where(n => n.Username == currentUser?.Username).ToList();
@@ -433,6 +435,7 @@ namespace PencatatanNilaiMahasiswa
                 foreach (var nilai in nilaiUser)
                 {
                     Console.WriteLine($"Nama Mahasiswa :{nilai.NamaMahasiswa} ,Mata Kuliah : {nilai.MataKuliah}, Nilai : {nilai.NilaiAngka}");
+                    Console.WriteLine();
                 }
             }
             MainApp();
@@ -464,7 +467,7 @@ namespace PencatatanNilaiMahasiswa
             if (int.TryParse(Console.ReadLine(), out int index) && index >= 1 && index <= nilaiUser.Count)
             {
                 var nilaiDipilih = nilaiUser[index - 1];
-                Console.WriteLine($"Mengedit Nilai:");
+                Console.WriteLine($"\nMengedit Nilai:");
                 Console.WriteLine($"Nama Mahasiswa : {nilaiDipilih.NamaMahasiswa}");
                 Console.WriteLine($"Mata Kuliah    : {nilaiDipilih.MataKuliah}");
                 Console.WriteLine($"Nilai Saat Ini : {nilaiDipilih.NilaiAngka}");
@@ -485,7 +488,8 @@ namespace PencatatanNilaiMahasiswa
                         {
                             target.NilaiAngka = nilaiBaru;
                             SaveNilai(semuaNilai);
-                            Console.WriteLine("✅ Nilai berhasil diperbarui.");
+                            ClearScreen();
+                            Console.WriteLine("\n✅ Nilai berhasil diperbarui.\n");
                         }
                         else
                         {
@@ -530,10 +534,10 @@ namespace PencatatanNilaiMahasiswa
             if (int.TryParse(Console.ReadLine(), out int index) && index >= 1 && index <= semuaNilai.Count)
             {
                 var nilaiDipilih = semuaNilai[index - 1];
-                Console.WriteLine($"Anda yakin ingin menghapus nilai berikut? (y/n)");
                 Console.WriteLine($"Nama Mahasiswa : {nilaiDipilih.NamaMahasiswa}");
                 Console.WriteLine($"Mata Kuliah    : {nilaiDipilih.MataKuliah}");
                 Console.WriteLine($"Nilai          : {nilaiDipilih.NilaiAngka}");
+                Console.Write($"Anda yakin ingin menghapus nilai berikut? (y/n) : ");
                 string konfirmasi = Console.ReadLine();
                 if (konfirmasi?.ToLower() == "y")
                 {
