@@ -1,12 +1,38 @@
 [
   {
     "Username": "jarwo",
-    "MataKuliah": "Matematika",
-    "NilaiAngka": 80
+    "NamaMahasiswa": "adit",
+    "MataKuliah": "sbk",
+    "NilaiAngka": 99
   },
   {
     "Username": "jarwo",
-    "MataKuliah": "Bahasa Inggris",
-    "NilaiAngka": 85
+    "NamaMahasiswa": "mac",
+    "MataKuliah": "indonesia",
+    "NilaiAngka": 99
+  },
+  {
+    "Username": "jarwo",
+    "NamaMahasiswa": "mac",
+    "MataKuliah": "jepang",
+    "NilaiAngka": 99
+  },
+  {
+    "Username": "jarwo",
+    "NamaMahasiswa": "budi",
+    "MataKuliah": "bahasa indonesia",
+    "NilaiAngka": 99
+  },
+  {
+    "Username": "jarwo",
+    "NamaMahasiswa": "max",
+    "MataKuliah": "english",
+    "NilaiAngka": 70
+  },
+  {
+    "Username": "jarwo",
+    "NamaMahasiswa": "Cleo",
+    "MataKuliah": "english",
+    "NilaiAngka": 98
   }
 ]
