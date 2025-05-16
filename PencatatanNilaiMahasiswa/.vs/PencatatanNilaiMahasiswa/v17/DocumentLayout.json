@@ -3,6 +3,9 @@
   "WorkspaceRootPath": "D:\\GitHub\\konstruksi-pencatatan-nilai-mahasiswa\\PencatatanNilaiMahasiswa\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{CA831B5B-473F-E156-361E-EC5C72985ECE}|..\\TestApp\\TestApp\\TestApp.csproj|d:\\github\\konstruksi-pencatatan-nilai-mahasiswa\\testapp\\testapp\\test1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BBD36DC1-BB01-4AE0-888C-1E88D2D756C4}|PencatatanNilaiMahasiswa\\PencatatanNilaiMahasiswa.csproj|d:\\github\\konstruksi-pencatatan-nilai-mahasiswa\\pencatatannilaimahasiswa\\pencatatannilaimahasiswa\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BBD36DC1-BB01-4AE0-888C-1E88D2D756C4}|PencatatanNilaiMahasiswa\\PencatatanNilaiMahasiswa.csproj|solutionrelative:pencatatannilaimahasiswa\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -23,12 +26,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Test1.cs",
+              "DocumentMoniker": "D:\\GitHub\\konstruksi-pencatatan-nilai-mahasiswa\\TestApp\\TestApp\\Test1.cs",
+              "RelativeDocumentMoniker": "..\\TestApp\\TestApp\\Test1.cs",
+              "ToolTip": "D:\\GitHub\\konstruksi-pencatatan-nilai-mahasiswa\\TestApp\\TestApp\\Test1.cs",
+              "RelativeToolTip": "..\\TestApp\\TestApp\\Test1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T06:37:18.78Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\GitHub\\konstruksi-pencatatan-nilai-mahasiswa\\PencatatanNilaiMahasiswa\\PencatatanNilaiMahasiswa\\Program.cs",
               "RelativeDocumentMoniker": "PencatatanNilaiMahasiswa\\Program.cs",
               "ToolTip": "D:\\GitHub\\konstruksi-pencatatan-nilai-mahasiswa\\PencatatanNilaiMahasiswa\\PencatatanNilaiMahasiswa\\Program.cs",
               "RelativeToolTip": "PencatatanNilaiMahasiswa\\Program.cs",
-              "ViewState": "AgIAAEoCAAAAAAAAAAAowFECAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAEECAAAAAAAAAAAjwFECAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-08T06:39:41.118Z",
               "EditorCaption": ""
