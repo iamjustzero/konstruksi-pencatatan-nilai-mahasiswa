@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HitungIPK")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cef74d964704ab39999a9c328f87d9e342ad86d9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c30b4a1122cdc659187912c5d279fadd6a2c503c")]
 [assembly: System.Reflection.AssemblyProductAttribute("HitungIPK")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HitungIPK")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

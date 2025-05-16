@@ -260,6 +260,30 @@ namespace PencatatanNilaiMahasiswa
             }
         }
 
+        static double HitungIPKMhs(List<NilaiMahasiswa> nilaiMahasiswa)
+        {
+            if (!nilaiMahasiswa.Any())
+                return 0.0;
+
+            double totalSkorIP = 0;
+
+            foreach (var nilai in nilaiMahasiswa)
+            {
+                double skorIP = 0;
+                if (nilai.NilaiAngka >= 80) skorIP = 4.0;
+                else if (nilai.NilaiAngka >= 70) skorIP = 3.0;
+                else if (nilai.NilaiAngka >= 60) skorIP = 2.0;
+                else if (nilai.NilaiAngka >= 50) skorIP = 1.0;
+                else skorIP = 0.0;
+
+                totalSkorIP += skorIP;
+            }
+
+            return totalSkorIP / nilaiMahasiswa.Count;
+        }
+
+
+        //Hitung IP
         static void HitungIPK()
         {
             Console.WriteLine("=== Hitung IPK ===");
@@ -294,32 +318,10 @@ namespace PencatatanNilaiMahasiswa
                     .Where(n => n.NamaMahasiswa == namaMahasiswa && n.Username == currentUser?.Username)
                     .ToList();
 
-                if (!nilaiMahasiswa.Any())
-                {
-                    Console.WriteLine("Mahasiswa tidak memiliki nilai.");
-                    MainApp();
-                    return;
-                }
-
-                double totalSkorIP = 0;
-
-                foreach (var nilai in nilaiMahasiswa)
-                {
-                    double skorIP = 0;
-                    if (nilai.NilaiAngka >= 80) skorIP = 4.0;
-                    else if (nilai.NilaiAngka >= 70) skorIP = 3.0;
-                    else if (nilai.NilaiAngka >= 60) skorIP = 2.0;
-                    else if (nilai.NilaiAngka >= 50) skorIP = 1.0;
-                    else skorIP = 0.0;
-
-                    totalSkorIP += skorIP;
-                }
-
-                double ipk = totalSkorIP / nilaiMahasiswa.Count;
+                double ipk = HitungIPKMhs(nilaiMahasiswa);
 
                 Console.WriteLine($"\nMahasiswa: {namaMahasiswa}");
                 Console.WriteLine($"Jumlah Mata Kuliah: {nilaiMahasiswa.Count}");
-                Console.WriteLine($"Total Skor IP: {totalSkorIP:F2}");
                 Console.WriteLine($"IPK: {ipk:F2}");
                 Console.WriteLine();
             }
@@ -337,7 +339,6 @@ namespace PencatatanNilaiMahasiswa
             Console.WriteLine("=== Leaderboard - Rangking Berdasarkan IPK ===");
             var semuaNilai = LoadNilai();
 
-            // Ambil daftar nama mahasiswa milik pengguna saat ini
             var daftarMahasiswa = semuaNilai
                 .Where(n => n.Username == currentUser?.Username)
                 .GroupBy(n => n.NamaMahasiswa)
@@ -359,22 +360,7 @@ namespace PencatatanNilaiMahasiswa
                     .Where(n => n.NamaMahasiswa == nama && n.Username == currentUser?.Username)
                     .ToList();
 
-                double totalSkorIP = 0;
-
-                foreach (var nilai in nilaiMahasiswa)
-                {
-                    double skorIP = 0;
-                    if (nilai.NilaiAngka >= 80) skorIP = 4.0;
-                    else if (nilai.NilaiAngka >= 70) skorIP = 3.0;
-                    else if (nilai.NilaiAngka >= 60) skorIP = 2.0;
-                    else if (nilai.NilaiAngka >= 50) skorIP = 1.0;
-                    else skorIP = 0.0;
-
-                    totalSkorIP += skorIP;
-                }
-
-                double ipk = totalSkorIP / nilaiMahasiswa.Count;
-
+                double ipk = HitungIPKMhs(nilaiMahasiswa);
                 daftarIPK.Add((nama, ipk));
             }
 
@@ -388,6 +374,7 @@ namespace PencatatanNilaiMahasiswa
             {
                 Console.WriteLine($"{no++}\t{item.Nama,-20} \t{item.IPK:F2}");
             }
+            Console.WriteLine();
 
             MainApp();
         }
