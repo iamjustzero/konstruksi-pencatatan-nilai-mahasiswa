@@ -34,5 +34,17 @@
     "NamaMahasiswa": "Cleo",
     "MataKuliah": "english",
     "NilaiAngka": 98
+  },
+  {
+    "Username": "jarwo",
+    "NamaMahasiswa": "Yanto",
+    "MataKuliah": "Bahasa Indonesia",
+    "NilaiAngka": 99
+  },
+  {
+    "Username": "jarwo",
+    "NamaMahasiswa": "Max",
+    "MataKuliah": "Bahasa Inggris",
+    "NilaiAngka": 87
   }
 ]
