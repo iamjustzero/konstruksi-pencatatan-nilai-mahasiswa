@@ -18,3 +18,6 @@ D:\GitHub\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8
 D:\GitHub\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\GradeApp.MainApp.resources
 D:\GitHub\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\GradeApp.Properties.Resources.resources
 D:\GitHub\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\GradeApp.UC_Dashboard.resources
+D:\GitHub\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\GradeApp.UC_Manage.resources
+D:\GitHub\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\GradeApp.UC_Counter.resources
+D:\GitHub\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\GradeApp.UC_Rangking.resources
