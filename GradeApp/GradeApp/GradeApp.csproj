@@ -9,11 +9,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="logo.png" />
+    <None Remove="logo_bgremoved.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="logo.png" />
+    <EmbeddedResource Include="logo_bgremoved.png" />
   </ItemGroup>
 
   <ItemGroup>
