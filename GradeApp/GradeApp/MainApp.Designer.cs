@@ -33,10 +33,10 @@
             buttonManage = new Button();
             pictureBox2 = new PictureBox();
             buttonLogout = new Button();
-            buttonRangking = new Button();
             buttonCounter = new Button();
             buttonDashboard = new Button();
             panelContent = new Panel();
+            buttonRangking = new Button();
             panelAdmin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -44,10 +44,10 @@
             // panelAdmin
             // 
             panelAdmin.BackColor = SystemColors.AppWorkspace;
+            panelAdmin.Controls.Add(buttonRangking);
             panelAdmin.Controls.Add(buttonManage);
             panelAdmin.Controls.Add(pictureBox2);
             panelAdmin.Controls.Add(buttonLogout);
-            panelAdmin.Controls.Add(buttonRangking);
             panelAdmin.Controls.Add(buttonCounter);
             panelAdmin.Controls.Add(buttonDashboard);
             panelAdmin.Dock = DockStyle.Left;
@@ -86,16 +86,6 @@
             buttonLogout.UseVisualStyleBackColor = true;
             buttonLogout.Click += buttonLogout_Click;
             // 
-            // buttonRangking
-            // 
-            buttonRangking.Location = new Point(12, 201);
-            buttonRangking.Name = "buttonRangking";
-            buttonRangking.Size = new Size(112, 23);
-            buttonRangking.TabIndex = 5;
-            buttonRangking.Text = "Rangking";
-            buttonRangking.UseVisualStyleBackColor = true;
-            buttonRangking.Click += button5_Click;
-            // 
             // buttonCounter
             // 
             buttonCounter.Location = new Point(12, 172);
@@ -123,6 +113,16 @@
             panelContent.Size = new Size(654, 450);
             panelContent.TabIndex = 1;
             // 
+            // buttonRangking
+            // 
+            buttonRangking.Location = new Point(12, 201);
+            buttonRangking.Name = "buttonRangking";
+            buttonRangking.Size = new Size(112, 23);
+            buttonRangking.TabIndex = 8;
+            buttonRangking.Text = "Rangking";
+            buttonRangking.UseVisualStyleBackColor = true;
+            buttonRangking.Click += buttonRangking_Click;
+            // 
             // MainApp
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -144,11 +144,11 @@
         private Button buttonManage;
         private Button buttonDashboard;
         private Button buttonLogout;
-        private Button buttonRangking;
         private Button buttonCounter;
         private Button button3;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
         private Panel panelContent;
+        private Button buttonRangking;
     }
 }

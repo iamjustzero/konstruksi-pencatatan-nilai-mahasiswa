@@ -68,5 +68,10 @@ namespace GradeApp
         {
 
         }
+
+        private void buttonRangking_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
