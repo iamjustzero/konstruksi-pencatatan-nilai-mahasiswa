@@ -28,17 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             lUsername = new Label();
             lPassword = new Label();
             tbUsername = new TextBox();
             tbPassword = new TextBox();
             bLogin = new Button();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // lUsername
             // 
             lUsername.AutoSize = true;
-            lUsername.Location = new Point(223, 152);
+            lUsername.Location = new Point(205, 235);
             lUsername.Name = "lUsername";
             lUsername.Size = new Size(60, 15);
             lUsername.TabIndex = 0;
@@ -48,7 +51,7 @@
             // lPassword
             // 
             lPassword.AutoSize = true;
-            lPassword.Location = new Point(223, 185);
+            lPassword.Location = new Point(205, 268);
             lPassword.Name = "lPassword";
             lPassword.Size = new Size(57, 15);
             lPassword.TabIndex = 1;
@@ -57,21 +60,21 @@
             // 
             // tbUsername
             // 
-            tbUsername.Location = new Point(326, 152);
+            tbUsername.Location = new Point(308, 235);
             tbUsername.Name = "tbUsername";
             tbUsername.Size = new Size(161, 23);
             tbUsername.TabIndex = 2;
             // 
             // tbPassword
             // 
-            tbPassword.Location = new Point(326, 185);
+            tbPassword.Location = new Point(308, 268);
             tbPassword.Name = "tbPassword";
             tbPassword.Size = new Size(161, 23);
             tbPassword.TabIndex = 3;
             // 
             // bLogin
             // 
-            bLogin.Location = new Point(372, 238);
+            bLogin.Location = new Point(354, 321);
             bLogin.Name = "bLogin";
             bLogin.Size = new Size(75, 23);
             bLogin.TabIndex = 4;
@@ -79,18 +82,30 @@
             bLogin.UseVisualStyleBackColor = true;
             bLogin.Click += bLogin_Click;
             // 
-            // Form1
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(329, 47);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(126, 140);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 5;
+            pictureBox1.TabStop = false;
+            // 
+            // Login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(pictureBox1);
             Controls.Add(bLogin);
             Controls.Add(tbPassword);
             Controls.Add(tbUsername);
             Controls.Add(lPassword);
             Controls.Add(lUsername);
-            Name = "Form1";
+            Name = "Login";
             Text = "Login";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -102,5 +117,6 @@
         private TextBox tbUsername;
         private TextBox tbPassword;
         private Button bLogin;
+        private PictureBox pictureBox1;
     }
 }
