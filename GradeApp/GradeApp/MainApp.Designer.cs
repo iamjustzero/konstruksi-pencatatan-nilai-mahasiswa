@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainApp));
             panel1 = new Panel();
-            button6 = new Button();
+            button1 = new Button();
+            pictureBox2 = new PictureBox();
+            buttonLogout = new Button();
             button5 = new Button();
             button4 = new Button();
             buttonDashboard = new Button();
-            pictureBox2 = new PictureBox();
-            button1 = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -45,7 +45,7 @@
             panel1.BackColor = SystemColors.AppWorkspace;
             panel1.Controls.Add(button1);
             panel1.Controls.Add(pictureBox2);
-            panel1.Controls.Add(button6);
+            panel1.Controls.Add(buttonLogout);
             panel1.Controls.Add(button5);
             panel1.Controls.Add(button4);
             panel1.Controls.Add(buttonDashboard);
@@ -55,14 +55,34 @@
             panel1.Size = new Size(149, 450);
             panel1.TabIndex = 0;
             // 
-            // button6
+            // button1
             // 
-            button6.Location = new Point(12, 379);
-            button6.Name = "button6";
-            button6.Size = new Size(112, 23);
-            button6.TabIndex = 6;
-            button6.Text = "Logout";
-            button6.UseVisualStyleBackColor = true;
+            button1.Location = new Point(12, 143);
+            button1.Name = "button1";
+            button1.Size = new Size(112, 23);
+            button1.TabIndex = 7;
+            button1.Text = "Manage";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(35, 21);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(66, 73);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 1;
+            pictureBox2.TabStop = false;
+            // 
+            // buttonLogout
+            // 
+            buttonLogout.Location = new Point(12, 379);
+            buttonLogout.Name = "buttonLogout";
+            buttonLogout.Size = new Size(112, 23);
+            buttonLogout.TabIndex = 6;
+            buttonLogout.Text = "Logout";
+            buttonLogout.UseVisualStyleBackColor = true;
+            buttonLogout.Click += buttonLogout_Click;
             // 
             // button5
             // 
@@ -92,25 +112,6 @@
             buttonDashboard.Text = "Dashboard";
             buttonDashboard.UseVisualStyleBackColor = true;
             // 
-            // pictureBox2
-            // 
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(35, 21);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(66, 73);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 1;
-            pictureBox2.TabStop = false;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(12, 143);
-            button1.Name = "button1";
-            button1.Size = new Size(112, 23);
-            button1.TabIndex = 7;
-            button1.Text = "Manage";
-            button1.UseVisualStyleBackColor = true;
-            // 
             // MainApp
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -130,7 +131,7 @@
         private Button button2;
         private Button button1;
         private Button buttonDashboard;
-        private Button button6;
+        private Button buttonLogout;
         private Button button5;
         private Button button4;
         private Button button3;
