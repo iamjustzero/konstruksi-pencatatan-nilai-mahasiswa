@@ -29,31 +29,32 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainApp));
-            panel1 = new Panel();
+            panelAdmin = new Panel();
             button1 = new Button();
             pictureBox2 = new PictureBox();
             buttonLogout = new Button();
             button5 = new Button();
             button4 = new Button();
             buttonDashboard = new Button();
-            panel1.SuspendLayout();
+            panelContent = new Panel();
+            panelAdmin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
-            // panel1
+            // panelAdmin
             // 
-            panel1.BackColor = SystemColors.AppWorkspace;
-            panel1.Controls.Add(button1);
-            panel1.Controls.Add(pictureBox2);
-            panel1.Controls.Add(buttonLogout);
-            panel1.Controls.Add(button5);
-            panel1.Controls.Add(button4);
-            panel1.Controls.Add(buttonDashboard);
-            panel1.Dock = DockStyle.Left;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(149, 450);
-            panel1.TabIndex = 0;
+            panelAdmin.BackColor = SystemColors.AppWorkspace;
+            panelAdmin.Controls.Add(button1);
+            panelAdmin.Controls.Add(pictureBox2);
+            panelAdmin.Controls.Add(buttonLogout);
+            panelAdmin.Controls.Add(button5);
+            panelAdmin.Controls.Add(button4);
+            panelAdmin.Controls.Add(buttonDashboard);
+            panelAdmin.Dock = DockStyle.Left;
+            panelAdmin.Location = new Point(0, 0);
+            panelAdmin.Name = "panelAdmin";
+            panelAdmin.Size = new Size(149, 450);
+            panelAdmin.TabIndex = 0;
             // 
             // button1
             // 
@@ -111,23 +112,32 @@
             buttonDashboard.TabIndex = 0;
             buttonDashboard.Text = "Dashboard";
             buttonDashboard.UseVisualStyleBackColor = true;
+            buttonDashboard.Click += buttonDashboard_Click;
+            // 
+            // panelContent
+            // 
+            panelContent.Location = new Point(145, 0);
+            panelContent.Name = "panelContent";
+            panelContent.Size = new Size(654, 450);
+            panelContent.TabIndex = 1;
             // 
             // MainApp
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(panel1);
+            Controls.Add(panelContent);
+            Controls.Add(panelAdmin);
             Name = "MainApp";
             Text = "Main App";
-            panel1.ResumeLayout(false);
+            panelAdmin.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Panel panel1;
+        private Panel panelAdmin;
         private Button button2;
         private Button button1;
         private Button buttonDashboard;
@@ -137,5 +147,6 @@
         private Button button3;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
+        private Panel panelContent;
     }
 }

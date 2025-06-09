@@ -20,6 +20,13 @@ namespace GradeApp
             //this.MaximizeBox = false;
         }
 
+        private void ShowUserControl(UserControl control)
+        {
+            panelContent.Controls.Clear();
+            panelContent.Dock = DockStyle.Fill;
+            panelContent.Controls.Add(control);
+        }
+
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -45,6 +52,11 @@ namespace GradeApp
             this.Close();
             Login login = new Login();
             login.Show();
+        }
+
+        private void buttonDashboard_Click(object sender, EventArgs e)
+        {
+            ShowUserControl(new UC_Dashboard());
         }
     }
 }
