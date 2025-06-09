@@ -58,5 +58,15 @@ namespace GradeApp
         {
             ShowUserControl(new UC_Dashboard());
         }
+
+        private void buttonManage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonCounter_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

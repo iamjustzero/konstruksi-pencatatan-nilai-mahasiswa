@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainApp));
             panelAdmin = new Panel();
-            button1 = new Button();
+            buttonManage = new Button();
             pictureBox2 = new PictureBox();
             buttonLogout = new Button();
-            button5 = new Button();
-            button4 = new Button();
+            buttonRangking = new Button();
+            buttonCounter = new Button();
             buttonDashboard = new Button();
             panelContent = new Panel();
             panelAdmin.SuspendLayout();
@@ -44,11 +44,11 @@
             // panelAdmin
             // 
             panelAdmin.BackColor = SystemColors.AppWorkspace;
-            panelAdmin.Controls.Add(button1);
+            panelAdmin.Controls.Add(buttonManage);
             panelAdmin.Controls.Add(pictureBox2);
             panelAdmin.Controls.Add(buttonLogout);
-            panelAdmin.Controls.Add(button5);
-            panelAdmin.Controls.Add(button4);
+            panelAdmin.Controls.Add(buttonRangking);
+            panelAdmin.Controls.Add(buttonCounter);
             panelAdmin.Controls.Add(buttonDashboard);
             panelAdmin.Dock = DockStyle.Left;
             panelAdmin.Location = new Point(0, 0);
@@ -56,14 +56,15 @@
             panelAdmin.Size = new Size(149, 450);
             panelAdmin.TabIndex = 0;
             // 
-            // button1
+            // buttonManage
             // 
-            button1.Location = new Point(12, 143);
-            button1.Name = "button1";
-            button1.Size = new Size(112, 23);
-            button1.TabIndex = 7;
-            button1.Text = "Manage";
-            button1.UseVisualStyleBackColor = true;
+            buttonManage.Location = new Point(12, 143);
+            buttonManage.Name = "buttonManage";
+            buttonManage.Size = new Size(112, 23);
+            buttonManage.TabIndex = 7;
+            buttonManage.Text = "Manage";
+            buttonManage.UseVisualStyleBackColor = true;
+            buttonManage.Click += buttonManage_Click;
             // 
             // pictureBox2
             // 
@@ -85,24 +86,25 @@
             buttonLogout.UseVisualStyleBackColor = true;
             buttonLogout.Click += buttonLogout_Click;
             // 
-            // button5
+            // buttonRangking
             // 
-            button5.Location = new Point(12, 201);
-            button5.Name = "button5";
-            button5.Size = new Size(112, 23);
-            button5.TabIndex = 5;
-            button5.Text = "Rangking";
-            button5.UseVisualStyleBackColor = true;
-            button5.Click += button5_Click;
+            buttonRangking.Location = new Point(12, 201);
+            buttonRangking.Name = "buttonRangking";
+            buttonRangking.Size = new Size(112, 23);
+            buttonRangking.TabIndex = 5;
+            buttonRangking.Text = "Rangking";
+            buttonRangking.UseVisualStyleBackColor = true;
+            buttonRangking.Click += button5_Click;
             // 
-            // button4
+            // buttonCounter
             // 
-            button4.Location = new Point(12, 172);
-            button4.Name = "button4";
-            button4.Size = new Size(112, 23);
-            button4.TabIndex = 4;
-            button4.Text = "Counter";
-            button4.UseVisualStyleBackColor = true;
+            buttonCounter.Location = new Point(12, 172);
+            buttonCounter.Name = "buttonCounter";
+            buttonCounter.Size = new Size(112, 23);
+            buttonCounter.TabIndex = 4;
+            buttonCounter.Text = "Counter";
+            buttonCounter.UseVisualStyleBackColor = true;
+            buttonCounter.Click += buttonCounter_Click;
             // 
             // buttonDashboard
             // 
@@ -139,11 +141,11 @@
 
         private Panel panelAdmin;
         private Button button2;
-        private Button button1;
+        private Button buttonManage;
         private Button buttonDashboard;
         private Button buttonLogout;
-        private Button button5;
-        private Button button4;
+        private Button buttonRangking;
+        private Button buttonCounter;
         private Button button3;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
