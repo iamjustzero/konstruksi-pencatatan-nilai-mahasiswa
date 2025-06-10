@@ -8,5 +8,25 @@
         "Nilai": 99.0
       }
     ]
+  },
+  {
+    "NIM": "012345",
+    "Nama": "Jarwo",
+    "DaftarNilai": [
+      {
+        "NamaMK": "Inggris",
+        "Nilai": 80.0
+      }
+    ]
+  },
+  {
+    "NIM": "12345",
+    "Nama": "Budi",
+    "DaftarNilai": [
+      {
+        "NamaMK": "Matematika",
+        "Nilai": 98.0
+      }
+    ]
   }
 ]

@@ -8,6 +8,7 @@ namespace GradeApp
 {
     public class MataKuliah
     {
+        public string NIM { get; set; }
         public string NamaMK { get; set; }
         public double Nilai { get; set; }
     }

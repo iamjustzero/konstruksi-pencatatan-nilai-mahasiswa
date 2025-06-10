@@ -123,7 +123,7 @@
             dgvMahasiswa.Name = "dgvMahasiswa";
             dgvMahasiswa.Size = new Size(358, 150);
             dgvMahasiswa.TabIndex = 8;
-            dgvMahasiswa.CellContentClick += dgvMahasiswa_CellContentClick;
+            //dgvMahasiswa.CellContentClick += dgvMahasiswa_CellContentClick;
             // 
             // labelMataKuliah
             // 

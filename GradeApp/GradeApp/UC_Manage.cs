@@ -20,13 +20,11 @@ namespace GradeApp
         {
             InitializeComponent();
 
-
             dgvMahasiswa.ReadOnly = true;
             dgvMahasiswa.AllowUserToAddRows = false;
             dgvMahasiswa.EditMode = DataGridViewEditMode.EditProgrammatically;
             dgvMahasiswa.RowHeadersVisible = false;
             dgvMahasiswa.Size = new Size(600, 200);
-
 
             dgvMataKuliah.AutoGenerateColumns = true;
             dgvMataKuliah.ReadOnly = true;
@@ -92,8 +90,24 @@ namespace GradeApp
                 textBoxNIM.Text = mahasiswaSaatIni.NIM;
                 textBoxNama.Text = mahasiswaSaatIni.Nama;
 
+                var semuaNilai = new List<dynamic>();
+
+                foreach (var mhs in daftarMahasiswa)
+                {
+                    foreach (var mk in mhs.DaftarNilai)
+                    {
+                        semuaNilai.Add(new
+                        {
+                            NIM = mhs.NIM,
+                            NamaMahasiswa = mhs.Nama,
+                            NamaMK = mk.NamaMK,
+                            Nilai = mk.Nilai
+                        });
+                    }
+                }
+
                 dgvMataKuliah.DataSource = null;
-                dgvMataKuliah.DataSource = mahasiswaSaatIni.DaftarNilai;
+                dgvMataKuliah.DataSource = semuaNilai;
             }
         }
 
@@ -144,28 +158,6 @@ namespace GradeApp
             string nim = textBoxNIM.Text;
             MahasiswaRepository.Delete(nim);
             LoadData();
-        }
-
-        private void dgvMahasiswa_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-                var row = dgvMahasiswa.Rows[e.RowIndex];
-                string nim = row.Cells["NIM"].Value.ToString();
-
-                mahasiswaSaatIni = daftarMahasiswa.FirstOrDefault(m => m.NIM == nim);
-
-                if (mahasiswaSaatIni != null)
-                {
-                    textBoxNIM.Text = mahasiswaSaatIni.NIM;
-                    textBoxNama.Text = mahasiswaSaatIni.Nama;
-
-                    // Tampilkan daftar mata kuliah
-                    dgvMataKuliah.DataSource = null;
-                    dgvMataKuliah.DataSource = mahasiswaSaatIni.DaftarNilai;
-                }
-            }
-
         }
     }
 }
