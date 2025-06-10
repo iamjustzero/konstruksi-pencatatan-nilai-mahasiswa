@@ -13,31 +13,31 @@ namespace GradeApp
         private static string filePath = "mahasiswa.json";
 
         // Simpan data ke file JSON
-        //public static void SaveData(List<Mahasiswa> list)
-        //{
-        //    string json = JsonConvert.SerializeObject(list, Formatting.Indented);
-        //    File.WriteAllText(filePath, json);
-        //}
+        public static void SaveData(List<Mahasiswa> list)
+        {
+            string json = JsonConvert.SerializeObject(list, Formatting.Indented);
+            File.WriteAllText(filePath, json);
+        }
 
         // Baca data dari file JSON
-        //public static List<Mahasiswa> LoadData()
-        //{
-        //    if (!File.Exists(filePath))
-        //    {
-        //        return new List<Mahasiswa>();
-        //    }
+        public static List<Mahasiswa> LoadData()
+        {
+            if (!File.Exists(filePath))
+            {
+                return new List<Mahasiswa>();
+            }
 
-        //    string json = File.ReadAllText(filePath);
-        //    return JsonConvert.DeserializeObject<List<Mahasiswa>>(json);
-        //}
+            string json = File.ReadAllText(filePath);
+            return JsonConvert.DeserializeObject<List<Mahasiswa>>(json);
+        }
 
         // Tambah data baru
-        //public static void Add(Mahasiswa mhs)
-        //{
-        //    List<Mahasiswa> list = LoadData();
-        //    list.Add(mhs);
-        //    SaveData(list);
-        //}
+        public static void Add(Mahasiswa mhs)
+        {
+            List<Mahasiswa> list = LoadData();
+            list.Add(mhs);
+            SaveData(list);
+        }
 
         // Hapus data berdasarkan NIM
         public static void Delete(string nim)
@@ -48,15 +48,15 @@ namespace GradeApp
         }
 
         // Update data
-        //public static void Update(Mahasiswa mhsLama, Mahasiswa mhsBaru)
-        //{
-        //    List<Mahasiswa> list = LoadData();
-        //    int index = list.FindIndex(x => x.NIM == mhsLama.NIM);
-        //    if (index != -1)
-        //    {
-        //        list[index] = mhsBaru;
-        //        SaveData(list);
-        //    }
-        //}
+        public static void Update(Mahasiswa mhsLama, Mahasiswa mhsBaru)
+        {
+            List<Mahasiswa> list = LoadData();
+            int index = list.FindIndex(x => x.NIM == mhsLama.NIM);
+            if (index != -1)
+            {
+                list[index] = mhsBaru;
+                SaveData(list);
+            }
+        }
     }
 }

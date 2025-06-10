@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GradeApp
 {
-    internal class Mahasiswa
+    public class Mahasiswa
     {
         public string NIM { get; set; }
         public string Nama { get; set; }

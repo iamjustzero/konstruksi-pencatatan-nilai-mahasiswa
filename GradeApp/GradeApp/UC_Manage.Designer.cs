@@ -43,7 +43,7 @@
             // labelNama
             // 
             labelNama.AutoSize = true;
-            labelNama.Location = new Point(185, 58);
+            labelNama.Location = new Point(35, 20);
             labelNama.Name = "labelNama";
             labelNama.Size = new Size(39, 15);
             labelNama.TabIndex = 0;
@@ -52,7 +52,7 @@
             // labelNIM
             // 
             labelNIM.AutoSize = true;
-            labelNIM.Location = new Point(194, 87);
+            labelNIM.Location = new Point(44, 49);
             labelNIM.Name = "labelNIM";
             labelNIM.Size = new Size(30, 15);
             labelNIM.TabIndex = 1;
@@ -61,7 +61,7 @@
             // labelNilai
             // 
             labelNilai.AutoSize = true;
-            labelNilai.Location = new Point(193, 116);
+            labelNilai.Location = new Point(43, 78);
             labelNilai.Name = "labelNilai";
             labelNilai.Size = new Size(31, 15);
             labelNilai.TabIndex = 2;
@@ -69,28 +69,28 @@
             // 
             // textBoxNama
             // 
-            textBoxNama.Location = new Point(230, 50);
+            textBoxNama.Location = new Point(80, 12);
             textBoxNama.Name = "textBoxNama";
             textBoxNama.Size = new Size(100, 23);
             textBoxNama.TabIndex = 3;
             // 
             // textBoxNIM
             // 
-            textBoxNIM.Location = new Point(230, 79);
+            textBoxNIM.Location = new Point(80, 41);
             textBoxNIM.Name = "textBoxNIM";
             textBoxNIM.Size = new Size(100, 23);
             textBoxNIM.TabIndex = 4;
             // 
             // textBoxNilai
             // 
-            textBoxNilai.Location = new Point(230, 108);
+            textBoxNilai.Location = new Point(80, 70);
             textBoxNilai.Name = "textBoxNilai";
             textBoxNilai.Size = new Size(100, 23);
             textBoxNilai.TabIndex = 5;
             // 
             // buttonSimpan
             // 
-            buttonSimpan.Location = new Point(205, 172);
+            buttonSimpan.Location = new Point(54, 108);
             buttonSimpan.Name = "buttonSimpan";
             buttonSimpan.Size = new Size(60, 23);
             buttonSimpan.TabIndex = 6;
@@ -100,7 +100,7 @@
             // 
             // buttonHapus
             // 
-            buttonHapus.Location = new Point(271, 172);
+            buttonHapus.Location = new Point(120, 108);
             buttonHapus.Name = "buttonHapus";
             buttonHapus.Size = new Size(60, 23);
             buttonHapus.TabIndex = 7;
@@ -111,10 +111,11 @@
             // dgvMahasiswa
             // 
             dgvMahasiswa.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvMahasiswa.Location = new Point(505, 252);
+            dgvMahasiswa.Location = new Point(9, 163);
             dgvMahasiswa.Name = "dgvMahasiswa";
-            dgvMahasiswa.Size = new Size(240, 150);
+            dgvMahasiswa.Size = new Size(358, 150);
             dgvMahasiswa.TabIndex = 8;
+            dgvMahasiswa.CellContentClick += dgvMahasiswa_CellContentClick;
             // 
             // UC_Manage
             // 

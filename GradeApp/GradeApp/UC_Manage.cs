@@ -86,5 +86,10 @@ namespace GradeApp
             MahasiswaRepository.Delete(nim);
             LoadData();
         }
+
+        private void dgvMahasiswa_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

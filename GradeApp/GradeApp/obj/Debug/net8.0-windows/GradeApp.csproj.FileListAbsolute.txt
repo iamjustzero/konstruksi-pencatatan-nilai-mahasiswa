@@ -21,3 +21,6 @@ D:\GitHub\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8
 D:\GitHub\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\GradeApp.UC_Manage.resources
 D:\GitHub\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\GradeApp.UC_Counter.resources
 D:\GitHub\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\GradeApp.UC_Rangking.resources
+D:\GitHub\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+D:\GitHub\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\GradeApp.csproj.AssemblyReference.cache
+D:\GitHub\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\GradeApp.csproj.Up2Date
