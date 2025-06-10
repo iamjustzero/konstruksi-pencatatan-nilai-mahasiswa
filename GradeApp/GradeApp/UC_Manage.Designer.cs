@@ -37,7 +37,11 @@
             buttonSimpan = new Button();
             buttonHapus = new Button();
             dgvMahasiswa = new DataGridView();
+            labelMataKuliah = new Label();
+            textBoxMataKuliah = new TextBox();
+            dgvMataKuliah = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)dgvMahasiswa).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvMataKuliah).BeginInit();
             SuspendLayout();
             // 
             // labelNama
@@ -71,26 +75,26 @@
             // 
             textBoxNama.Location = new Point(80, 12);
             textBoxNama.Name = "textBoxNama";
-            textBoxNama.Size = new Size(100, 23);
+            textBoxNama.Size = new Size(156, 23);
             textBoxNama.TabIndex = 3;
             // 
             // textBoxNIM
             // 
             textBoxNIM.Location = new Point(80, 41);
             textBoxNIM.Name = "textBoxNIM";
-            textBoxNIM.Size = new Size(100, 23);
+            textBoxNIM.Size = new Size(156, 23);
             textBoxNIM.TabIndex = 4;
             // 
             // textBoxNilai
             // 
             textBoxNilai.Location = new Point(80, 70);
             textBoxNilai.Name = "textBoxNilai";
-            textBoxNilai.Size = new Size(100, 23);
+            textBoxNilai.Size = new Size(156, 23);
             textBoxNilai.TabIndex = 5;
             // 
             // buttonSimpan
             // 
-            buttonSimpan.Location = new Point(54, 108);
+            buttonSimpan.Location = new Point(80, 134);
             buttonSimpan.Name = "buttonSimpan";
             buttonSimpan.Size = new Size(60, 23);
             buttonSimpan.TabIndex = 6;
@@ -100,7 +104,7 @@
             // 
             // buttonHapus
             // 
-            buttonHapus.Location = new Point(120, 108);
+            buttonHapus.Location = new Point(176, 134);
             buttonHapus.Name = "buttonHapus";
             buttonHapus.Size = new Size(60, 23);
             buttonHapus.TabIndex = 7;
@@ -110,6 +114,10 @@
             // 
             // dgvMahasiswa
             // 
+            dgvMahasiswa.AllowUserToAddRows = false;
+            dgvMahasiswa.AllowUserToDeleteRows = false;
+            dgvMahasiswa.AllowUserToResizeColumns = false;
+            dgvMahasiswa.AllowUserToResizeRows = false;
             dgvMahasiswa.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvMahasiswa.Location = new Point(9, 163);
             dgvMahasiswa.Name = "dgvMahasiswa";
@@ -117,10 +125,41 @@
             dgvMahasiswa.TabIndex = 8;
             dgvMahasiswa.CellContentClick += dgvMahasiswa_CellContentClick;
             // 
+            // labelMataKuliah
+            // 
+            labelMataKuliah.AutoSize = true;
+            labelMataKuliah.Location = new Point(4, 107);
+            labelMataKuliah.Name = "labelMataKuliah";
+            labelMataKuliah.Size = new Size(70, 15);
+            labelMataKuliah.TabIndex = 9;
+            labelMataKuliah.Text = "Mata Kuliah";
+            // 
+            // textBoxMataKuliah
+            // 
+            textBoxMataKuliah.Location = new Point(80, 99);
+            textBoxMataKuliah.Name = "textBoxMataKuliah";
+            textBoxMataKuliah.Size = new Size(156, 23);
+            textBoxMataKuliah.TabIndex = 10;
+            // 
+            // dgvMataKuliah
+            // 
+            dgvMataKuliah.AllowUserToAddRows = false;
+            dgvMataKuliah.AllowUserToDeleteRows = false;
+            dgvMataKuliah.AllowUserToResizeColumns = false;
+            dgvMataKuliah.AllowUserToResizeRows = false;
+            dgvMataKuliah.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvMataKuliah.Location = new Point(9, 319);
+            dgvMataKuliah.Name = "dgvMataKuliah";
+            dgvMataKuliah.Size = new Size(358, 150);
+            dgvMataKuliah.TabIndex = 11;
+            // 
             // UC_Manage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(dgvMataKuliah);
+            Controls.Add(textBoxMataKuliah);
+            Controls.Add(labelMataKuliah);
             Controls.Add(dgvMahasiswa);
             Controls.Add(buttonHapus);
             Controls.Add(buttonSimpan);
@@ -134,6 +173,7 @@
             Size = new Size(894, 557);
             Load += UC_Manage_Load;
             ((System.ComponentModel.ISupportInitialize)dgvMahasiswa).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvMataKuliah).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -152,5 +192,8 @@
         private Button buttonSimpan;
         private Button buttonHapus;
         private DataGridView dgvMahasiswa;
+        private Label labelMataKuliah;
+        private TextBox textBoxMataKuliah;
+        private DataGridView dgvMataKuliah;
     }
 }

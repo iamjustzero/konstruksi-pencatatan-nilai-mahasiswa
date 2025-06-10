@@ -1,7 +1,12 @@
 [
   {
-    "NIM": "12345678",
-    "Nama": "Jarwo",
-    "Nilai": 90.0
+    "NIM": "12345",
+    "Nama": "Budi",
+    "DaftarNilai": [
+      {
+        "NamaMK": "Indonesia",
+        "Nilai": 99.0
+      }
+    ]
   }
 ]

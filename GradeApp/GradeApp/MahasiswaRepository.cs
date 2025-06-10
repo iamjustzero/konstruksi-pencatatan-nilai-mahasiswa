@@ -29,15 +29,19 @@ namespace GradeApp
             return JsonConvert.DeserializeObject<List<Mahasiswa>>(json);
         }
 
-        // Tambah data baru
         public static void Add(Mahasiswa mhs)
         {
             List<Mahasiswa> list = LoadData();
+
+            if (list == null)
+            {
+                list = new List<Mahasiswa>();
+            }
+
             list.Add(mhs);
             SaveData(list);
         }
 
-        // Hapus data berdasarkan NIM
         public static void Delete(string nim)
         {
             List<Mahasiswa> list = LoadData();
@@ -45,7 +49,6 @@ namespace GradeApp
             SaveData(list);
         }
 
-        // Update data
         public static void Update(Mahasiswa mhsLama, Mahasiswa mhsBaru)
         {
             List<Mahasiswa> list = LoadData();

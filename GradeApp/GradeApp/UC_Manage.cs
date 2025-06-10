@@ -12,9 +12,14 @@ namespace GradeApp
 {
     public partial class UC_Manage : UserControl
     {
+
+        private List<Mahasiswa> daftarMahasiswa = new List<Mahasiswa>();
+        private Mahasiswa mahasiswaSaatIni;
+
         public UC_Manage()
         {
             InitializeComponent();
+            dgvMataKuliah.AutoGenerateColumns = true;
             LoadData();
         }
 
@@ -31,9 +36,9 @@ namespace GradeApp
 
         private void LoadData()
         {
+            daftarMahasiswa = MahasiswaRepository.LoadData();
             dgvMahasiswa.DataSource = null;
-            dgvMahasiswa.DataSource = MahasiswaRepository.LoadData();
-            ResetForm();
+            dgvMahasiswa.DataSource = daftarMahasiswa;
         }
 
         private void ResetForm()
@@ -41,11 +46,24 @@ namespace GradeApp
             textBoxNama.Clear();
             textBoxNIM.Clear();
             textBoxNilai.Clear();
+            textBoxMataKuliah.Clear();
+            dgvMataKuliah.DataSource = null;
+            mahasiswaSaatIni = null;
         }
 
         private void UC_Manage_Load(object sender, EventArgs e)
         {
+            LoadData();
 
+            if (daftarMahasiswa.Count > 0)
+            {
+                mahasiswaSaatIni = daftarMahasiswa[0];
+                textBoxNIM.Text = mahasiswaSaatIni.NIM;
+                textBoxNama.Text = mahasiswaSaatIni.Nama;
+
+                dgvMataKuliah.DataSource = null;
+                dgvMataKuliah.DataSource = mahasiswaSaatIni.DaftarNilai;
+            }
         }
 
         private void buttonSimpan_Click(object sender, EventArgs e)
@@ -56,21 +74,31 @@ namespace GradeApp
                 return;
             }
 
-            if (!double.TryParse(textBoxNilai.Text, out double nilai))
+            var daftarMK = new List<MataKuliah>();
+            if (!string.IsNullOrEmpty(textBoxMataKuliah.Text) && double.TryParse(textBoxNilai.Text, out double nilai))
             {
-                MessageBox.Show("Nilai harus angka!");
-                return;
+                daftarMK.Add(new MataKuliah
+                {
+                    NamaMK = textBoxMataKuliah.Text,
+                    Nilai = nilai
+                });
             }
 
             var mhs = new Mahasiswa
             {
                 NIM = textBoxNIM.Text,
                 Nama = textBoxNama.Text,
-                Nilai = nilai
+                DaftarNilai = daftarMK
             };
 
             MahasiswaRepository.Add(mhs);
             LoadData();
+
+            mahasiswaSaatIni = mhs;
+            dgvMataKuliah.DataSource = null;
+            dgvMataKuliah.DataSource = mahasiswaSaatIni.DaftarNilai;
+
+            ResetForm();
 
         }
 
@@ -89,6 +117,23 @@ namespace GradeApp
 
         private void dgvMahasiswa_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex >= 0)
+            {
+                var row = dgvMahasiswa.Rows[e.RowIndex];
+                string nim = row.Cells["NIM"].Value.ToString();
+
+                mahasiswaSaatIni = daftarMahasiswa.FirstOrDefault(m => m.NIM == nim);
+
+                if (mahasiswaSaatIni != null)
+                {
+                    textBoxNIM.Text = mahasiswaSaatIni.NIM;
+                    textBoxNama.Text = mahasiswaSaatIni.Nama;
+
+                    // Tampilkan daftar mata kuliah
+                    dgvMataKuliah.DataSource = null;
+                    dgvMataKuliah.DataSource = mahasiswaSaatIni.DaftarNilai;
+                }
+            }
 
         }
     }
