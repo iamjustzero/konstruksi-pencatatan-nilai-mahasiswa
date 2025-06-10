@@ -17,7 +17,12 @@ namespace GradeApp
             InitializeComponent();
             this.MaximumSize = new Size(800, 600);
             this.StartPosition = FormStartPosition.CenterScreen;
-            //this.MaximizeBox = false;
+            this.FormClosed += OnFormClosed;
+        }
+
+        private void OnFormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
 
         private void ShowUserControl(UserControl control)
