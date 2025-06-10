@@ -28,45 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
-            label1 = new Label();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            dgvMataKuliah = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dgvMataKuliah).BeginInit();
             SuspendLayout();
             // 
-            // dataGridView1
+            // dgvMataKuliah
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(98, 120);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(240, 150);
-            dataGridView1.TabIndex = 0;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(183, 57);
-            label1.Name = "label1";
-            label1.Size = new Size(79, 15);
-            label1.TabIndex = 1;
-            label1.Text = "UC_Dashbord";
-            //label1.Click += this.label1_Click;
+            dgvMataKuliah.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvMataKuliah.Location = new Point(61, 53);
+            dgvMataKuliah.Name = "dgvMataKuliah";
+            dgvMataKuliah.Size = new Size(352, 233);
+            dgvMataKuliah.TabIndex = 0;
+            //dgvMataKuliah.CellContentClick += dgvMataKuliah_CellContentClick;
             // 
             // UC_Dashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(label1);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvMataKuliah);
             Name = "UC_Dashboard";
             Size = new Size(497, 333);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvMataKuliah).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
-        private DataGridView dataGridView1;
-        private Label label1;
+        private DataGridView dgvMataKuliah;
     }
 }

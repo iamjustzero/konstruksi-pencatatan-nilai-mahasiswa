@@ -4,6 +4,7 @@
     "Nama": "Budi",
     "DaftarNilai": [
       {
+        "NIM": null,
         "NamaMK": "Indonesia",
         "Nilai": 99.0
       }
@@ -14,6 +15,7 @@
     "Nama": "Jarwo",
     "DaftarNilai": [
       {
+        "NIM": null,
         "NamaMK": "Inggris",
         "Nilai": 80.0
       }
@@ -24,8 +26,20 @@
     "Nama": "Budi",
     "DaftarNilai": [
       {
+        "NIM": null,
         "NamaMK": "Matematika",
         "Nilai": 98.0
+      }
+    ]
+  },
+  {
+    "NIM": "54321",
+    "Nama": "Owed",
+    "DaftarNilai": [
+      {
+        "NIM": null,
+        "NamaMK": "Konstruksi",
+        "Nilai": 89.0
       }
     ]
   }
