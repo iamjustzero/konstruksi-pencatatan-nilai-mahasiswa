@@ -12,14 +12,12 @@ namespace GradeApp
     {
         private static string filePath = "mahasiswa.json";
 
-        // Simpan data ke file JSON
         public static void SaveData(List<Mahasiswa> list)
         {
             string json = JsonConvert.SerializeObject(list, Formatting.Indented);
             File.WriteAllText(filePath, json);
         }
 
-        // Baca data dari file JSON
         public static List<Mahasiswa> LoadData()
         {
             if (!File.Exists(filePath))

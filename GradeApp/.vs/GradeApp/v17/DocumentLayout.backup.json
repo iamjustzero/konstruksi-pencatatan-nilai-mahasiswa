@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "D:\\GitHub\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{61D4FAFF-4076-42FE-9971-C9B24DAB31FB}|GradeApp\\GradeApp.csproj|D:\\GitHub\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\gradeapp\\uc_manage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{61D4FAFF-4076-42FE-9971-C9B24DAB31FB}|GradeApp\\GradeApp.csproj|solutionrelative:gradeapp\\uc_manage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{61D4FAFF-4076-42FE-9971-C9B24DAB31FB}|GradeApp\\GradeApp.csproj|d:\\github\\konstruksi-pencatatan-nilai-mahasiswa\\gradeapp\\gradeapp\\mahasiswa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61D4FAFF-4076-42FE-9971-C9B24DAB31FB}|GradeApp\\GradeApp.csproj|solutionrelative:gradeapp\\mahasiswa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61D4FAFF-4076-42FE-9971-C9B24DAB31FB}|GradeApp\\GradeApp.csproj|d:\\github\\konstruksi-pencatatan-nilai-mahasiswa\\gradeapp\\gradeapp\\matakuliah.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61D4FAFF-4076-42FE-9971-C9B24DAB31FB}|GradeApp\\GradeApp.csproj|solutionrelative:gradeapp\\matakuliah.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{61D4FAFF-4076-42FE-9971-C9B24DAB31FB}|GradeApp\\GradeApp.csproj|d:\\github\\konstruksi-pencatatan-nilai-mahasiswa\\gradeapp\\gradeapp\\mahasiswarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -15,16 +19,16 @@
       "RelativeMoniker": "D:0:0:{61D4FAFF-4076-42FE-9971-C9B24DAB31FB}|GradeApp\\GradeApp.csproj|solutionrelative:gradeapp\\uc_manage.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{61D4FAFF-4076-42FE-9971-C9B24DAB31FB}|GradeApp\\GradeApp.csproj|D:\\GitHub\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\gradeapp\\mainapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{61D4FAFF-4076-42FE-9971-C9B24DAB31FB}|GradeApp\\GradeApp.csproj|solutionrelative:gradeapp\\mainapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{61D4FAFF-4076-42FE-9971-C9B24DAB31FB}|GradeApp\\GradeApp.csproj|d:\\github\\konstruksi-pencatatan-nilai-mahasiswa\\gradeapp\\gradeapp\\mahasiswa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{61D4FAFF-4076-42FE-9971-C9B24DAB31FB}|GradeApp\\GradeApp.csproj|solutionrelative:gradeapp\\mahasiswa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{61D4FAFF-4076-42FE-9971-C9B24DAB31FB}|GradeApp\\GradeApp.csproj|d:\\github\\konstruksi-pencatatan-nilai-mahasiswa\\gradeapp\\gradeapp\\uc_manage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{61D4FAFF-4076-42FE-9971-C9B24DAB31FB}|GradeApp\\GradeApp.csproj|solutionrelative:gradeapp\\uc_manage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61D4FAFF-4076-42FE-9971-C9B24DAB31FB}|GradeApp\\GradeApp.csproj|D:\\GitHub\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\gradeapp\\uc_manage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{61D4FAFF-4076-42FE-9971-C9B24DAB31FB}|GradeApp\\GradeApp.csproj|solutionrelative:gradeapp\\uc_manage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61D4FAFF-4076-42FE-9971-C9B24DAB31FB}|GradeApp\\GradeApp.csproj|D:\\GitHub\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\gradeapp\\mainapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{61D4FAFF-4076-42FE-9971-C9B24DAB31FB}|GradeApp\\GradeApp.csproj|solutionrelative:gradeapp\\mainapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{61D4FAFF-4076-42FE-9971-C9B24DAB31FB}|GradeApp\\GradeApp.csproj|d:\\github\\konstruksi-pencatatan-nilai-mahasiswa\\gradeapp\\gradeapp\\gradeapp.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
@@ -74,15 +78,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "MainApp.cs [Design]",
               "DocumentMoniker": "D:\\GitHub\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\GradeApp\\MainApp.cs",
               "RelativeDocumentMoniker": "GradeApp\\MainApp.cs",
@@ -90,18 +90,17 @@
               "RelativeToolTip": "GradeApp\\MainApp.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-09T12:05:20.487Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "MahasiswaRepository.cs",
               "DocumentMoniker": "D:\\GitHub\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\GradeApp\\MahasiswaRepository.cs",
               "RelativeDocumentMoniker": "GradeApp\\MahasiswaRepository.cs",
               "ToolTip": "D:\\GitHub\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\GradeApp\\MahasiswaRepository.cs",
               "RelativeToolTip": "GradeApp\\MahasiswaRepository.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA4AAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-09T12:54:12.608Z",
               "IsPinned": true,
@@ -109,58 +108,73 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "MataKuliah.cs",
+              "DocumentMoniker": "D:\\GitHub\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\GradeApp\\MataKuliah.cs",
+              "RelativeDocumentMoniker": "GradeApp\\MataKuliah.cs",
+              "ToolTip": "D:\\GitHub\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\GradeApp\\MataKuliah.cs*",
+              "RelativeToolTip": "GradeApp\\MataKuliah.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T01:23:38.546Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "UC_Manage.Designer.cs",
               "DocumentMoniker": "D:\\GitHub\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\GradeApp\\UC_Manage.Designer.cs",
               "RelativeDocumentMoniker": "GradeApp\\UC_Manage.Designer.cs",
-              "ToolTip": "D:\\GitHub\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\GradeApp\\UC_Manage.Designer.cs*",
-              "RelativeToolTip": "GradeApp\\UC_Manage.Designer.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABBAAAAAAAAAA==",
+              "ToolTip": "D:\\GitHub\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\GradeApp\\UC_Manage.Designer.cs",
+              "RelativeToolTip": "GradeApp\\UC_Manage.Designer.cs",
+              "ViewState": "AgIAAJwAAAAAAAAAAAAAAAwAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-09T14:43:04.586Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UC_Manage.cs [Design]",
-              "DocumentMoniker": "D:\\GitHub\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\GradeApp\\UC_Manage.cs",
-              "RelativeDocumentMoniker": "GradeApp\\UC_Manage.cs",
-              "ToolTip": "D:\\GitHub\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\GradeApp\\UC_Manage.cs [Design]*",
-              "RelativeToolTip": "GradeApp\\UC_Manage.cs [Design]*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T12:18:07.894Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "UC_Manage.cs",
               "DocumentMoniker": "D:\\GitHub\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\GradeApp\\UC_Manage.cs",
               "RelativeDocumentMoniker": "GradeApp\\UC_Manage.cs",
-              "ToolTip": "D:\\GitHub\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\GradeApp\\UC_Manage.cs*",
-              "RelativeToolTip": "GradeApp\\UC_Manage.cs*",
-              "ViewState": "AgIAADEAAAAAAAAAAAArwBAAAAAiAAAAAAAAAA==",
+              "ToolTip": "D:\\GitHub\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\GradeApp\\UC_Manage.cs",
+              "RelativeToolTip": "GradeApp\\UC_Manage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T12:36:21.473Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-09T12:36:21.473Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Mahasiswa.cs",
               "DocumentMoniker": "D:\\GitHub\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\GradeApp\\Mahasiswa.cs",
               "RelativeDocumentMoniker": "GradeApp\\Mahasiswa.cs",
-              "ToolTip": "D:\\GitHub\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\GradeApp\\Mahasiswa.cs",
-              "RelativeToolTip": "GradeApp\\Mahasiswa.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "ToolTip": "D:\\GitHub\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\GradeApp\\Mahasiswa.cs*",
+              "RelativeToolTip": "GradeApp\\Mahasiswa.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-09T12:50:31.613Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
+              "Title": "UC_Manage.cs [Design]",
+              "DocumentMoniker": "D:\\GitHub\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\GradeApp\\UC_Manage.cs",
+              "RelativeDocumentMoniker": "GradeApp\\UC_Manage.cs",
+              "ToolTip": "D:\\GitHub\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\GradeApp\\UC_Manage.cs [Design]",
+              "RelativeToolTip": "GradeApp\\UC_Manage.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T12:18:07.894Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "GradeApp",
               "DocumentMoniker": "D:\\GitHub\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\GradeApp\\GradeApp.csproj",
               "RelativeDocumentMoniker": "GradeApp\\GradeApp.csproj",
@@ -171,7 +185,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "UC_Counter.cs [Design]",
               "DocumentMoniker": "D:\\GitHub\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\GradeApp\\UC_Counter.cs",
               "RelativeDocumentMoniker": "GradeApp\\UC_Counter.cs",
@@ -182,7 +196,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "UC_Rangking.cs [Design]",
               "DocumentMoniker": "D:\\GitHub\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\GradeApp\\UC_Rangking.cs",
               "RelativeDocumentMoniker": "GradeApp\\UC_Rangking.cs",
@@ -193,7 +207,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "MainApp.cs",
               "DocumentMoniker": "D:\\GitHub\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\GradeApp\\MainApp.cs",
               "RelativeDocumentMoniker": "GradeApp\\MainApp.cs",
@@ -205,7 +219,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "MainApp.Designer.cs",
               "DocumentMoniker": "D:\\GitHub\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\GradeApp\\MainApp.Designer.cs",
               "RelativeDocumentMoniker": "GradeApp\\MainApp.Designer.cs",
@@ -213,12 +227,11 @@
               "RelativeToolTip": "GradeApp\\MainApp.Designer.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAWwBYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-08T03:52:39.339Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-08T03:52:39.339Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "UC_Dashboard.cs",
               "DocumentMoniker": "D:\\GitHub\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\GradeApp\\UC_Dashboard.cs",
               "RelativeDocumentMoniker": "GradeApp\\UC_Dashboard.cs",
@@ -231,7 +244,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "UC_Dashboard.Designer.cs",
               "DocumentMoniker": "D:\\GitHub\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\GradeApp\\UC_Dashboard.Designer.cs",
               "RelativeDocumentMoniker": "GradeApp\\UC_Dashboard.Designer.cs",
@@ -243,7 +256,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "Login.cs",
               "DocumentMoniker": "D:\\GitHub\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\GradeApp\\Login.cs",
               "RelativeDocumentMoniker": "GradeApp\\Login.cs",
@@ -256,7 +269,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "UC_Dashboard.cs [Design]",
               "DocumentMoniker": "D:\\GitHub\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\GradeApp\\UC_Dashboard.cs",
               "RelativeDocumentMoniker": "GradeApp\\UC_Dashboard.cs",
@@ -267,7 +280,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "Login.cs [Design]",
               "DocumentMoniker": "D:\\GitHub\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\GradeApp\\Login.cs",
               "RelativeDocumentMoniker": "GradeApp\\Login.cs",
