@@ -19,8 +19,39 @@ namespace GradeApp
         public UC_Manage()
         {
             InitializeComponent();
+
+
+            dgvMahasiswa.ReadOnly = true;
+            dgvMahasiswa.AllowUserToAddRows = false;
+            dgvMahasiswa.EditMode = DataGridViewEditMode.EditProgrammatically;
+            dgvMahasiswa.RowHeadersVisible = false;
+            dgvMahasiswa.Size = new Size(600, 200);
+
+
             dgvMataKuliah.AutoGenerateColumns = true;
+            dgvMataKuliah.ReadOnly = true;
+            dgvMataKuliah.AllowUserToAddRows = false;
+            dgvMataKuliah.EditMode = DataGridViewEditMode.EditProgrammatically;
+            dgvMataKuliah.RowHeadersVisible = false;
+            dgvMataKuliah.Size = new Size(600, 150);
+
+            SetUkuranKolom();
             LoadData();
+        }
+
+        private void SetUkuranKolom()
+        {
+            if (dgvMahasiswa.Columns.Contains("NIM"))
+                dgvMahasiswa.Columns["NIM"].Width = 100;
+
+            if (dgvMahasiswa.Columns.Contains("Nama"))
+                dgvMahasiswa.Columns["Nama"].Width = 200;
+
+            if (dgvMataKuliah.Columns.Contains("NamaMK"))
+                dgvMataKuliah.Columns["NamaMK"].Width = 150;
+
+            if (dgvMataKuliah.Columns.Contains("Nilai"))
+                dgvMataKuliah.Columns["Nilai"].Width = 80;
         }
 
         private void dgvMahasiswa_CellClick(object sender, DataGridViewCellEventArgs e)
