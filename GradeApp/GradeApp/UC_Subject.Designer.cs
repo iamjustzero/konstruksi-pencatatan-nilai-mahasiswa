@@ -76,7 +76,7 @@
             comboBoxSKS.Location = new Point(106, 46);
             comboBoxSKS.Margin = new Padding(2);
             comboBoxSKS.Name = "comboBoxSKS";
-            comboBoxSKS.Size = new Size(84, 23);
+            comboBoxSKS.Size = new Size(48, 23);
             comboBoxSKS.TabIndex = 3;
             comboBoxSKS.SelectedIndexChanged += comboBoxSKS_SelectedIndexChanged;
             // 
@@ -109,11 +109,11 @@
             dgvMataKuliah.Margin = new Padding(2);
             dgvMataKuliah.Name = "dgvMataKuliah";
             dgvMataKuliah.RowHeadersWidth = 62;
-            dgvMataKuliah.Size = new Size(609, 135);
+            dgvMataKuliah.Size = new Size(609, 329);
             dgvMataKuliah.TabIndex = 7;
             dgvMataKuliah.CellContentClick += dgvMataKuliah_CellContentClick;
             // 
-            // UC_MataKuliah
+            // UC_Subject
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -125,8 +125,8 @@
             Controls.Add(textBoxMataKuliah);
             Controls.Add(labelNamaMataKuliah);
             Margin = new Padding(2);
-            Name = "UC_MataKuliah";
-            Size = new Size(644, 307);
+            Name = "UC_Subject";
+            Size = new Size(644, 450);
             ((System.ComponentModel.ISupportInitialize)dgvMataKuliah).EndInit();
             ResumeLayout(false);
             PerformLayout();

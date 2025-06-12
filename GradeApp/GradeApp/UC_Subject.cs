@@ -33,18 +33,20 @@ namespace GradeApp
 
         private void UC_MataKuliah_Load(object sender, EventArgs e)
         {
-
             comboBoxSKS.Items.Clear();
             comboBoxSKS.Items.Add("2");
             comboBoxSKS.Items.Add("3");
             comboBoxSKS.Items.Add("4");
             comboBoxSKS.SelectedIndex = 0;
 
-
             dgvMataKuliah.ColumnCount = 2;
             dgvMataKuliah.Columns[0].Name = "Mata Kuliah";
             dgvMataKuliah.Columns[1].Name = "SKS";
+
+            listMataKuliah = MataKuliahRepository.Load();
+            TampilkanMataKuliah();
         }
+
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -102,9 +104,14 @@ namespace GradeApp
             };
 
             listMataKuliah.Add(mataKuliah);
+            MataKuliahRepository.Save(listMataKuliah);
+
             TampilkanMataKuliah();
             ClearInput();
         }
+
+
+
         private void TampilkanMataKuliah()
         {
             dgvMataKuliah.Rows.Clear();
