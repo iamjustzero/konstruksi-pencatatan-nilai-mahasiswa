@@ -55,9 +55,15 @@ namespace GradeApp
             dgvMataKuliah.Columns[0].Name = "Mata Kuliah";
             dgvMataKuliah.Columns[1].Name = "SKS";
 
+            foreach (DataGridViewColumn col in dgvMataKuliah.Columns)
+            {
+                col.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
+
             listMataKuliah = MataKuliahRepository.Load();
             TampilkanMataKuliah();
         }
+
 
 
         private void label1_Click(object sender, EventArgs e)
