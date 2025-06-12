@@ -84,6 +84,8 @@ namespace GradeApp
                 dgvMataKuliah.DataSource = null;
                 dgvMataKuliah.DataSource = semuaNilai;
             }
+            textBoxNIM.Clear();
+            textBoxNama.Clear();
         }
 
         private void buttonSimpan_Click(object sender, EventArgs e)

@@ -42,5 +42,38 @@
         "Nilai": 89.0
       }
     ]
+  },
+  {
+    "NIM": "Budi",
+    "Nama": "12345",
+    "DaftarNilai": [
+      {
+        "NIM": null,
+        "NamaMK": "Konstruksi",
+        "Nilai": 97.0
+      }
+    ]
+  },
+  {
+    "NIM": "0123",
+    "Nama": "Budi",
+    "DaftarNilai": [
+      {
+        "NIM": null,
+        "NamaMK": "MTK",
+        "Nilai": 99.0
+      }
+    ]
+  },
+  {
+    "NIM": "0123",
+    "Nama": "Jarwo",
+    "DaftarNilai": [
+      {
+        "NIM": null,
+        "NamaMK": "Bahasa",
+        "Nilai": 99.0
+      }
+    ]
   }
 ]
