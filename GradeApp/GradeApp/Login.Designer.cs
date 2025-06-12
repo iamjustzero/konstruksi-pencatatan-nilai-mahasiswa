@@ -35,6 +35,8 @@
             tbPassword = new TextBox();
             bLogin = new Button();
             pictureBox1 = new PictureBox();
+            label1 = new Label();
+            label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -85,18 +87,40 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(329, 47);
+            pictureBox1.Location = new Point(329, 74);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(126, 140);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 5;
             pictureBox1.TabStop = false;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(238, 49);
+            label1.Name = "label1";
+            label1.Size = new Size(304, 22);
+            label1.TabIndex = 6;
+            label1.Text = "Student Grade Management System";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(364, 30);
+            label2.Name = "label2";
+            label2.Size = new Size(52, 19);
+            label2.TabIndex = 7;
+            label2.Text = "SGMS";
+            // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label2);
+            Controls.Add(label1);
             Controls.Add(pictureBox1);
             Controls.Add(bLogin);
             Controls.Add(tbPassword);
@@ -118,5 +142,7 @@
         private TextBox tbPassword;
         private Button bLogin;
         private PictureBox pictureBox1;
+        private Label label1;
+        private Label label2;
     }
 }
