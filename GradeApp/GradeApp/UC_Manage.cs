@@ -20,12 +20,6 @@ namespace GradeApp
         {
             InitializeComponent();
 
-            dgvMahasiswa.ReadOnly = true;
-            dgvMahasiswa.AllowUserToAddRows = false;
-            dgvMahasiswa.EditMode = DataGridViewEditMode.EditProgrammatically;
-            dgvMahasiswa.RowHeadersVisible = false;
-            dgvMahasiswa.Size = new Size(600, 200);
-
             dgvMataKuliah.AutoGenerateColumns = true;
             dgvMataKuliah.ReadOnly = true;
             dgvMataKuliah.AllowUserToAddRows = false;
@@ -39,12 +33,6 @@ namespace GradeApp
 
         private void SetUkuranKolom()
         {
-            if (dgvMahasiswa.Columns.Contains("NIM"))
-                dgvMahasiswa.Columns["NIM"].Width = 100;
-
-            if (dgvMahasiswa.Columns.Contains("Nama"))
-                dgvMahasiswa.Columns["Nama"].Width = 200;
-
             if (dgvMataKuliah.Columns.Contains("NamaMK"))
                 dgvMataKuliah.Columns["NamaMK"].Width = 150;
 
@@ -52,22 +40,9 @@ namespace GradeApp
                 dgvMataKuliah.Columns["Nilai"].Width = 80;
         }
 
-        private void dgvMahasiswa_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-                var row = dgvMahasiswa.Rows[e.RowIndex];
-                textBoxNIM.Text = row.Cells["NIM"].Value.ToString();
-                textBoxNama.Text = row.Cells["Nama"].Value.ToString();
-                textBoxNilai.Text = row.Cells["Nilai"].Value.ToString();
-            }
-        }
-
         private void LoadData()
         {
             daftarMahasiswa = MahasiswaRepository.LoadData();
-            dgvMahasiswa.DataSource = null;
-            dgvMahasiswa.DataSource = daftarMahasiswa;
         }
 
         private void ResetForm()
@@ -149,15 +124,21 @@ namespace GradeApp
 
         private void buttonHapus_Click(object sender, EventArgs e)
         {
-            if (dgvMahasiswa.SelectedRows.Count == 0)
-            {
-                MessageBox.Show("Pilih data yang ingin dihapus.");
-                return;
-            }
+            //if (dgvMahasiswa.SelectedRows.Count == 0)
+            //{
+            //    MessageBox.Show("Pilih data yang ingin dihapus.");
+            //    return;
+            //}
 
-            string nim = textBoxNIM.Text;
-            MahasiswaRepository.Delete(nim);
-            LoadData();
+            //string nim = textBoxNIM.Text;
+            //MahasiswaRepository.Delete(nim);
+            //LoadData();
+        }
+
+        private void dgvMahasiswa_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+        
+        
         }
     }
 }
