@@ -34,11 +34,11 @@
             // 
             // dgvMataKuliah
             // 
-            dgvMataKuliah.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvMataKuliah.Location = new Point(61, 53);
-            dgvMataKuliah.Name = "dgvMataKuliah";
-            dgvMataKuliah.Size = new Size(352, 233);
-            dgvMataKuliah.TabIndex = 0;
+            //dgvMataKuliah.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            //dgvMataKuliah.Location = new Point(61, 53);
+            //dgvMataKuliah.Name = "dgvMataKuliah";
+            //dgvMataKuliah.Size = new Size(352, 233);
+            //dgvMataKuliah.TabIndex = 0;
             //dgvMataKuliah.CellContentClick += dgvMataKuliah_CellContentClick;
             // 
             // UC_Dashboard
