@@ -10,14 +10,16 @@ using System.Windows.Forms;
 
 namespace GradeApp
 {
-    public class MataKuliah
-    {
-        public string NamaMataKuliah { get; set; }
-        public int SKS { get; set; }
-    }
+   
     public partial class UC_MataKuliah : UserControl
     {
-        List<MataKuliah> listMataKuliah = new List<MataKuliah>();
+        public class Matkul
+        {
+            public string NamaMataKuliah { get; set; }
+            public int SKS { get; set; }
+        }
+
+        List<Matkul> listMataKuliah = new List<Matkul>();
         int selectedRow = -1;
 
         public UC_MataKuliah()
@@ -92,7 +94,7 @@ namespace GradeApp
                 return;
             }
 
-            MataKuliah mataKuliah = new MataKuliah
+            Matkul mataKuliah = new Matkul
             {
                 NamaMataKuliah = textBoxMataKuliah.Text,
                 SKS = int.Parse(comboBoxSKS.SelectedItem.ToString())
