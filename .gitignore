@@ -1,0 +1,21 @@
+# Ignore build outputs
+bin/
+obj/
+
+# Ignore VS files
+.vs/
+*.user
+*.suo
+
+# Ignore DLL, EXE, PDB files (jika perlu)
+*.dll
+*.exe
+*.pdb
+
+# Ignore NuGet packages
+*.nupkg
+packages/
+
+# Ignore other temporary files
+*.cache
+*.log
