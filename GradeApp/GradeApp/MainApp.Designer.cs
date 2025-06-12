@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainApp));
             panelAdmin = new Panel();
-            buttonMataKuliah = new Button();
+            buttonSubject = new Button();
             buttonRangking = new Button();
             buttonManage = new Button();
             pictureBox2 = new PictureBox();
             buttonLogout = new Button();
-            buttonCounter = new Button();
+            buttonReport = new Button();
             buttonDashboard = new Button();
             panelContent = new Panel();
             panelAdmin.SuspendLayout();
@@ -45,12 +45,12 @@
             // panelAdmin
             // 
             panelAdmin.BackColor = SystemColors.AppWorkspace;
-            panelAdmin.Controls.Add(buttonMataKuliah);
+            panelAdmin.Controls.Add(buttonSubject);
             panelAdmin.Controls.Add(buttonRangking);
             panelAdmin.Controls.Add(buttonManage);
             panelAdmin.Controls.Add(pictureBox2);
             panelAdmin.Controls.Add(buttonLogout);
-            panelAdmin.Controls.Add(buttonCounter);
+            panelAdmin.Controls.Add(buttonReport);
             panelAdmin.Controls.Add(buttonDashboard);
             panelAdmin.Dock = DockStyle.Left;
             panelAdmin.Location = new Point(0, 0);
@@ -58,15 +58,15 @@
             panelAdmin.Size = new Size(149, 449);
             panelAdmin.TabIndex = 0;
             // 
-            // buttonMataKuliah
+            // buttonSubject
             // 
-            buttonMataKuliah.Location = new Point(12, 230);
-            buttonMataKuliah.Name = "buttonMataKuliah";
-            buttonMataKuliah.Size = new Size(112, 23);
-            buttonMataKuliah.TabIndex = 9;
-            buttonMataKuliah.Text = "Subject";
-            buttonMataKuliah.UseVisualStyleBackColor = true;
-            buttonMataKuliah.Click += buttonMataKuliah_Click;
+            buttonSubject.Location = new Point(12, 230);
+            buttonSubject.Name = "buttonSubject";
+            buttonSubject.Size = new Size(112, 23);
+            buttonSubject.TabIndex = 9;
+            buttonSubject.Text = "Subject";
+            buttonSubject.UseVisualStyleBackColor = true;
+            buttonSubject.Click += buttonMataKuliah_Click;
             // 
             // buttonRangking
             // 
@@ -84,7 +84,7 @@
             buttonManage.Name = "buttonManage";
             buttonManage.Size = new Size(112, 23);
             buttonManage.TabIndex = 7;
-            buttonManage.Text = "Manage";
+            buttonManage.Text = "Grade";
             buttonManage.UseVisualStyleBackColor = true;
             buttonManage.Click += buttonManage_Click;
             // 
@@ -108,15 +108,15 @@
             buttonLogout.UseVisualStyleBackColor = true;
             buttonLogout.Click += buttonLogout_Click;
             // 
-            // buttonCounter
+            // buttonReport
             // 
-            buttonCounter.Location = new Point(12, 172);
-            buttonCounter.Name = "buttonCounter";
-            buttonCounter.Size = new Size(112, 23);
-            buttonCounter.TabIndex = 4;
-            buttonCounter.Text = "Counter";
-            buttonCounter.UseVisualStyleBackColor = true;
-            buttonCounter.Click += buttonCounter_Click;
+            buttonReport.Location = new Point(12, 172);
+            buttonReport.Name = "buttonReport";
+            buttonReport.Size = new Size(112, 23);
+            buttonReport.TabIndex = 4;
+            buttonReport.Text = "Report";
+            buttonReport.UseVisualStyleBackColor = true;
+            buttonReport.Click += buttonCounter_Click;
             // 
             // buttonDashboard
             // 
@@ -156,12 +156,12 @@
         private Button buttonManage;
         private Button buttonDashboard;
         private Button buttonLogout;
-        private Button buttonCounter;
+        private Button buttonReport;
         private Button button3;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
         private Panel panelContent;
         private Button buttonRangking;
-        private Button buttonMataKuliah;
+        private Button buttonSubject;
     }
 }
