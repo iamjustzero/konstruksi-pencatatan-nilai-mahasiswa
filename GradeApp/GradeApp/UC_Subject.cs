@@ -114,15 +114,26 @@ namespace GradeApp
 
         private void buttonSimpan_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(textBoxMataKuliah.Text))
+            string namaMatkulBaru = textBoxMataKuliah.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(namaMatkulBaru))
             {
                 MessageBox.Show("Nama Mata Kuliah harus diisi.");
                 return;
             }
 
+            bool sudahAda = listMataKuliah.Any(mk =>
+                mk.NamaMataKuliah.Equals(namaMatkulBaru, StringComparison.OrdinalIgnoreCase));
+
+            if (sudahAda)
+            {
+                MessageBox.Show($"Mata kuliah \"{namaMatkulBaru}\" sudah terdaftar.", "Duplikat", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             Matkul mataKuliah = new Matkul
             {
-                NamaMataKuliah = textBoxMataKuliah.Text,
+                NamaMataKuliah = namaMatkulBaru,
                 SKS = int.Parse(comboBoxSKS.SelectedItem.ToString())
             };
 
@@ -132,6 +143,7 @@ namespace GradeApp
             TampilkanMataKuliah();
             ClearInput();
         }
+
 
 
 
