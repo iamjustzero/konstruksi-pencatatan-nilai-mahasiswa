@@ -32,7 +32,7 @@
             textBoxMataKuliah = new TextBox();
             labelSKS = new Label();
             comboBoxSKS = new ComboBox();
-            buttonSimpan = new Button();
+            buttonSave = new Button();
             buttonClear = new Button();
             dgvMataKuliah = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)dgvMataKuliah).BeginInit();
@@ -80,16 +80,16 @@
             comboBoxSKS.TabIndex = 3;
             comboBoxSKS.SelectedIndexChanged += comboBoxSKS_SelectedIndexChanged;
             // 
-            // buttonSimpan
+            // buttonSave
             // 
-            buttonSimpan.Location = new Point(14, 73);
-            buttonSimpan.Margin = new Padding(2);
-            buttonSimpan.Name = "buttonSimpan";
-            buttonSimpan.Size = new Size(78, 31);
-            buttonSimpan.TabIndex = 5;
-            buttonSimpan.Text = "Simpan";
-            buttonSimpan.UseVisualStyleBackColor = true;
-            buttonSimpan.Click += buttonSimpan_Click;
+            buttonSave.Location = new Point(14, 73);
+            buttonSave.Margin = new Padding(2);
+            buttonSave.Name = "buttonSave";
+            buttonSave.Size = new Size(78, 31);
+            buttonSave.TabIndex = 5;
+            buttonSave.Text = "Save";
+            buttonSave.UseVisualStyleBackColor = true;
+            buttonSave.Click += buttonSimpan_Click;
             // 
             // buttonClear
             // 
@@ -98,7 +98,7 @@
             buttonClear.Name = "buttonClear";
             buttonClear.Size = new Size(78, 31);
             buttonClear.TabIndex = 6;
-            buttonClear.Text = "Reset";
+            buttonClear.Text = "Delete";
             buttonClear.UseVisualStyleBackColor = true;
             buttonClear.Click += buttonClear_Click;
             // 
@@ -119,7 +119,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(dgvMataKuliah);
             Controls.Add(buttonClear);
-            Controls.Add(buttonSimpan);
+            Controls.Add(buttonSave);
             Controls.Add(comboBoxSKS);
             Controls.Add(labelSKS);
             Controls.Add(textBoxMataKuliah);
@@ -138,7 +138,7 @@
         private TextBox textBoxMataKuliah;
         private Label labelSKS;
         private ComboBox comboBoxSKS;
-        private Button buttonSimpan;
+        private Button buttonSave;
         private Button buttonClear;
         private DataGridView dgvMataKuliah;
     }

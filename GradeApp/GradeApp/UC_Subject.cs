@@ -35,8 +35,10 @@ namespace GradeApp
             dgvMataKuliah.AllowUserToOrderColumns = false;
             dgvMataKuliah.AllowUserToAddRows = false;
             dgvMataKuliah.AllowUserToDeleteRows = false;
+            dgvMataKuliah.Enabled = true;
+            dgvMataKuliah.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvMataKuliah.ClearSelection();
-            dgvMataKuliah.Enabled = false;
+            dgvMataKuliah.CellClick += dgvMataKuliah_CellClick;
             this.Load += UC_MataKuliah_Load;
         }
 
@@ -99,6 +101,17 @@ namespace GradeApp
             }
         }
 
+        private void dgvMataKuliah_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                selectedRow = e.RowIndex;
+                textBoxMataKuliah.Text = dgvMataKuliah.Rows[e.RowIndex].Cells[0].Value.ToString();
+                comboBoxSKS.SelectedItem = dgvMataKuliah.Rows[e.RowIndex].Cells[1].Value.ToString();
+            }
+        }
+
+
         private void buttonSimpan_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(textBoxMataKuliah.Text))
@@ -141,7 +154,30 @@ namespace GradeApp
 
         private void buttonClear_Click(object sender, EventArgs e)
         {
+            if (selectedRow >= 0 && selectedRow < listMataKuliah.Count)
+            {
+                string nama = listMataKuliah[selectedRow].NamaMataKuliah;
+                var result = MessageBox.Show($"Yakin ingin menghapus mata kuliah '{nama}'?",
+                                             "Konfirmasi Hapus",
+                                             MessageBoxButtons.YesNo,
+                                             MessageBoxIcon.Question);
 
+                if (result == DialogResult.Yes)
+                {
+                    listMataKuliah.RemoveAt(selectedRow);
+                    selectedRow = -1; // <<== Tambahkan ini DI SINI
+                    MataKuliahRepository.Save(listMataKuliah);
+                    TampilkanMataKuliah();
+                    ClearInput();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Pilih mata kuliah yang ingin dihapus terlebih dahulu.",
+                                "Info",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
+            }
         }
     }
 }
