@@ -25,7 +25,8 @@ namespace GradeApp
         public UC_MataKuliah()
         {
             InitializeComponent();
-
+            dgvMataKuliah.RowHeadersVisible = false;
+            dgvMataKuliah.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             this.Load += UC_MataKuliah_Load;
 
         }

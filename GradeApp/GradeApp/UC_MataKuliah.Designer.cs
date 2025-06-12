@@ -109,7 +109,7 @@
             dgvMataKuliah.Margin = new Padding(2);
             dgvMataKuliah.Name = "dgvMataKuliah";
             dgvMataKuliah.RowHeadersWidth = 62;
-            dgvMataKuliah.Size = new Size(596, 135);
+            dgvMataKuliah.Size = new Size(609, 135);
             dgvMataKuliah.TabIndex = 7;
             dgvMataKuliah.CellContentClick += dgvMataKuliah_CellContentClick;
             // 
@@ -126,7 +126,7 @@
             Controls.Add(labelNamaMataKuliah);
             Margin = new Padding(2);
             Name = "UC_MataKuliah";
-            Size = new Size(629, 307);
+            Size = new Size(644, 307);
             ((System.ComponentModel.ISupportInitialize)dgvMataKuliah).EndInit();
             ResumeLayout(false);
             PerformLayout();
