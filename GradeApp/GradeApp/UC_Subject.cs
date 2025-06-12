@@ -51,6 +51,8 @@ namespace GradeApp
             comboBoxSKS.Items.Add("4");
             comboBoxSKS.SelectedIndex = 0;
 
+            comboBoxSKS.DropDownStyle = ComboBoxStyle.DropDownList;
+
             dgvMataKuliah.ColumnCount = 2;
             dgvMataKuliah.Columns[0].Name = "Mata Kuliah";
             dgvMataKuliah.Columns[1].Name = "SKS";
