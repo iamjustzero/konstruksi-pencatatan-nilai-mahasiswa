@@ -25,11 +25,21 @@ namespace GradeApp
         public UC_Subject()
         {
             InitializeComponent();
-            dgvMataKuliah.RowHeadersVisible = false;
-            dgvMataKuliah.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            this.Load += UC_MataKuliah_Load;
 
+            dgvMataKuliah.RowHeadersVisible = false;
+            dgvMataKuliah.ReadOnly = true;
+            dgvMataKuliah.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvMataKuliah.MultiSelect = false;
+            dgvMataKuliah.AllowUserToResizeColumns = false;
+            dgvMataKuliah.AllowUserToResizeRows = false;
+            dgvMataKuliah.AllowUserToOrderColumns = false;
+            dgvMataKuliah.AllowUserToAddRows = false;
+            dgvMataKuliah.AllowUserToDeleteRows = false;
+            dgvMataKuliah.ClearSelection();
+            dgvMataKuliah.Enabled = false;
+            this.Load += UC_MataKuliah_Load;
         }
+
 
         private void UC_MataKuliah_Load(object sender, EventArgs e)
         {
@@ -119,7 +129,10 @@ namespace GradeApp
             {
                 dgvMataKuliah.Rows.Add(mk.NamaMataKuliah, mk.SKS);
             }
+
+            dgvMataKuliah.ClearSelection();
         }
+
         private void ClearInput()
         {
             textBoxMataKuliah.Clear();
