@@ -319,6 +319,34 @@ namespace PencatatanNilaiMahasiswa
 
         static void EditNilai()
         {
+<<<<<<< HEAD
+
+            var semuaNilai = LoadNilai();
+            Console.Write("Masukkan nama mata kuliah: ");
+            string mk = Console.ReadLine();
+
+            // mencari nilai 
+            var nilaiMahasiswa = semuaNilai.FirstOrDefault(n => n.Username == currentUser.Username && n.MataKuliah == mk);
+
+            if (nilaiMahasiswa != null)
+            {
+                Console.WriteLine($"Nilai saat ini untuk mata kuliah {mk} adalah {nilaiMahasiswa.NilaiAngka}");
+                Console.Write("Masukkan nilai baru (0-100: )");
+
+                if (double.TryParse(Console.ReadLine(), out double nilaiBaru))
+                {
+                    // precondition
+                    if (nilaiBaru < 0 || nilaiBaru > 100)
+                    {
+                        Console.WriteLine("Nilai tidak valid, nilai harys dalam rentang 0 - 100");
+                    }
+                    else
+                    {
+                        // update nilai
+                        nilaiMahasiswa.NilaiAngka = nilaiBaru;
+                        SaveNilai(semuaNilai);
+                        Console.WriteLine("Nilai diperbarui");
+=======
             Console.WriteLine("Edit Nilai");
             var semuaNilai = LoadNilai();
             var nilaiUser = semuaNilai
@@ -370,17 +398,34 @@ namespace PencatatanNilaiMahasiswa
                         {
                             Console.WriteLine("❌ Data tidak ditemukan.");
                         }
+>>>>>>> dbbf1be5d2b7d9381953cdff268a50d7d4ad4cd3
                     }
                 }
                 else
                 {
+<<<<<<< HEAD
+                    Console.WriteLine("Inputan tidak valid");
+=======
                     Console.WriteLine("❌ Input tidak valid.");
+>>>>>>> dbbf1be5d2b7d9381953cdff268a50d7d4ad4cd3
                 }
             }
             else
             {
+<<<<<<< HEAD
+                Console.WriteLine("Nilai mata kuliah tidak ditemukan ");
+            }
+
+            MainApp();
+        }
+
+        static void HapusNilai()
+        {
+            Console.WriteLine("Hapus Nilai");
+=======
                 Console.WriteLine("❌ Pilihan tidak valid.");
             }
+>>>>>>> dbbf1be5d2b7d9381953cdff268a50d7d4ad4cd3
             MainApp();
         }
 

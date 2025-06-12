@@ -8,7 +8,11 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = PencatatanNilaiMahasiswa
+<<<<<<< HEAD
+build_property.ProjectDir = D:\semester4\kontruksiperangkatlunak\konstruksi-pencatatan-nilai-mahasiswa\PencatatanNilaiMahasiswa\PencatatanNilaiMahasiswa\
+=======
 build_property.ProjectDir = D:\GitHub\konstruksi-pencatatan-nilai-mahasiswa\PencatatanNilaiMahasiswa\PencatatanNilaiMahasiswa\
+>>>>>>> dbbf1be5d2b7d9381953cdff268a50d7d4ad4cd3
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.EffectiveAnalysisLevelStyle = 8.0

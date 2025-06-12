@@ -78,5 +78,20 @@ namespace GradeApp
         {
             ShowUserControl(new UC_Rangking());
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonMataKuliah_Click(object sender, EventArgs e)
+        {
+            ShowUserControl(new UC_MataKuliah());
+        }
     }
 }

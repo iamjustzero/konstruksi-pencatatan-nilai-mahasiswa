@@ -45,56 +45,63 @@
             // labelNama
             // 
             labelNama.AutoSize = true;
-            labelNama.Location = new Point(35, 20);
+            labelNama.Location = new Point(50, 33);
+            labelNama.Margin = new Padding(4, 0, 4, 0);
             labelNama.Name = "labelNama";
-            labelNama.Size = new Size(39, 15);
+            labelNama.Size = new Size(59, 25);
             labelNama.TabIndex = 0;
             labelNama.Text = "Nama";
             // 
             // labelNIM
             // 
             labelNIM.AutoSize = true;
-            labelNIM.Location = new Point(44, 49);
+            labelNIM.Location = new Point(63, 82);
+            labelNIM.Margin = new Padding(4, 0, 4, 0);
             labelNIM.Name = "labelNIM";
-            labelNIM.Size = new Size(30, 15);
+            labelNIM.Size = new Size(46, 25);
             labelNIM.TabIndex = 1;
             labelNIM.Text = "NIM";
             // 
             // labelNilai
             // 
             labelNilai.AutoSize = true;
-            labelNilai.Location = new Point(43, 78);
+            labelNilai.Location = new Point(61, 130);
+            labelNilai.Margin = new Padding(4, 0, 4, 0);
             labelNilai.Name = "labelNilai";
-            labelNilai.Size = new Size(31, 15);
+            labelNilai.Size = new Size(46, 25);
             labelNilai.TabIndex = 2;
             labelNilai.Text = "Nilai";
             // 
             // textBoxNama
             // 
-            textBoxNama.Location = new Point(80, 12);
+            textBoxNama.Location = new Point(114, 20);
+            textBoxNama.Margin = new Padding(4, 5, 4, 5);
             textBoxNama.Name = "textBoxNama";
-            textBoxNama.Size = new Size(156, 23);
+            textBoxNama.Size = new Size(221, 31);
             textBoxNama.TabIndex = 3;
             // 
             // textBoxNIM
             // 
-            textBoxNIM.Location = new Point(80, 41);
+            textBoxNIM.Location = new Point(114, 68);
+            textBoxNIM.Margin = new Padding(4, 5, 4, 5);
             textBoxNIM.Name = "textBoxNIM";
-            textBoxNIM.Size = new Size(156, 23);
+            textBoxNIM.Size = new Size(221, 31);
             textBoxNIM.TabIndex = 4;
             // 
             // textBoxNilai
             // 
-            textBoxNilai.Location = new Point(80, 70);
+            textBoxNilai.Location = new Point(114, 117);
+            textBoxNilai.Margin = new Padding(4, 5, 4, 5);
             textBoxNilai.Name = "textBoxNilai";
-            textBoxNilai.Size = new Size(156, 23);
+            textBoxNilai.Size = new Size(221, 31);
             textBoxNilai.TabIndex = 5;
             // 
             // buttonSimpan
             // 
-            buttonSimpan.Location = new Point(80, 134);
+            buttonSimpan.Location = new Point(114, 223);
+            buttonSimpan.Margin = new Padding(4, 5, 4, 5);
             buttonSimpan.Name = "buttonSimpan";
-            buttonSimpan.Size = new Size(60, 23);
+            buttonSimpan.Size = new Size(86, 38);
             buttonSimpan.TabIndex = 6;
             buttonSimpan.Text = "Simpan";
             buttonSimpan.UseVisualStyleBackColor = true;
@@ -102,9 +109,10 @@
             // 
             // buttonHapus
             // 
-            buttonHapus.Location = new Point(176, 134);
+            buttonHapus.Location = new Point(251, 223);
+            buttonHapus.Margin = new Padding(4, 5, 4, 5);
             buttonHapus.Name = "buttonHapus";
-            buttonHapus.Size = new Size(60, 23);
+            buttonHapus.Size = new Size(86, 38);
             buttonHapus.TabIndex = 7;
             buttonHapus.Text = "Hapus";
             buttonHapus.UseVisualStyleBackColor = true;
@@ -113,17 +121,19 @@
             // labelMataKuliah
             // 
             labelMataKuliah.AutoSize = true;
-            labelMataKuliah.Location = new Point(4, 107);
+            labelMataKuliah.Location = new Point(6, 178);
+            labelMataKuliah.Margin = new Padding(4, 0, 4, 0);
             labelMataKuliah.Name = "labelMataKuliah";
-            labelMataKuliah.Size = new Size(70, 15);
+            labelMataKuliah.Size = new Size(104, 25);
             labelMataKuliah.TabIndex = 9;
             labelMataKuliah.Text = "Mata Kuliah";
             // 
             // textBoxMataKuliah
             // 
-            textBoxMataKuliah.Location = new Point(80, 99);
+            textBoxMataKuliah.Location = new Point(114, 165);
+            textBoxMataKuliah.Margin = new Padding(4, 5, 4, 5);
             textBoxMataKuliah.Name = "textBoxMataKuliah";
-            textBoxMataKuliah.Size = new Size(156, 23);
+            textBoxMataKuliah.Size = new Size(221, 31);
             textBoxMataKuliah.TabIndex = 10;
             // 
             // dgvMataKuliah
@@ -140,7 +150,7 @@
             // 
             // UC_Manage
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(dgvMataKuliah);
             Controls.Add(textBoxMataKuliah);
@@ -153,6 +163,7 @@
             Controls.Add(labelNilai);
             Controls.Add(labelNIM);
             Controls.Add(labelNama);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "UC_Manage";
             Size = new Size(653, 375);
             Load += UC_Manage_Load;

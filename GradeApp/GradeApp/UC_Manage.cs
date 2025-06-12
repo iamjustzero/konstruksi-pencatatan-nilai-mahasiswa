@@ -142,5 +142,10 @@ namespace GradeApp
         
         
         }
+
+        private void dgvMahasiswa_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
