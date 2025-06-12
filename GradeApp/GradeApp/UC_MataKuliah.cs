@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace GradeApp
 {
-   
+
     public partial class UC_MataKuliah : UserControl
     {
         public class Matkul
@@ -32,14 +32,14 @@ namespace GradeApp
 
         private void UC_MataKuliah_Load(object sender, EventArgs e)
         {
-           
+
             comboBoxSKS.Items.Clear();
             comboBoxSKS.Items.Add("2");
             comboBoxSKS.Items.Add("3");
             comboBoxSKS.Items.Add("4");
             comboBoxSKS.SelectedIndex = 0;
 
-          
+
             dgvMataKuliah.ColumnCount = 2;
             dgvMataKuliah.Columns[0].Name = "Mata Kuliah";
             dgvMataKuliah.Columns[1].Name = "SKS";
@@ -67,7 +67,7 @@ namespace GradeApp
 
         private void comboBoxSKS_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
 
         }
 
@@ -116,6 +116,11 @@ namespace GradeApp
         {
             textBoxMataKuliah.Clear();
             comboBoxSKS.SelectedIndex = 0;
+        }
+
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
