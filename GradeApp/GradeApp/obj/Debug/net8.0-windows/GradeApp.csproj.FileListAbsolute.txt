@@ -58,7 +58,6 @@ D:\GitHub\construction\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\o
 D:\GitHub\construction\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\GradeApp.UC_Counter.resources
 D:\GitHub\construction\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\GradeApp.UC_Dashboard.resources
 D:\GitHub\construction\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\GradeApp.UC_Manage.resources
-D:\GitHub\construction\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\GradeApp.UC_MataKuliah.resources
 D:\GitHub\construction\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\GradeApp.UC_Rangking.resources
 D:\GitHub\construction\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\GradeApp.csproj.GenerateResource.cache
 D:\GitHub\construction\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\GradeApp.GeneratedMSBuildEditorConfig.editorconfig
@@ -78,3 +77,4 @@ D:\GitHub\construction\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\b
 D:\GitHub\construction\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\GradeApp.csproj.Up2Date
 D:\GitHub\construction\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\GradeApp.genruntimeconfig.cache
 D:\GitHub\construction\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\ref\GradeApp.dll
+D:\GitHub\construction\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\GradeApp.UC_Subject.resources

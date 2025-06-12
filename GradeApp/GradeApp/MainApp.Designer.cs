@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainApp));
             panelAdmin = new Panel();
+            buttonMataKuliah = new Button();
             buttonRangking = new Button();
             buttonManage = new Button();
             pictureBox2 = new PictureBox();
@@ -37,7 +38,6 @@
             buttonCounter = new Button();
             buttonDashboard = new Button();
             panelContent = new Panel();
-            buttonMataKuliah = new Button();
             panelAdmin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -54,17 +54,25 @@
             panelAdmin.Controls.Add(buttonDashboard);
             panelAdmin.Dock = DockStyle.Left;
             panelAdmin.Location = new Point(0, 0);
-            panelAdmin.Margin = new Padding(4, 5, 4, 5);
             panelAdmin.Name = "panelAdmin";
-            panelAdmin.Size = new Size(213, 750);
+            panelAdmin.Size = new Size(149, 449);
             panelAdmin.TabIndex = 0;
+            // 
+            // buttonMataKuliah
+            // 
+            buttonMataKuliah.Location = new Point(12, 230);
+            buttonMataKuliah.Name = "buttonMataKuliah";
+            buttonMataKuliah.Size = new Size(112, 23);
+            buttonMataKuliah.TabIndex = 9;
+            buttonMataKuliah.Text = "Subject";
+            buttonMataKuliah.UseVisualStyleBackColor = true;
+            buttonMataKuliah.Click += buttonMataKuliah_Click;
             // 
             // buttonRangking
             // 
-            buttonRangking.Location = new Point(17, 335);
-            buttonRangking.Margin = new Padding(4, 5, 4, 5);
+            buttonRangking.Location = new Point(12, 201);
             buttonRangking.Name = "buttonRangking";
-            buttonRangking.Size = new Size(160, 38);
+            buttonRangking.Size = new Size(112, 23);
             buttonRangking.TabIndex = 8;
             buttonRangking.Text = "Rangking";
             buttonRangking.UseVisualStyleBackColor = true;
@@ -72,10 +80,9 @@
             // 
             // buttonManage
             // 
-            buttonManage.Location = new Point(17, 238);
-            buttonManage.Margin = new Padding(4, 5, 4, 5);
+            buttonManage.Location = new Point(12, 143);
             buttonManage.Name = "buttonManage";
-            buttonManage.Size = new Size(160, 38);
+            buttonManage.Size = new Size(112, 23);
             buttonManage.TabIndex = 7;
             buttonManage.Text = "Manage";
             buttonManage.UseVisualStyleBackColor = true;
@@ -84,20 +91,18 @@
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(50, 35);
-            pictureBox2.Margin = new Padding(4, 5, 4, 5);
+            pictureBox2.Location = new Point(35, 21);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(94, 122);
+            pictureBox2.Size = new Size(66, 73);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 1;
             pictureBox2.TabStop = false;
             // 
             // buttonLogout
             // 
-            buttonLogout.Location = new Point(17, 632);
-            buttonLogout.Margin = new Padding(4, 5, 4, 5);
+            buttonLogout.Location = new Point(12, 379);
             buttonLogout.Name = "buttonLogout";
-            buttonLogout.Size = new Size(160, 38);
+            buttonLogout.Size = new Size(112, 23);
             buttonLogout.TabIndex = 6;
             buttonLogout.Text = "Logout";
             buttonLogout.UseVisualStyleBackColor = true;
@@ -105,10 +110,9 @@
             // 
             // buttonCounter
             // 
-            buttonCounter.Location = new Point(17, 287);
-            buttonCounter.Margin = new Padding(4, 5, 4, 5);
+            buttonCounter.Location = new Point(12, 172);
             buttonCounter.Name = "buttonCounter";
-            buttonCounter.Size = new Size(160, 38);
+            buttonCounter.Size = new Size(112, 23);
             buttonCounter.TabIndex = 4;
             buttonCounter.Text = "Counter";
             buttonCounter.UseVisualStyleBackColor = true;
@@ -116,10 +120,9 @@
             // 
             // buttonDashboard
             // 
-            buttonDashboard.Location = new Point(17, 190);
-            buttonDashboard.Margin = new Padding(4, 5, 4, 5);
+            buttonDashboard.Location = new Point(12, 114);
             buttonDashboard.Name = "buttonDashboard";
-            buttonDashboard.Size = new Size(160, 38);
+            buttonDashboard.Size = new Size(112, 23);
             buttonDashboard.TabIndex = 0;
             buttonDashboard.Text = "Dashboard";
             buttonDashboard.UseVisualStyleBackColor = true;
@@ -127,31 +130,18 @@
             // 
             // panelContent
             // 
-            panelContent.Location = new Point(207, 0);
-            panelContent.Margin = new Padding(4, 5, 4, 5);
+            panelContent.Location = new Point(145, 0);
             panelContent.Name = "panelContent";
-            panelContent.Size = new Size(934, 750);
+            panelContent.Size = new Size(654, 450);
             panelContent.TabIndex = 1;
-            // 
-            // buttonMataKuliah
-            // 
-            buttonMataKuliah.Location = new Point(17, 383);
-            buttonMataKuliah.Margin = new Padding(4, 5, 4, 5);
-            buttonMataKuliah.Name = "buttonMataKuliah";
-            buttonMataKuliah.Size = new Size(160, 38);
-            buttonMataKuliah.TabIndex = 9;
-            buttonMataKuliah.Text = "Mata Kuliah";
-            buttonMataKuliah.UseVisualStyleBackColor = true;
-            buttonMataKuliah.Click += buttonMataKuliah_Click;
             // 
             // MainApp
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1143, 750);
+            ClientSize = new Size(800, 449);
             Controls.Add(panelContent);
             Controls.Add(panelAdmin);
-            Margin = new Padding(4, 5, 4, 5);
             Name = "MainApp";
             Text = "Main App";
             panelAdmin.ResumeLayout(false);

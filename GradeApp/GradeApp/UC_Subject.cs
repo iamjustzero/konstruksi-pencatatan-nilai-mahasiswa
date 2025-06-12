@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace GradeApp
 {
 
-    public partial class UC_MataKuliah : UserControl
+    public partial class UC_Subject : UserControl
     {
         public class Matkul
         {
@@ -22,7 +22,7 @@ namespace GradeApp
         List<Matkul> listMataKuliah = new List<Matkul>();
         int selectedRow = -1;
 
-        public UC_MataKuliah()
+        public UC_Subject()
         {
             InitializeComponent();
             dgvMataKuliah.RowHeadersVisible = false;

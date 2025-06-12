@@ -1,6 +1,6 @@
 ﻿namespace GradeApp
 {
-    partial class UC_MataKuliah
+    partial class UC_Subject
     {
         /// <summary> 
         /// Required designer variable.

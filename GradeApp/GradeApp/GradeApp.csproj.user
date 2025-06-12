@@ -16,7 +16,7 @@
     <Compile Update="UC_Manage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UC_MataKuliah.cs">
+    <Compile Update="UC_Subject.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UC_Rangking.cs">

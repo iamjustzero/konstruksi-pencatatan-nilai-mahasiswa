@@ -91,7 +91,7 @@ namespace GradeApp
 
         private void buttonMataKuliah_Click(object sender, EventArgs e)
         {
-            ShowUserControl(new UC_MataKuliah());
+            ShowUserControl(new UC_Subject());
         }
     }
 }
