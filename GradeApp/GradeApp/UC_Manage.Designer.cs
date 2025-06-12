@@ -133,9 +133,9 @@
             dgvMataKuliah.AllowUserToResizeColumns = false;
             dgvMataKuliah.AllowUserToResizeRows = false;
             dgvMataKuliah.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvMataKuliah.Location = new Point(4, 172);
+            dgvMataKuliah.Location = new Point(4, 163);
             dgvMataKuliah.Name = "dgvMataKuliah";
-            dgvMataKuliah.Size = new Size(358, 150);
+            dgvMataKuliah.Size = new Size(627, 150);
             dgvMataKuliah.TabIndex = 11;
             // 
             // UC_Manage
@@ -154,7 +154,7 @@
             Controls.Add(labelNIM);
             Controls.Add(labelNama);
             Name = "UC_Manage";
-            Size = new Size(894, 557);
+            Size = new Size(653, 375);
             Load += UC_Manage_Load;
             ((System.ComponentModel.ISupportInitialize)dgvMataKuliah).EndInit();
             ResumeLayout(false);

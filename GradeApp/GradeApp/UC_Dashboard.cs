@@ -20,7 +20,7 @@ namespace GradeApp
             dgvMataKuliah.AllowUserToAddRows = false;
             dgvMataKuliah.EditMode = DataGridViewEditMode.EditProgrammatically;
             dgvMataKuliah.RowHeadersVisible = false;
-            dgvMataKuliah.Size = new Size(600, 150);
+            dgvMataKuliah.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             SetUkuranKolom();
             LoadData();
@@ -59,6 +59,11 @@ namespace GradeApp
 
             dgvMataKuliah.DataSource = null;
             dgvMataKuliah.DataSource = semuaNilai;
+        }
+
+        private void dgvMataKuliah_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
