@@ -1,0 +1,63 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Newtonsoft.Json;
+
+namespace GradeApp
+{
+
+    public static class MahasiswaRepository
+    {
+        private static string filePath = "mahasiswa.json";
+
+        public static void SaveData(List<Mahasiswa> list)
+        {
+            string json = JsonConvert.SerializeObject(list, Formatting.Indented);
+            File.WriteAllText(filePath, json);
+        }
+
+        public static List<Mahasiswa> LoadData()
+        {
+            if (!File.Exists(filePath))
+            {
+                return new List<Mahasiswa>();
+            }
+
+            string json = File.ReadAllText(filePath);
+            return JsonConvert.DeserializeObject<List<Mahasiswa>>(json);
+        }
+
+        public static void Add(Mahasiswa mhs)
+        {
+            List<Mahasiswa> list = LoadData();
+
+            if (list == null)
+            {
+                list = new List<Mahasiswa>();
+            }
+
+            list.Add(mhs);
+            SaveData(list);
+        }
+
+        public static void Delete(string nim)
+        {
+            List<Mahasiswa> list = LoadData();
+            list.RemoveAll(x => x.NIM == nim);
+            SaveData(list);
+        }
+
+        public static void Update(Mahasiswa mhsLama, Mahasiswa mhsBaru)
+        {
+            List<Mahasiswa> list = LoadData();
+            int index = list.FindIndex(x => x.NIM == mhsLama.NIM);
+            if (index != -1)
+            {
+                list[index] = mhsBaru;
+                SaveData(list);
+            }
+        }
+    }
+}

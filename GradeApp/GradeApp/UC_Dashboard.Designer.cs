@@ -1,0 +1,59 @@
+﻿namespace GradeApp
+{
+    partial class UC_Dashboard
+    {
+        /// <summary> 
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary> 
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Component Designer generated code
+
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            dgvMataKuliah = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dgvMataKuliah).BeginInit();
+            SuspendLayout();
+            // 
+            // dgvMataKuliah
+            // 
+            dgvMataKuliah.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvMataKuliah.Location = new Point(61, 53);
+            dgvMataKuliah.Name = "dgvMataKuliah";
+            dgvMataKuliah.Size = new Size(352, 233);
+            dgvMataKuliah.TabIndex = 0;
+            //dgvMataKuliah.CellContentClick += dgvMataKuliah_CellContentClick;
+            // 
+            // UC_Dashboard
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(dgvMataKuliah);
+            Name = "UC_Dashboard";
+            Size = new Size(497, 333);
+            ((System.ComponentModel.ISupportInitialize)dgvMataKuliah).EndInit();
+            ResumeLayout(false);
+        }
+
+        #endregion
+
+        private DataGridView dgvMataKuliah;
+    }
+}

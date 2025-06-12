@@ -2,7 +2,13 @@
   "ExpandedNodes": [
     "",
     "\\PencatatanNilaiMahasiswa",
+<<<<<<< HEAD
     "\\PencatatanNilaiMahasiswa\\PencatatanNilaiMahasiswa"
+=======
+    "\\PencatatanNilaiMahasiswa\\PencatatanNilaiMahasiswa",
+    "\\TestApp",
+    "\\TestApp\\TestApp"
+>>>>>>> dbbf1be5d2b7d9381953cdff268a50d7d4ad4cd3
   ],
   "SelectedNode": "\\PencatatanNilaiMahasiswa\\PencatatanNilaiMahasiswa\\Program.cs",
   "PreviewInSolutionExplorer": false
