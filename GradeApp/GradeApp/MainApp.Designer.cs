@@ -134,6 +134,7 @@
             panelContent.Name = "panelContent";
             panelContent.Size = new Size(654, 450);
             panelContent.TabIndex = 1;
+            panelContent.Paint += panelContent_Paint;
             // 
             // MainApp
             // 

@@ -18,6 +18,7 @@ namespace GradeApp
             this.MaximumSize = new Size(800, 600);
             this.StartPosition = FormStartPosition.CenterScreen;
             this.FormClosed += OnFormClosed;
+            ShowUserControl(new UC_Dashboard());
         }
 
         private void OnFormClosed(object sender, FormClosedEventArgs e)
@@ -92,6 +93,11 @@ namespace GradeApp
         private void buttonMataKuliah_Click(object sender, EventArgs e)
         {
             ShowUserControl(new UC_Subject());
+        }
+
+        private void panelContent_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
