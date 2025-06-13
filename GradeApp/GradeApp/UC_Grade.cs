@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -184,8 +185,74 @@ namespace GradeApp
 
         private void buttonHapus_Click(object sender, EventArgs e)
         {
+            if (dgvMataKuliah.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Pilih data yang ingin dihapus!");
+                return;
+            }
 
+            var result = MessageBox.Show("Yakin ingin menghapus data ini?", "Konfirmasi Hapus", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.No) return;
+
+            var selectedRow = dgvMataKuliah.SelectedRows[0];
+            string nim = selectedRow.Cells["NIM"].Value?.ToString()?.Trim();
+            string namaMK = selectedRow.Cells["NamaMK"].Value?.ToString()?.Trim();
+
+            if (string.IsNullOrEmpty(nim) || string.IsNullOrEmpty(namaMK))
+            {
+                MessageBox.Show("Data tidak valid untuk dihapus.");
+                return;
+            }
+
+            var mahasiswa = daftarMahasiswa.FirstOrDefault(m => m.NIM.Trim() == nim);
+            if (mahasiswa != null)
+            {
+                var mkToRemove = mahasiswa.DaftarNilai
+                    .FirstOrDefault(mk => string.Equals(mk.NamaMK?.Trim(), namaMK, StringComparison.OrdinalIgnoreCase));
+
+                if (mkToRemove != null)
+                {
+                    mahasiswa.DaftarNilai.Remove(mkToRemove);
+
+                    // Jika tidak ada mata kuliah lagi, hapus mahasiswa
+                    if (!mahasiswa.DaftarNilai.Any())
+                    {
+                        daftarMahasiswa.Remove(mahasiswa);
+                    }
+
+                    MahasiswaRepository.SaveAll(daftarMahasiswa);
+                    LoadData();
+                    RefreshDataGrid();
+
+                    MessageBox.Show("Data berhasil dihapus.");
+                }
+                else
+                {
+                    MessageBox.Show("Mata kuliah tidak ditemukan untuk mahasiswa ini.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Mahasiswa tidak ditemukan.");
+            }
         }
+
+        private void RefreshDataGrid()
+        {
+            var semuaNilai = daftarMahasiswa.SelectMany(m => m.DaftarNilai.Select(mk => new
+            {
+                NIM = m.NIM,
+                NamaMahasiswa = m.Nama,
+                NamaMK = mk.NamaMK,
+                Nilai = mk.Nilai
+            })).ToList();
+
+            dgvMataKuliah.DataSource = null;
+            dgvMataKuliah.DataSource = semuaNilai;
+        }
+
+
+
 
         private void dgvMahasiswa_CellContentClick(object sender, DataGridViewCellEventArgs e) { }
 

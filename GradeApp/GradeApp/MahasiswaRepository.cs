@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 using Newtonsoft.Json;
 
 namespace GradeApp
 {
-
     public static class MahasiswaRepository
     {
         private static string filePath = "mahasiswa.json";
@@ -32,14 +29,27 @@ namespace GradeApp
         public static void Add(Mahasiswa mhs)
         {
             List<Mahasiswa> list = LoadData();
-
-            if (list == null)
+            var existing = list.Find(x => x.NIM == mhs.NIM);
+            if (existing != null)
             {
-                list = new List<Mahasiswa>();
+                foreach (var mk in mhs.DaftarNilai)
+                {
+                    if (!existing.DaftarNilai.Any(x => x.NamaMK.Equals(mk.NamaMK, StringComparison.OrdinalIgnoreCase)))
+                    {
+                        existing.DaftarNilai.Add(mk);
+                    }
+                }
             }
-
-            list.Add(mhs);
+            else
+            {
+                list.Add(mhs);
+            }
             SaveData(list);
+        }
+
+        public static void SaveAll(List<Mahasiswa> semuaData)
+        {
+            SaveData(semuaData);
         }
 
         public static void Delete(string nim)
