@@ -10,7 +10,6 @@ D:\GitHub\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8
 D:\GitHub\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\GradeApp.Properties.Resources.resources
 D:\GitHub\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\GradeApp.UC_Counter.resources
 D:\GitHub\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\GradeApp.UC_Dashboard.resources
-D:\GitHub\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\GradeApp.UC_Manage.resources
 D:\GitHub\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\GradeApp.UC_Rangking.resources
 D:\GitHub\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\GradeApp.csproj.GenerateResource.cache
 D:\GitHub\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\GradeApp.GeneratedMSBuildEditorConfig.editorconfig
@@ -78,3 +77,5 @@ D:\GitHub\construction\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\o
 D:\GitHub\construction\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\ref\GradeApp.dll
 D:\GitHub\construction\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\GradeApp.UC_Subject.resources
 D:\GitHub\construction\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\GradeApp.UC_Grade.resources
+D:\GitHub\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\GradeApp.UC_Grade.resources
+D:\GitHub\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\GradeApp.UC_Subject.resources

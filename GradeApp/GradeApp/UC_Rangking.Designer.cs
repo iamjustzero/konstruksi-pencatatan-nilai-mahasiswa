@@ -28,31 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            dataGridViewMataKuliah = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewMataKuliah).BeginInit();
             SuspendLayout();
             // 
-            // label1
+            // dataGridViewMataKuliah
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(357, 202);
-            label1.Name = "label1";
-            label1.Size = new Size(57, 15);
-            label1.TabIndex = 0;
-            label1.Text = "Rangking";
+            dataGridViewMataKuliah.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewMataKuliah.Location = new Point(3, 3);
+            dataGridViewMataKuliah.Name = "dataGridViewMataKuliah";
+            dataGridViewMataKuliah.Size = new Size(628, 443);
+            dataGridViewMataKuliah.TabIndex = 0;
             // 
             // UC_Rangking
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(label1);
+            Controls.Add(dataGridViewMataKuliah);
             Name = "UC_Rangking";
-            Size = new Size(932, 554);
+            Size = new Size(635, 449);
+            ((System.ComponentModel.ISupportInitialize)dataGridViewMataKuliah).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
-        private Label label1;
+        private DataGridView dataGridViewMataKuliah;
     }
 }
