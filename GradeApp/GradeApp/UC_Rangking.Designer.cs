@@ -28,31 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridViewMataKuliah = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewMataKuliah).BeginInit();
+            dgvMataKuliah = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dgvMataKuliah).BeginInit();
             SuspendLayout();
             // 
-            // dataGridViewMataKuliah
+            // dgvMataKuliah
             // 
-            dataGridViewMataKuliah.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewMataKuliah.Location = new Point(3, 3);
-            dataGridViewMataKuliah.Name = "dataGridViewMataKuliah";
-            dataGridViewMataKuliah.Size = new Size(628, 443);
-            dataGridViewMataKuliah.TabIndex = 0;
+            dgvMataKuliah.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvMataKuliah.Location = new Point(3, 3);
+            dgvMataKuliah.Name = "dgvMataKuliah";
+            dgvMataKuliah.Size = new Size(628, 443);
+            dgvMataKuliah.TabIndex = 0;
+            dgvMataKuliah.CellContentClick += dgvMataKuliah_CellContentClick;
             // 
             // UC_Rangking
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(dataGridViewMataKuliah);
+            Controls.Add(dgvMataKuliah);
             Name = "UC_Rangking";
             Size = new Size(635, 449);
-            ((System.ComponentModel.ISupportInitialize)dataGridViewMataKuliah).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvMataKuliah).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private DataGridView dataGridViewMataKuliah;
+        private DataGridView dgvMataKuliah;
     }
 }
