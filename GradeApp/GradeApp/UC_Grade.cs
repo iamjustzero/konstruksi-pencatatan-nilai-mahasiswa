@@ -130,19 +130,34 @@ namespace GradeApp
                 return;
             }
 
+            string nim = textBoxNIM.Text.Trim();
+            string nama = textBoxNama.Text.Trim();
+            string namaMK = comboBoxMataKuliah.SelectedItem.ToString();
+
+            bool sudahAda = daftarMahasiswa.Any(m =>
+                m.NIM == nim &&
+                m.Nama == nama &&
+                m.DaftarNilai.Any(n => n.NamaMK == namaMK));
+
+            if (sudahAda)
+            {
+                MessageBox.Show("Data Nilai dengan NIM, Nama, dan Mata Kuliah tersebut sudah ADA");
+                return;
+            }
+
             var daftarMK = new List<MataKuliah>
             {
                 new MataKuliah
                 {
-                    NamaMK = comboBoxMataKuliah.SelectedItem.ToString(),
+                    NamaMK = namaMK,
                     Nilai = nilai
                 }
             };
 
             var mhs = new Mahasiswa
             {
-                NIM = textBoxNIM.Text,
-                Nama = textBoxNama.Text,
+                NIM = nim,
+                Nama = nama,
                 DaftarNilai = daftarMK
             };
 
@@ -156,9 +171,10 @@ namespace GradeApp
             ResetForm();
         }
 
+
         private void buttonHapus_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void dgvMahasiswa_CellContentClick(object sender, DataGridViewCellEventArgs e) { }
