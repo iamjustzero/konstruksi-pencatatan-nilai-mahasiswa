@@ -34,9 +34,9 @@
             // 
             // dgvMataKuliah
             // 
-            dgvMataKuliah.Location = new Point(3, 31);
+            dgvMataKuliah.Location = new Point(13, 110);
             dgvMataKuliah.Name = "dgvMataKuliah";
-            dgvMataKuliah.Size = new Size(626, 259);
+            dgvMataKuliah.Size = new Size(611, 324);
             dgvMataKuliah.TabIndex = 0;
             dgvMataKuliah.CellContentClick += dgvMataKuliah_CellContentClick;
             // 
@@ -46,7 +46,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(dgvMataKuliah);
             Name = "UC_Dashboard";
-            Size = new Size(645, 333);
+            Size = new Size(644, 455);
             Load += UC_Dashboard_Load;
             ((System.ComponentModel.ISupportInitialize)dgvMataKuliah).EndInit();
             ResumeLayout(false);
