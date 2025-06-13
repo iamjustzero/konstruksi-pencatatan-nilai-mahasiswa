@@ -65,26 +65,50 @@ namespace GradeApp
             dgvMataKuliah.DataSource = null;
             dgvMataKuliah.DataSource = dataGridSource;
 
-            //hitung average grade
+            
             if (semuaNilai.Count > 0)
             {
                 double rataRata = semuaNilai.Average(mk => mk.Nilai);
-                labelAverageValue.Text = rataRata.ToString("0.00");
+                labelAverageValuee.Text = rataRata.ToString("0.00");
+
+                double nilaiTertinggi = semuaNilai.Max(mk => mk.Nilai);
+                labelHighestGradeValue.Text = nilaiTertinggi.ToString("0.00");
+
+                double nilaiTerendah = semuaNilai.Min(mk => mk.Nilai);
+                labelLowestGradeValue.Text = nilaiTerendah.ToString("0.00");
+
             }
             else
             {
                 labelAverageValue.Text = "0.00";
+                labelHighestGradeValue.Text = "0.00";
             }
         }
 
+
         private void dgvMataKuliah_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Kosong, karena hanya view
+
         }
 
         private void UC_Dashboard_Load(object sender, EventArgs e)
         {
-            LoadData(); 
+            LoadData();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelAverageTitle_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelAverageValuee_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
