@@ -113,6 +113,12 @@ namespace GradeApp
                 return;
             }
 
+            if (!System.Text.RegularExpressions.Regex.IsMatch(textBoxNama.Text, @"^[a-zA-Z\s]+$"))
+            {
+                MessageBox.Show("Nama hanya boleh berisi huruf");
+                return;
+            }
+
             if (comboBoxMataKuliah.SelectedItem == null)
             {
                 MessageBox.Show("Pilih mata kuliah dari daftar!");

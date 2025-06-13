@@ -185,7 +185,7 @@ namespace GradeApp
                 if (result == DialogResult.Yes)
                 {
                     listMataKuliah.RemoveAt(selectedRow);
-                    selectedRow = -1; // <<== Tambahkan ini DI SINI
+                    selectedRow = -1;
                     MataKuliahRepository.Save(listMataKuliah);
                     TampilkanMataKuliah();
                     ClearInput();
