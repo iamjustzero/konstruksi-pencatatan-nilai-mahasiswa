@@ -36,7 +36,6 @@
             bLogin = new Button();
             pictureBox1 = new PictureBox();
             label1 = new Label();
-            label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -104,22 +103,11 @@
             label1.TabIndex = 6;
             label1.Text = "Student Grade Management System";
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(364, 30);
-            label2.Name = "label2";
-            label2.Size = new Size(52, 19);
-            label2.TabIndex = 7;
-            label2.Text = "SGMS";
-            // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
             Controls.Add(bLogin);
@@ -143,6 +131,5 @@
         private Button bLogin;
         private PictureBox pictureBox1;
         private Label label1;
-        private Label label2;
     }
 }

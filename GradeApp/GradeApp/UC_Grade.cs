@@ -25,9 +25,8 @@ namespace GradeApp
             dgvMataKuliah.EditMode = DataGridViewEditMode.EditProgrammatically;
             dgvMataKuliah.RowHeadersVisible = false;
             dgvMataKuliah.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
+            dgvMataKuliah.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             comboBoxMataKuliah.DropDownStyle = ComboBoxStyle.DropDownList;
-
             SetUkuranKolom();
             LoadData();
             LoadMataKuliah();
