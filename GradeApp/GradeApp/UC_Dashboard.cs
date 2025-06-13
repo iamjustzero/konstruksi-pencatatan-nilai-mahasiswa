@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace GradeApp
@@ -9,7 +9,6 @@ namespace GradeApp
     public partial class UC_Dashboard : UserControl
     {
         private List<Mahasiswa> daftarMahasiswa = new List<Mahasiswa>();
-        private Mahasiswa mahasiswaSaatIni;
 
         public UC_Dashboard()
         {
@@ -30,12 +29,11 @@ namespace GradeApp
             dgvMataKuliah.DefaultCellStyle.SelectionBackColor = dgvMataKuliah.DefaultCellStyle.BackColor;
             dgvMataKuliah.DefaultCellStyle.SelectionForeColor = dgvMataKuliah.DefaultCellStyle.ForeColor;
 
-            dgvMataKuliah.Enabled = false; 
+            dgvMataKuliah.Enabled = false;
 
             SetUkuranKolom();
             LoadData();
         }
-
 
         private void SetUkuranKolom()
         {
@@ -53,33 +51,40 @@ namespace GradeApp
         {
             daftarMahasiswa = MahasiswaRepository.LoadData();
 
-            var semuaNilai = new List<dynamic>();
+            var semuaNilai = daftarMahasiswa
+                .SelectMany(m => m.DaftarNilai)
+                .ToList();
 
-            foreach (var mhs in daftarMahasiswa)
+            var dataGridSource = semuaNilai.Select(mk => new
             {
-                foreach (var mk in mhs.DaftarNilai)
-                {
-                    semuaNilai.Add(new
-                    {
-                        NIM = mhs.NIM,
-                        NamaMK = mk.NamaMK,
-                        Nilai = mk.Nilai
-                    });
-                }
-            }
+                NIM = daftarMahasiswa.First(m => m.DaftarNilai.Contains(mk)).NIM,
+                NamaMK = mk.NamaMK,
+                Nilai = mk.Nilai
+            }).ToList();
 
             dgvMataKuliah.DataSource = null;
-            dgvMataKuliah.DataSource = semuaNilai;
+            dgvMataKuliah.DataSource = dataGridSource;
+
+            //hitung average grade
+            if (semuaNilai.Count > 0)
+            {
+                double rataRata = semuaNilai.Average(mk => mk.Nilai);
+                labelAverageValue.Text = rataRata.ToString("0.00");
+            }
+            else
+            {
+                labelAverageValue.Text = "0.00";
+            }
         }
 
         private void dgvMataKuliah_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            // Kosong, karena hanya view
         }
 
         private void UC_Dashboard_Load(object sender, EventArgs e)
         {
-
+            LoadData(); 
         }
     }
 }
