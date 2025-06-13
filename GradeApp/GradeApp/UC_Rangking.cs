@@ -34,16 +34,24 @@ namespace GradeApp
 
         private void TampilkanSemuaNilai()
         {
-            var semuaNilai = daftarMahasiswa.SelectMany(m => m.DaftarNilai.Select(mk => new
-            {
-                NIM = m.NIM,
-                NamaMahasiswa = m.Nama,
-                NamaMK = mk.NamaMK,
-                Nilai = mk.Nilai
-            })).ToList();
+            // Kalkulasi IPK untuk setiap mahasiswa
+            var dataRangking = daftarMahasiswa
+                .Where(m => m.DaftarNilai != null && m.DaftarNilai.Count > 0)
+                .Select(m => new
+                {
+                    NIM = m.NIM,
+                    NamaMahasiswa = m.Nama,
+                    IPK = Math.Round(m.DaftarNilai.Average(x => x.Nilai) / 25 * 4, 2) // Rumus IPK, 2 digit desimal
+                })
+                .OrderByDescending(m => m.IPK)
+                .ToList();
 
-            dgvMataKuliah.DataSource = null;
-            dgvMataKuliah.DataSource = semuaNilai;
+            dgvMataKuliah.DataSource = null;    
+            dgvMataKuliah.DataSource = dataRangking;    
+
+            // Ganti header kolom
+            if (dgvMataKuliah.Columns["IPK"] != null)
+                dgvMataKuliah.Columns["IPK"].HeaderText = "IPK";
         }
 
         private void AturDataGridView()

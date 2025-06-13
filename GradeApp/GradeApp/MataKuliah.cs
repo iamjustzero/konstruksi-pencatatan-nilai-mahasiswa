@@ -12,5 +12,6 @@ namespace GradeApp
         public int SKS { get; set; }
         public string NamaMK { get; set; }
         public double Nilai { get; set; }
+
     }
 }

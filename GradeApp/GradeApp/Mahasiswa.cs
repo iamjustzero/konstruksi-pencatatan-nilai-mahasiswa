@@ -11,5 +11,6 @@ namespace GradeApp
         public string NIM { get; set; }
         public string Nama { get; set; }
         public List<MataKuliah> DaftarNilai { get; set; } = new List<MataKuliah>();
+
     }
 }
