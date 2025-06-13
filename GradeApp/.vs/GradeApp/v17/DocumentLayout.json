@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "D:\\Full Sm 3\u00264\\Sm 4\\Konstruksi Perangkat Lunak\\New folder\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{61D4FAFF-4076-42FE-9971-C9B24DAB31FB}|GradeApp\\GradeApp.csproj|d:\\full sm 3\u00264\\sm 4\\konstruksi perangkat lunak\\new folder\\konstruksi-pencatatan-nilai-mahasiswa\\gradeapp\\gradeapp\\resources\\logo.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{61D4FAFF-4076-42FE-9971-C9B24DAB31FB}|GradeApp\\GradeApp.csproj|solutionrelative:gradeapp\\resources\\logo.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61D4FAFF-4076-42FE-9971-C9B24DAB31FB}|GradeApp\\GradeApp.csproj|D:\\Full Sm 3\u00264\\Sm 4\\Konstruksi Perangkat Lunak\\New folder\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\gradeapp\\mainapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{61D4FAFF-4076-42FE-9971-C9B24DAB31FB}|GradeApp\\GradeApp.csproj|solutionrelative:gradeapp\\mainapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61D4FAFF-4076-42FE-9971-C9B24DAB31FB}|GradeApp\\GradeApp.csproj|d:\\full sm 3\u00264\\sm 4\\konstruksi perangkat lunak\\new folder\\konstruksi-pencatatan-nilai-mahasiswa\\gradeapp\\gradeapp\\mainapp.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61D4FAFF-4076-42FE-9971-C9B24DAB31FB}|GradeApp\\GradeApp.csproj|solutionrelative:gradeapp\\mainapp.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61D4FAFF-4076-42FE-9971-C9B24DAB31FB}|GradeApp\\GradeApp.csproj|d:\\full sm 3\u00264\\sm 4\\konstruksi perangkat lunak\\new folder\\konstruksi-pencatatan-nilai-mahasiswa\\gradeapp\\gradeapp\\mainapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61D4FAFF-4076-42FE-9971-C9B24DAB31FB}|GradeApp\\GradeApp.csproj|solutionrelative:gradeapp\\mainapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{61D4FAFF-4076-42FE-9971-C9B24DAB31FB}|GradeApp\\GradeApp.csproj|D:\\Full Sm 3\u00264\\Sm 4\\Konstruksi Perangkat Lunak\\New folder\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\gradeapp\\uc_matakuliah.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{61D4FAFF-4076-42FE-9971-C9B24DAB31FB}|GradeApp\\GradeApp.csproj|solutionrelative:gradeapp\\uc_matakuliah.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -17,18 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{61D4FAFF-4076-42FE-9971-C9B24DAB31FB}|GradeApp\\GradeApp.csproj|d:\\full sm 3\u00264\\sm 4\\konstruksi perangkat lunak\\new folder\\konstruksi-pencatatan-nilai-mahasiswa\\gradeapp\\gradeapp\\uc_manage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{61D4FAFF-4076-42FE-9971-C9B24DAB31FB}|GradeApp\\GradeApp.csproj|solutionrelative:gradeapp\\uc_manage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{61D4FAFF-4076-42FE-9971-C9B24DAB31FB}|GradeApp\\GradeApp.csproj|d:\\full sm 3\u00264\\sm 4\\konstruksi perangkat lunak\\new folder\\konstruksi-pencatatan-nilai-mahasiswa\\gradeapp\\gradeapp\\mainapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{61D4FAFF-4076-42FE-9971-C9B24DAB31FB}|GradeApp\\GradeApp.csproj|solutionrelative:gradeapp\\mainapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{61D4FAFF-4076-42FE-9971-C9B24DAB31FB}|GradeApp\\GradeApp.csproj|D:\\Full Sm 3\u00264\\Sm 4\\Konstruksi Perangkat Lunak\\New folder\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\gradeapp\\mainapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{61D4FAFF-4076-42FE-9971-C9B24DAB31FB}|GradeApp\\GradeApp.csproj|solutionrelative:gradeapp\\mainapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{61D4FAFF-4076-42FE-9971-C9B24DAB31FB}|GradeApp\\GradeApp.csproj|d:\\full sm 3\u00264\\sm 4\\konstruksi perangkat lunak\\new folder\\konstruksi-pencatatan-nilai-mahasiswa\\gradeapp\\gradeapp\\mainapp.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{61D4FAFF-4076-42FE-9971-C9B24DAB31FB}|GradeApp\\GradeApp.csproj|solutionrelative:gradeapp\\mainapp.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{61D4FAFF-4076-42FE-9971-C9B24DAB31FB}|GradeApp\\GradeApp.csproj|d:\\full sm 3\u00264\\sm 4\\konstruksi perangkat lunak\\new folder\\konstruksi-pencatatan-nilai-mahasiswa\\gradeapp\\gradeapp\\uc_matakuliah.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -90,11 +94,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "MainApp.cs [Design]",
               "DocumentMoniker": "D:\\Full Sm 3\u00264\\Sm 4\\Konstruksi Perangkat Lunak\\New folder\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\GradeApp\\MainApp.cs",
               "RelativeDocumentMoniker": "GradeApp\\MainApp.cs",
@@ -106,7 +110,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "UC_Dashboard.cs [Design]",
               "DocumentMoniker": "D:\\Full Sm 3\u00264\\Sm 4\\Konstruksi Perangkat Lunak\\New folder\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\GradeApp\\UC_Dashboard.cs",
               "RelativeDocumentMoniker": "GradeApp\\UC_Dashboard.cs",
@@ -118,7 +122,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "UC_Manage.cs [Design]",
               "DocumentMoniker": "D:\\Full Sm 3\u00264\\Sm 4\\Konstruksi Perangkat Lunak\\New folder\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\GradeApp\\UC_Manage.cs",
               "RelativeDocumentMoniker": "GradeApp\\UC_Manage.cs",
@@ -138,44 +142,42 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UC_MataKuliah.cs",
-              "DocumentMoniker": "D:\\Full Sm 3\u00264\\Sm 4\\Konstruksi Perangkat Lunak\\New folder\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\GradeApp\\UC_MataKuliah.cs",
-              "RelativeDocumentMoniker": "GradeApp\\UC_MataKuliah.cs",
-              "ToolTip": "D:\\Full Sm 3\u00264\\Sm 4\\Konstruksi Perangkat Lunak\\New folder\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\GradeApp\\UC_MataKuliah.cs",
-              "RelativeToolTip": "GradeApp\\UC_MataKuliah.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T09:49:42.765Z",
-              "EditorCaption": ""
+              "DocumentIndex": 0,
+              "Title": "logo.png -  [English (United States)] - PNG [210x240, 8 bit, PNG]",
+              "DocumentMoniker": "D:\\Full Sm 3\u00264\\Sm 4\\Konstruksi Perangkat Lunak\\New folder\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\GradeApp\\Resources\\logo.png",
+              "RelativeDocumentMoniker": "GradeApp\\Resources\\logo.png",
+              "ToolTip": "D:\\Full Sm 3\u00264\\Sm 4\\Konstruksi Perangkat Lunak\\New folder\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\GradeApp\\Resources\\logo.png -  [English (United States)] - PNG [210x240, 8 bit, PNG]",
+              "RelativeToolTip": "GradeApp\\Resources\\logo.png -  [English (United States)] - PNG [210x240, 8 bit, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-06-13T10:28:40.72Z",
+              "EditorCaption": " -  [English (United States)] - PNG [210x240, 8 bit, PNG]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "UC_MataKuliah.cs [Design]",
               "DocumentMoniker": "D:\\Full Sm 3\u00264\\Sm 4\\Konstruksi Perangkat Lunak\\New folder\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\GradeApp\\UC_MataKuliah.cs",
               "RelativeDocumentMoniker": "GradeApp\\UC_MataKuliah.cs",
               "ToolTip": "D:\\Full Sm 3\u00264\\Sm 4\\Konstruksi Perangkat Lunak\\New folder\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\GradeApp\\UC_MataKuliah.cs [Design]",
               "RelativeToolTip": "GradeApp\\UC_MataKuliah.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T09:48:28.873Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-06-10T09:48:28.873Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "MainApp.cs",
               "DocumentMoniker": "D:\\Full Sm 3\u00264\\Sm 4\\Konstruksi Perangkat Lunak\\New folder\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\GradeApp\\MainApp.cs",
               "RelativeDocumentMoniker": "GradeApp\\MainApp.cs",
               "ToolTip": "D:\\Full Sm 3\u00264\\Sm 4\\Konstruksi Perangkat Lunak\\New folder\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\GradeApp\\MainApp.cs",
               "RelativeToolTip": "GradeApp\\MainApp.cs",
-              "ViewState": "AgIAAFkAAAAAAAAAAADwv2EAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAuwGEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-09T12:02:19.159Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "UC_Manage.cs",
               "DocumentMoniker": "D:\\Full Sm 3\u00264\\Sm 4\\Konstruksi Perangkat Lunak\\New folder\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\GradeApp\\UC_Manage.cs",
               "RelativeDocumentMoniker": "GradeApp\\UC_Manage.cs",
@@ -187,19 +189,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "MainApp.Designer.cs",
               "DocumentMoniker": "D:\\Full Sm 3\u00264\\Sm 4\\Konstruksi Perangkat Lunak\\New folder\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\GradeApp\\MainApp.Designer.cs",
               "RelativeDocumentMoniker": "GradeApp\\MainApp.Designer.cs",
               "ToolTip": "D:\\Full Sm 3\u00264\\Sm 4\\Konstruksi Perangkat Lunak\\New folder\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\GradeApp\\MainApp.Designer.cs",
               "RelativeToolTip": "GradeApp\\MainApp.Designer.cs",
-              "ViewState": "AgIAAIEAAAAAAAAAAAAIwI8AAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-08T03:52:39.339Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
+              "Title": "UC_MataKuliah.cs",
+              "DocumentMoniker": "D:\\Full Sm 3\u00264\\Sm 4\\Konstruksi Perangkat Lunak\\New folder\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\GradeApp\\UC_MataKuliah.cs",
+              "RelativeDocumentMoniker": "GradeApp\\UC_MataKuliah.cs",
+              "ToolTip": "D:\\Full Sm 3\u00264\\Sm 4\\Konstruksi Perangkat Lunak\\New folder\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\GradeApp\\UC_MataKuliah.cs",
+              "RelativeToolTip": "GradeApp\\UC_MataKuliah.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T09:49:42.765Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "UC_MataKuliah.Designer.cs",
               "DocumentMoniker": "D:\\Full Sm 3\u00264\\Sm 4\\Konstruksi Perangkat Lunak\\New folder\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\GradeApp\\UC_MataKuliah.Designer.cs",
               "RelativeDocumentMoniker": "GradeApp\\UC_MataKuliah.Designer.cs",
@@ -207,12 +221,11 @@
               "RelativeToolTip": "GradeApp\\UC_MataKuliah.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAIgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T09:48:34.06Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-10T09:48:34.06Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "UC_Dashboard.cs",
               "DocumentMoniker": "D:\\Full Sm 3\u00264\\Sm 4\\Konstruksi Perangkat Lunak\\New folder\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\GradeApp\\UC_Dashboard.cs",
               "RelativeDocumentMoniker": "GradeApp\\UC_Dashboard.cs",
@@ -224,7 +237,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "UC_Dashboard.Designer.cs",
               "DocumentMoniker": "D:\\Full Sm 3\u00264\\Sm 4\\Konstruksi Perangkat Lunak\\New folder\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\GradeApp\\UC_Dashboard.Designer.cs",
               "RelativeDocumentMoniker": "GradeApp\\UC_Dashboard.Designer.cs",
@@ -236,7 +249,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "Mahasiswa.cs",
               "DocumentMoniker": "D:\\Full Sm 3\u00264\\Sm 4\\Konstruksi Perangkat Lunak\\New folder\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\GradeApp\\Mahasiswa.cs",
               "RelativeDocumentMoniker": "GradeApp\\Mahasiswa.cs",
@@ -248,7 +261,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "MataKuliah.cs",
               "DocumentMoniker": "D:\\Full Sm 3\u00264\\Sm 4\\Konstruksi Perangkat Lunak\\New folder\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\GradeApp\\MataKuliah.cs",
               "RelativeDocumentMoniker": "GradeApp\\MataKuliah.cs",
@@ -260,7 +273,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "UC_Manage.Designer.cs",
               "DocumentMoniker": "D:\\Full Sm 3\u00264\\Sm 4\\Konstruksi Perangkat Lunak\\New folder\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\GradeApp\\UC_Manage.Designer.cs",
               "RelativeDocumentMoniker": "GradeApp\\UC_Manage.Designer.cs",
@@ -272,7 +285,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "GradeApp.csproj",
               "DocumentMoniker": "D:\\Full Sm 3\u00264\\Sm 4\\Konstruksi Perangkat Lunak\\New folder\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\GradeApp\\GradeApp.csproj",
               "RelativeDocumentMoniker": "GradeApp\\GradeApp.csproj",
@@ -284,7 +297,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "GradeApp",
               "DocumentMoniker": "D:\\Full Sm 3\u00264\\Sm 4\\Konstruksi Perangkat Lunak\\New folder\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\GradeApp\\GradeApp.csproj",
               "RelativeDocumentMoniker": "GradeApp\\GradeApp.csproj",
@@ -295,7 +308,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "Login.cs",
               "DocumentMoniker": "D:\\Full Sm 3\u00264\\Sm 4\\Konstruksi Perangkat Lunak\\New folder\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\GradeApp\\Login.cs",
               "RelativeDocumentMoniker": "GradeApp\\Login.cs",
@@ -308,7 +321,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "UC_Counter.cs [Design]",
               "DocumentMoniker": "D:\\Full Sm 3\u00264\\Sm 4\\Konstruksi Perangkat Lunak\\New folder\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\GradeApp\\UC_Counter.cs",
               "RelativeDocumentMoniker": "GradeApp\\UC_Counter.cs",
@@ -319,7 +332,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "UC_Rangking.cs [Design]",
               "DocumentMoniker": "D:\\Full Sm 3\u00264\\Sm 4\\Konstruksi Perangkat Lunak\\New folder\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\GradeApp\\UC_Rangking.cs",
               "RelativeDocumentMoniker": "GradeApp\\UC_Rangking.cs",
@@ -330,7 +343,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "Login.cs [Design]",
               "DocumentMoniker": "D:\\Full Sm 3\u00264\\Sm 4\\Konstruksi Perangkat Lunak\\New folder\\konstruksi-pencatatan-nilai-mahasiswa\\GradeApp\\GradeApp\\Login.cs",
               "RelativeDocumentMoniker": "GradeApp\\Login.cs",
