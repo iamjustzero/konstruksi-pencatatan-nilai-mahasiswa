@@ -47,6 +47,7 @@
             Controls.Add(dgvMataKuliah);
             Name = "UC_Dashboard";
             Size = new Size(645, 333);
+            Load += UC_Dashboard_Load;
             ((System.ComponentModel.ISupportInitialize)dgvMataKuliah).EndInit();
             ResumeLayout(false);
         }

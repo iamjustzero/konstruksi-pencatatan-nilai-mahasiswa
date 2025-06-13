@@ -17,14 +17,25 @@ namespace GradeApp
 
             dgvMataKuliah.AutoGenerateColumns = true;
             dgvMataKuliah.ReadOnly = true;
+            dgvMataKuliah.Enabled = true;
             dgvMataKuliah.AllowUserToAddRows = false;
-            dgvMataKuliah.EditMode = DataGridViewEditMode.EditProgrammatically;
+            dgvMataKuliah.AllowUserToResizeColumns = false;
+            dgvMataKuliah.AllowUserToResizeRows = false;
+            dgvMataKuliah.AllowUserToOrderColumns = false;
+            dgvMataKuliah.SelectionMode = DataGridViewSelectionMode.CellSelect;
+            dgvMataKuliah.MultiSelect = false;
+            dgvMataKuliah.ClearSelection();
             dgvMataKuliah.RowHeadersVisible = false;
             dgvMataKuliah.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvMataKuliah.DefaultCellStyle.SelectionBackColor = dgvMataKuliah.DefaultCellStyle.BackColor;
+            dgvMataKuliah.DefaultCellStyle.SelectionForeColor = dgvMataKuliah.DefaultCellStyle.ForeColor;
+
+            dgvMataKuliah.Enabled = false; 
 
             SetUkuranKolom();
             LoadData();
         }
+
 
         private void SetUkuranKolom()
         {
@@ -62,6 +73,11 @@ namespace GradeApp
         }
 
         private void dgvMataKuliah_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void UC_Dashboard_Load(object sender, EventArgs e)
         {
 
         }
