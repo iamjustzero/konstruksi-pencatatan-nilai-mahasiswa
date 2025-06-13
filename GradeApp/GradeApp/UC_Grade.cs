@@ -10,13 +10,12 @@ using System.Windows.Forms;
 
 namespace GradeApp
 {
-    public partial class UC_Manage : UserControl
+    public partial class UC_Grade : UserControl
     {
-
         private List<Mahasiswa> daftarMahasiswa = new List<Mahasiswa>();
         private Mahasiswa mahasiswaSaatIni;
 
-        public UC_Manage()
+        public UC_Grade()
         {
             InitializeComponent();
 
@@ -27,8 +26,11 @@ namespace GradeApp
             dgvMataKuliah.RowHeadersVisible = false;
             dgvMataKuliah.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
+            comboBoxMataKuliah.DropDownStyle = ComboBoxStyle.DropDownList;
+
             SetUkuranKolom();
             LoadData();
+            LoadMataKuliah();
         }
 
         private void SetUkuranKolom()
@@ -45,12 +47,26 @@ namespace GradeApp
             daftarMahasiswa = MahasiswaRepository.LoadData();
         }
 
+        private void LoadMataKuliah()
+        {
+            comboBoxMataKuliah.Items.Clear();
+            var semuaMK = MataKuliahRepository.Load();
+            foreach (var mk in semuaMK)
+            {
+                comboBoxMataKuliah.Items.Add(mk.NamaMataKuliah);
+            }
+
+            if (comboBoxMataKuliah.Items.Count > 0)
+                comboBoxMataKuliah.SelectedIndex = 0;
+        }
+
         private void ResetForm()
         {
             textBoxNama.Clear();
             textBoxNIM.Clear();
             textBoxNilai.Clear();
-            textBoxMataKuliah.Clear();
+            if (comboBoxMataKuliah.Items.Count > 0)
+                comboBoxMataKuliah.SelectedIndex = 0;
             dgvMataKuliah.DataSource = null;
             mahasiswaSaatIni = null;
         }
@@ -84,27 +100,39 @@ namespace GradeApp
                 dgvMataKuliah.DataSource = null;
                 dgvMataKuliah.DataSource = semuaNilai;
             }
+
             textBoxNIM.Clear();
             textBoxNama.Clear();
         }
 
         private void buttonSimpan_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(textBoxNIM.Text) || string.IsNullOrEmpty(textBoxNama.Text))
+            if (string.IsNullOrWhiteSpace(textBoxNIM.Text) || string.IsNullOrWhiteSpace(textBoxNama.Text))
             {
                 MessageBox.Show("NIM dan Nama harus diisi!");
                 return;
             }
 
-            var daftarMK = new List<MataKuliah>();
-            if (!string.IsNullOrEmpty(textBoxMataKuliah.Text) && double.TryParse(textBoxNilai.Text, out double nilai))
+            if (comboBoxMataKuliah.SelectedItem == null)
             {
-                daftarMK.Add(new MataKuliah
-                {
-                    NamaMK = textBoxMataKuliah.Text,
-                    Nilai = nilai
-                });
+                MessageBox.Show("Pilih mata kuliah dari daftar!");
+                return;
             }
+
+            if (!double.TryParse(textBoxNilai.Text, out double nilai))
+            {
+                MessageBox.Show("Nilai harus berupa angka!");
+                return;
+            }
+
+            var daftarMK = new List<MataKuliah>
+            {
+                new MataKuliah
+                {
+                    NamaMK = comboBoxMataKuliah.SelectedItem.ToString(),
+                    Nilai = nilai
+                }
+            };
 
             var mhs = new Mahasiswa
             {
@@ -121,31 +149,17 @@ namespace GradeApp
             dgvMataKuliah.DataSource = mahasiswaSaatIni.DaftarNilai;
 
             ResetForm();
-
         }
 
         private void buttonHapus_Click(object sender, EventArgs e)
         {
-            //if (dgvMahasiswa.SelectedRows.Count == 0)
-            //{
-            //    MessageBox.Show("Pilih data yang ingin dihapus.");
-            //    return;
-            //}
-
-            //string nim = textBoxNIM.Text;
-            //MahasiswaRepository.Delete(nim);
-            //LoadData();
+            
         }
 
-        private void dgvMahasiswa_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+        private void dgvMahasiswa_CellContentClick(object sender, DataGridViewCellEventArgs e) { }
 
+        private void dgvMataKuliah_CellContentClick(object sender, DataGridViewCellEventArgs e) { }
 
-        }
-
-        private void dgvMataKuliah_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+        private void comboBoxMataKuliah_SelectedIndexChanged(object sender, EventArgs e) { }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace GradeApp
 {
-    partial class UC_Manage
+    partial class UC_Grade
     {
         /// <summary> 
         /// Required designer variable.
@@ -37,8 +37,8 @@
             buttonSimpan = new Button();
             buttonHapus = new Button();
             labelMataKuliah = new Label();
-            textBoxMataKuliah = new TextBox();
             dgvMataKuliah = new DataGridView();
+            comboBoxMataKuliah = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)dgvMataKuliah).BeginInit();
             SuspendLayout();
             // 
@@ -119,13 +119,6 @@
             labelMataKuliah.TabIndex = 9;
             labelMataKuliah.Text = "Mata Kuliah";
             // 
-            // textBoxMataKuliah
-            // 
-            textBoxMataKuliah.Location = new Point(80, 99);
-            textBoxMataKuliah.Name = "textBoxMataKuliah";
-            textBoxMataKuliah.Size = new Size(156, 23);
-            textBoxMataKuliah.TabIndex = 10;
-            // 
             // dgvMataKuliah
             // 
             dgvMataKuliah.AllowUserToAddRows = false;
@@ -140,12 +133,21 @@
             dgvMataKuliah.TabIndex = 11;
             dgvMataKuliah.CellContentClick += dgvMataKuliah_CellContentClick;
             // 
-            // UC_Manage
+            // comboBoxMataKuliah
+            // 
+            comboBoxMataKuliah.FormattingEnabled = true;
+            comboBoxMataKuliah.Location = new Point(80, 99);
+            comboBoxMataKuliah.Name = "comboBoxMataKuliah";
+            comboBoxMataKuliah.Size = new Size(156, 23);
+            comboBoxMataKuliah.TabIndex = 12;
+            comboBoxMataKuliah.SelectedIndexChanged += comboBoxMataKuliah_SelectedIndexChanged;
+            // 
+            // UC_Grade
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(comboBoxMataKuliah);
             Controls.Add(dgvMataKuliah);
-            Controls.Add(textBoxMataKuliah);
             Controls.Add(labelMataKuliah);
             Controls.Add(buttonHapus);
             Controls.Add(buttonSimpan);
@@ -155,7 +157,7 @@
             Controls.Add(labelNilai);
             Controls.Add(labelNIM);
             Controls.Add(labelNama);
-            Name = "UC_Manage";
+            Name = "UC_Grade";
             Size = new Size(636, 450);
             Load += UC_Manage_Load;
             ((System.ComponentModel.ISupportInitialize)dgvMataKuliah).EndInit();
@@ -177,7 +179,7 @@
         private Button buttonSimpan;
         private Button buttonHapus;
         private Label labelMataKuliah;
-        private TextBox textBoxMataKuliah;
         private DataGridView dgvMataKuliah;
+        private ComboBox comboBoxMataKuliah;
     }
 }

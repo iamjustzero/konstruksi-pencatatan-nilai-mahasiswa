@@ -66,7 +66,7 @@ namespace GradeApp
 
         private void buttonManage_Click(object sender, EventArgs e)
         {
-            ShowUserControl(new UC_Manage());
+            ShowUserControl(new UC_Grade());
         }
 
         private void buttonCounter_Click(object sender, EventArgs e)

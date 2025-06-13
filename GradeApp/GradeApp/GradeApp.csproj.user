@@ -13,7 +13,7 @@
     <Compile Update="UC_Dashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UC_Manage.cs">
+    <Compile Update="UC_Grade.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UC_Subject.cs">
