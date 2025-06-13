@@ -134,6 +134,15 @@ namespace GradeApp
             string nama = textBoxNama.Text.Trim();
             string namaMK = comboBoxMataKuliah.SelectedItem.ToString();
 
+            // Cek jika NIM sudah ada, maka nama harus sama
+            var existingMahasiswa = daftarMahasiswa.FirstOrDefault(m => m.NIM == nim);
+            if (existingMahasiswa != null && !string.Equals(existingMahasiswa.Nama, nama, StringComparison.OrdinalIgnoreCase))
+            {
+                MessageBox.Show($"NIM {nim} sudah terdaftar untuk nama \"{existingMahasiswa.Nama}\".\nPeriksa kembali input anda.");
+                return;
+            }
+
+            // Cek duplikat NIM + Nama + Mata Kuliah
             bool sudahAda = daftarMahasiswa.Any(m =>
                 m.NIM == nim &&
                 m.Nama == nama &&
@@ -141,7 +150,7 @@ namespace GradeApp
 
             if (sudahAda)
             {
-                MessageBox.Show("Data Nilai dengan NIM, Nama, dan Mata Kuliah tersebut sudah ADA");
+                MessageBox.Show("Data dengan NIM, Nama, dan Mata Kuliah tersebut sudah ada!");
                 return;
             }
 
@@ -170,6 +179,7 @@ namespace GradeApp
 
             ResetForm();
         }
+
 
 
         private void buttonHapus_Click(object sender, EventArgs e)
