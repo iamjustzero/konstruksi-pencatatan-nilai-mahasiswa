@@ -185,7 +185,7 @@ namespace GradeApp
 
         private void buttonHapus_Click(object sender, EventArgs e)
         {
-            if (dgvMataKuliah.SelectedRows.Count == 0)
+             if (dgvMataKuliah.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Pilih data yang ingin dihapus!");
                 return;

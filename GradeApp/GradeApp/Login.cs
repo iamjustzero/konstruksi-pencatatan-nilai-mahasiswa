@@ -2,15 +2,14 @@ namespace GradeApp
 {
     public partial class Login : Form
     {
-        private const string USERNAME = "admin";
-        private const string PASSWORD = "admin";
+        private const string username = "admin";
+        private const string password = "admin";
 
         public Login()
         {
             InitializeComponent();
             this.MaximumSize = new Size(800, 600);
             this.StartPosition = FormStartPosition.CenterScreen;
-            //this.MaximizeBox = false;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -25,10 +24,10 @@ namespace GradeApp
 
         private void bLogin_Click(object sender, EventArgs e)
         {
-            string username = tbUsername.Text;
-            string password = tbPassword.Text;
+            string usernameInput = tbUsername.Text;
+            string passwordInput = tbPassword.Text;
 
-            if (username == USERNAME && password == PASSWORD)
+            if (usernameInput == username && passwordInput == password)
             {
                 this.Hide();
                 MainApp mainApp = new MainApp();
