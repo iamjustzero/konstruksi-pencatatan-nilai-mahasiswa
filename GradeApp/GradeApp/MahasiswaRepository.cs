@@ -34,7 +34,7 @@ namespace GradeApp
             {
                 foreach (var mk in mhs.DaftarNilai)
                 {
-                    if (!existing.DaftarNilai.Any(x => x.NamaMK.Equals(mk.NamaMK, StringComparison.OrdinalIgnoreCase)))
+                    if (!existing.DaftarNilai.Any(x => x.Nama_MK.Equals(mk.Nama_MK, StringComparison.OrdinalIgnoreCase)))
                     {
                         existing.DaftarNilai.Add(mk);
                     }

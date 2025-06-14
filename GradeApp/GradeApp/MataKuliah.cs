@@ -8,9 +8,9 @@ namespace GradeApp
 {
     public class MataKuliah
     {
-        public string kodeMK { get; set; }
+        public string Kode_MK { get; set; }
         public int SKS { get; set; }
-        public string NamaMK { get; set; }
+        public string Nama_MK { get; set; }
         public double Nilai { get; set; }
 
     }

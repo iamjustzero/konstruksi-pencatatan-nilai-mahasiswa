@@ -58,7 +58,7 @@ namespace GradeApp
             var dataGridSource = semuaNilai.Select(mk => new
             {
                 NIM = daftarMahasiswa.First(m => m.DaftarNilai.Contains(mk)).NIM,
-                NamaMK = mk.NamaMK,
+                NamaMK = mk.Nama_MK,
                 Nilai = mk.Nilai
             }).ToList();
 

@@ -91,7 +91,7 @@ namespace GradeApp
                         {
                             NIM = mhs.NIM,
                             NamaMahasiswa = mhs.Nama,
-                            NamaMK = mk.NamaMK,
+                            NamaMK = mk.Nama_MK,
                             Nilai = mk.Nilai
                         });
                     }
@@ -147,7 +147,7 @@ namespace GradeApp
             bool sudahAda = daftarMahasiswa.Any(m =>
                 m.NIM == nim &&
                 m.Nama == nama &&
-                m.DaftarNilai.Any(n => n.NamaMK == namaMK));
+                m.DaftarNilai.Any(n => n.Nama_MK == namaMK));
 
             if (sudahAda)
             {
@@ -159,7 +159,7 @@ namespace GradeApp
             {
                 new MataKuliah
                 {
-                    NamaMK = namaMK,
+                    Nama_MK = namaMK,
                     Nilai = nilai
                 }
             };
@@ -208,7 +208,7 @@ namespace GradeApp
             if (mahasiswa != null)
             {
                 var mkToRemove = mahasiswa.DaftarNilai
-                    .FirstOrDefault(mk => string.Equals(mk.NamaMK?.Trim(), namaMK, StringComparison.OrdinalIgnoreCase));
+                    .FirstOrDefault(mk => string.Equals(mk.Nama_MK?.Trim(), namaMK, StringComparison.OrdinalIgnoreCase));
 
                 if (mkToRemove != null)
                 {
@@ -243,7 +243,7 @@ namespace GradeApp
             {
                 NIM = m.NIM,
                 NamaMahasiswa = m.Nama,
-                NamaMK = mk.NamaMK,
+                NamaMK = mk.Nama_MK,
                 Nilai = mk.Nilai
             })).ToList();
 
