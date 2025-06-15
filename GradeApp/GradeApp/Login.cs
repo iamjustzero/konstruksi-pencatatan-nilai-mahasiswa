@@ -8,8 +8,9 @@ namespace GradeApp
         public Login()
         {
             InitializeComponent();
-            this.MaximumSize = new Size(800, 600);
             this.StartPosition = FormStartPosition.CenterScreen;
+            this.MaximizeBox = false;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
         private void label1_Click(object sender, EventArgs e)
