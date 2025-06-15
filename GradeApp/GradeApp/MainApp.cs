@@ -15,9 +15,10 @@ namespace GradeApp
         public MainApp()
         {
             InitializeComponent();
-            this.MaximumSize = new Size(800, 600);
             this.StartPosition = FormStartPosition.CenterScreen;
             this.FormClosed += OnFormClosed;
+            this.MaximizeBox = false;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
             ShowUserControl(new UC_Dashboard());
         }
 
