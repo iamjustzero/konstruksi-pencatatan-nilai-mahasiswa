@@ -60,6 +60,30 @@ namespace GradeApp
                 comboBoxMataKuliah.SelectedIndex = 0;
         }
 
+        public void RefreshData()
+        {
+            var daftarMahasiswa = MahasiswaRepository.LoadData();
+
+            var semuaNilai = new List<dynamic>();
+
+            foreach (var mhs in daftarMahasiswa)
+            {
+                foreach (var mk in mhs.DaftarNilai)
+                {
+                    semuaNilai.Add(new
+                    {
+                        NIM = mhs.NIM,
+                        NamaMahasiswa = mhs.Nama,
+                        NamaMK = mk.Nama_MK,
+                        Nilai = mk.Nilai
+                    });
+                }
+            }
+
+            dgvMataKuliah.DataSource = null;
+            dgvMataKuliah.DataSource = semuaNilai;
+        }
+
         private void ResetForm()
         {
             textBoxNama.Clear();
@@ -141,15 +165,16 @@ namespace GradeApp
             string nama = textBoxNama.Text.Trim();
             string namaMK = comboBoxMataKuliah.SelectedItem.ToString();
 
-            // Cek jika NIM sudah ada, maka nama harus sama
+            // Cek apakah NIM sudah ada dengan nama yang berbeda
             var existingMahasiswa = daftarMahasiswa.FirstOrDefault(m => m.NIM == nim);
-            if (existingMahasiswa != null && !string.Equals(existingMahasiswa.Nama, nama, StringComparison.OrdinalIgnoreCase))
+            if (existingMahasiswa != null &&
+                !string.Equals(existingMahasiswa.Nama, nama, StringComparison.OrdinalIgnoreCase))
             {
-                MessageBox.Show($"NIM {nim} sudah terdaftar untuk nama \"{existingMahasiswa.Nama}\".\nPeriksa kembali input anda.");
+                MessageBox.Show($"NIM {nim} sudah terdaftar untuk \"{existingMahasiswa.Nama}\".\nPeriksa kembali input Anda.");
                 return;
             }
 
-            // Cek duplikat NIM + Nama + Mata Kuliah
+            // Cek duplikasi NIM + Nama + Mata Kuliah
             bool sudahAda = daftarMahasiswa.Any(m =>
                 m.NIM == nim &&
                 m.Nama == nama &&
@@ -162,13 +187,13 @@ namespace GradeApp
             }
 
             var daftarMK = new List<MataKuliah>
-            {
-                new MataKuliah
-                {
-                    Nama_MK = namaMK,
-                    Nilai = nilai
-                }
-            };
+    {
+        new MataKuliah
+        {
+            Nama_MK = namaMK,
+            Nilai = nilai
+        }
+    };
 
             var mhs = new Mahasiswa
             {
@@ -178,13 +203,19 @@ namespace GradeApp
             };
 
             MahasiswaRepository.Add(mhs);
-            LoadData();
+            LoadData(); 
 
             mahasiswaSaatIni = mhs;
             dgvMataKuliah.DataSource = null;
             dgvMataKuliah.DataSource = mahasiswaSaatIni.DaftarNilai;
 
             ResetForm();
+
+            var ucGrade = this.ParentForm?.Controls.Find("panelContent", true).FirstOrDefault() is Panel panel
+                          && panel.Controls.Count > 0
+                          && panel.Controls[0] is UC_Grade gradeControl ? gradeControl : null;
+
+            ucGrade?.RefreshData(); 
         }
 
 
