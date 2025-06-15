@@ -131,6 +131,12 @@ namespace GradeApp
                 return;
             }
 
+            if (nilai < 0 || nilai > 100)
+            {
+                MessageBox.Show("Nilai harus berada di antara 0 sampai 100.");
+                return;
+            }
+
             string nim = textBoxNIM.Text.Trim();
             string nama = textBoxNama.Text.Trim();
             string namaMK = comboBoxMataKuliah.SelectedItem.ToString();
