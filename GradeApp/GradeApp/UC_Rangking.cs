@@ -15,6 +15,8 @@ namespace GradeApp
         public UC_Rangking()
         {
             InitializeComponent();
+            dgvMataKuliah.AllowUserToResizeRows = false;
+            dgvMataKuliah.AllowUserToOrderColumns = false;
             this.Load += UC_Rangking_Load;
         }
 
