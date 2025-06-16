@@ -33,6 +33,7 @@ namespace GradeApp
             LoadMataKuliah();
         }
 
+        //ini buat set ukuran kolom 
         private void SetUkuranKolom()
         {
             if (dgvMataKuliah.Columns.Contains("NamaMK"))
