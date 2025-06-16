@@ -52,9 +52,9 @@
             // 
             // dgvMataKuliah
             // 
-            dgvMataKuliah.Location = new Point(13, 100);
+            dgvMataKuliah.Location = new Point(3, 100);
             dgvMataKuliah.Name = "dgvMataKuliah";
-            dgvMataKuliah.Size = new Size(611, 334);
+            dgvMataKuliah.Size = new Size(647, 341);
             dgvMataKuliah.TabIndex = 0;
             dgvMataKuliah.CellContentClick += dgvMataKuliah_CellContentClick;
             // 
@@ -129,7 +129,7 @@
             Controls.Add(labelAverageTitle);
             Controls.Add(dgvMataKuliah);
             Name = "UC_Dashboard";
-            Size = new Size(644, 455);
+            Size = new Size(653, 453);
             Load += UC_Dashboard_Load;
             ((System.ComponentModel.ISupportInitialize)dgvMataKuliah).EndInit();
             ResumeLayout(false);
