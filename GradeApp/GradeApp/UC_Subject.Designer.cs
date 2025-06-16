@@ -105,11 +105,11 @@
             // dgvMataKuliah
             // 
             dgvMataKuliah.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvMataKuliah.Location = new Point(14, 108);
+            dgvMataKuliah.Location = new Point(2, 108);
             dgvMataKuliah.Margin = new Padding(2);
             dgvMataKuliah.Name = "dgvMataKuliah";
             dgvMataKuliah.RowHeadersWidth = 62;
-            dgvMataKuliah.Size = new Size(609, 329);
+            dgvMataKuliah.Size = new Size(647, 340);
             dgvMataKuliah.TabIndex = 7;
             dgvMataKuliah.CellContentClick += dgvMataKuliah_CellContentClick;
             // 
@@ -126,7 +126,7 @@
             Controls.Add(labelNamaMataKuliah);
             Margin = new Padding(2);
             Name = "UC_Subject";
-            Size = new Size(644, 450);
+            Size = new Size(651, 450);
             ((System.ComponentModel.ISupportInitialize)dgvMataKuliah).EndInit();
             ResumeLayout(false);
             PerformLayout();
