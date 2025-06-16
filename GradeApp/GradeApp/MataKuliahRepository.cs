@@ -11,17 +11,36 @@ namespace GradeApp
 
         public static void Save(List<UC_Subject.Matkul> list)
         {
-            string json = JsonConvert.SerializeObject(list, Formatting.Indented);
-            File.WriteAllText(filePath, json);
+            if (list == null) return;
+
+            try
+            {
+                string json = JsonConvert.SerializeObject(list, Formatting.Indented);
+                File.WriteAllText(filePath, json);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
         }
 
         public static List<UC_Subject.Matkul> Load()
         {
-            if (!File.Exists(filePath))
-                return new List<UC_Subject.Matkul>();
+            try
+            {
+                if (!File.Exists(filePath))
+                    return new List<UC_Subject.Matkul>();
 
-            string json = File.ReadAllText(filePath);
-            return JsonConvert.DeserializeObject<List<UC_Subject.Matkul>>(json);
+                string json = File.ReadAllText(filePath);
+
+                var result = JsonConvert.DeserializeObject<List<UC_Subject.Matkul>>(json);
+
+                return result ?? new List<UC_Subject.Matkul>();
+            }
+            catch
+            {
+                return new List<UC_Subject.Matkul>();
+            }
         }
     }
 }
