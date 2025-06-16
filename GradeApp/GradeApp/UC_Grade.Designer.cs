@@ -126,10 +126,10 @@
             dgvMataKuliah.AllowUserToResizeColumns = false;
             dgvMataKuliah.AllowUserToResizeRows = false;
             dgvMataKuliah.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvMataKuliah.Location = new Point(14, 162);
+            dgvMataKuliah.Location = new Point(2, 162);
             dgvMataKuliah.Margin = new Padding(2);
             dgvMataKuliah.Name = "dgvMataKuliah";
-            dgvMataKuliah.Size = new Size(608, 277);
+            dgvMataKuliah.Size = new Size(643, 277);
             dgvMataKuliah.TabIndex = 11;
             dgvMataKuliah.CellContentClick += dgvMataKuliah_CellContentClick;
             // 
@@ -158,7 +158,7 @@
             Controls.Add(labelNIM);
             Controls.Add(labelNama);
             Name = "UC_Grade";
-            Size = new Size(636, 450);
+            Size = new Size(648, 450);
             Load += UC_Manage_Load;
             ((System.ComponentModel.ISupportInitialize)dgvMataKuliah).EndInit();
             ResumeLayout(false);
