@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,15 +12,16 @@ namespace GradeApp
 {
     public partial class UC_Rangking : UserControl
     {
+        private List<Mahasiswa> daftarMahasiswa = new List<Mahasiswa>();
+
         public UC_Rangking()
         {
             InitializeComponent();
             dgvMataKuliah.AllowUserToResizeRows = false;
             dgvMataKuliah.AllowUserToOrderColumns = false;
+            dgvMataKuliah.CellClick += dgvMataKuliah_CellClick;
             this.Load += UC_Rangking_Load;
         }
-
-        private List<Mahasiswa> daftarMahasiswa = new List<Mahasiswa>();
 
         private void UC_Rangking_Load(object sender, EventArgs e)
         {
@@ -31,31 +32,47 @@ namespace GradeApp
 
         private void LoadData()
         {
-            daftarMahasiswa = MahasiswaRepository.LoadData();
+            try
+            {
+                daftarMahasiswa = MahasiswaRepository.LoadData() ?? new List<Mahasiswa>();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Gagal memuat data: " + ex.Message);
+                daftarMahasiswa = new List<Mahasiswa>();
+            }
         }
 
         private void TampilkanSemuaNilai()
         {
-            // Kalkulasi IPK untuk setiap mahasiswa pada skala 4 (0.00 - 4.00)
-            var dataRangking = daftarMahasiswa
-                .Where(m => m.DaftarNilai != null && m.DaftarNilai.Count > 0)
-                .Select(m => new
+            // Pastikan DaftarNilai tidak null untuk setiap mahasiswa
+            var dataRangking = new List<dynamic>();
+
+            foreach (var mhs in daftarMahasiswa)
+            {
+                if (mhs.DaftarNilai == null || mhs.DaftarNilai.Count == 0)
                 {
-                    NIM = m.NIM,
-                    NamaMahasiswa = m.Nama,
-                    IPK = Math.Round(m.DaftarNilai.Average(x => x.Nilai) / 100 * 4, 2) // IPK skala 4, 2 digit desimal
-                })
-                .OrderByDescending(m => m.IPK)
-                .ToList();
+                    continue; // Lewati jika tidak ada nilai
+                }
+
+                double ipk = Math.Round(mhs.DaftarNilai.Average(x => x.Nilai) / 25, 2); // Contoh skala 0–4
+
+                dataRangking.Add(new
+                {
+                    NIM = mhs.NIM,
+                    NamaMahasiswa = mhs.Nama,
+                    IPK = ipk
+                });
+            }
 
             dgvMataKuliah.DataSource = null;
             dgvMataKuliah.DataSource = dataRangking;
 
             // Ganti header kolom jika perlu
-            if (dgvMataKuliah.Columns["IPK"] != null)
+            if (dgvMataKuliah.Columns.Contains("IPK"))
                 dgvMataKuliah.Columns["IPK"].HeaderText = "IPK";
 
-            // Pastikan semua kolom dapat di-sort (opsional, untuk jaga-jaga)
+            // Aktifkan sorting via klik header
             foreach (DataGridViewColumn column in dgvMataKuliah.Columns)
             {
                 column.SortMode = DataGridViewColumnSortMode.Automatic;
@@ -66,16 +83,21 @@ namespace GradeApp
         {
             dgvMataKuliah.AutoGenerateColumns = true;
             dgvMataKuliah.ReadOnly = true;
+            dgvMataKuliah.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvMataKuliah.RowHeadersVisible = false;
             dgvMataKuliah.AllowUserToAddRows = false;
             dgvMataKuliah.EditMode = DataGridViewEditMode.EditProgrammatically;
-            dgvMataKuliah.RowHeadersVisible = false;
-            dgvMataKuliah.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvMataKuliah.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+        }
+
+        private void dgvMataKuliah_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Kosong dulu — bisa diisi nanti kalau ada aksi tambahan
         }
 
         private void dgvMataKuliah_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Kosong, bisa diisi sesuai kebutuhan
+            // Kosong juga untuk sementara
         }
     }
 }

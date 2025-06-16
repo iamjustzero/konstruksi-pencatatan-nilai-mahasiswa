@@ -28,31 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            dataGridView1 = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
-            // label1
+            // dataGridView1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(452, 87);
-            label1.Name = "label1";
-            label1.Size = new Size(42, 15);
-            label1.TabIndex = 0;
-            label1.Text = "Report";
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(3, 3);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(645, 441);
+            dataGridView1.TabIndex = 0;
             // 
             // UC_Counter
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(label1);
+            Controls.Add(dataGridView1);
             Name = "UC_Counter";
-            Size = new Size(700, 416);
+            Size = new Size(652, 447);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
-        private Label label1;
+        private DataGridView dataGridView1;
     }
 }
