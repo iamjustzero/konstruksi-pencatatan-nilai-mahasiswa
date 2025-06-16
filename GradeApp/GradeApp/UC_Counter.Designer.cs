@@ -47,6 +47,7 @@
             Controls.Add(label1);
             Name = "UC_Counter";
             Size = new Size(700, 416);
+            Load += UC_Counter_Load;
             ResumeLayout(false);
             PerformLayout();
         }
