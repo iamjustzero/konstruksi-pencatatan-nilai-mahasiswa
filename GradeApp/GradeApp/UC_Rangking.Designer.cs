@@ -35,9 +35,9 @@
             // dgvMataKuliah
             // 
             dgvMataKuliah.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvMataKuliah.Location = new Point(3, 3);
+            dgvMataKuliah.Location = new Point(3, 6);
             dgvMataKuliah.Name = "dgvMataKuliah";
-            dgvMataKuliah.Size = new Size(628, 443);
+            dgvMataKuliah.Size = new Size(646, 440);
             dgvMataKuliah.TabIndex = 0;
             dgvMataKuliah.CellContentClick += dgvMataKuliah_CellContentClick;
             // 
@@ -47,7 +47,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(dgvMataKuliah);
             Name = "UC_Rangking";
-            Size = new Size(635, 449);
+            Size = new Size(652, 449);
             ((System.ComponentModel.ISupportInitialize)dgvMataKuliah).EndInit();
             ResumeLayout(false);
         }
