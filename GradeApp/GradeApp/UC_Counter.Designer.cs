@@ -28,31 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            dgvMataKuliah = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dgvMataKuliah).BeginInit();
             SuspendLayout();
             // 
-            // dataGridView1
+            // dgvMataKuliah
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(3, 3);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(645, 441);
-            dataGridView1.TabIndex = 0;
+            dgvMataKuliah.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvMataKuliah.Location = new Point(3, 3);
+            dgvMataKuliah.Name = "dgvMataKuliah";
+            dgvMataKuliah.Size = new Size(645, 441);
+            dgvMataKuliah.TabIndex = 0;
+            dgvMataKuliah.CellContentClick += dgvMataKuliah_CellContentClick;
             // 
             // UC_Counter
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvMataKuliah);
             Name = "UC_Counter";
             Size = new Size(652, 447);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvMataKuliah).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private DataGridView dataGridView1;
+        private DataGridView dgvMataKuliah;
     }
 }
