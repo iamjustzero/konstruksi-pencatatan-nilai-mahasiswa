@@ -8,11 +8,26 @@ namespace GradeApp
 {
     public partial class UC_Counter : UserControl
     {
+        private static UC_Counter _instance;
+
+        // Properti Singleton
+        public static UC_Counter Instance
+        {
+            get
+            {
+                if (_instance == null || _instance.IsDisposed)
+                {
+                    _instance = new UC_Counter();
+                }
+                return _instance;
+            }
+        }
+
         private List<Mahasiswa> daftarMahasiswa = new List<Mahasiswa>();
-        //private List<MataKuliah> daftarMatkul = new List<MataKuliah>();
         private List<UC_Subject.Matkul> daftarMatkul = new List<UC_Subject.Matkul>();
 
-        public UC_Counter()
+        // Konstruktor private agar tidak bisa diakses dari luar
+        private UC_Counter()
         {
             InitializeComponent();
 
@@ -43,13 +58,6 @@ namespace GradeApp
             }
         }
 
-        private void dgvMataKuliah_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-
-
         private List<UC_Subject.Matkul> LoadMatkulData()
         {
             try
@@ -79,10 +87,10 @@ namespace GradeApp
             {
                 if (mhs.DaftarNilai == null || mhs.DaftarNilai.Count == 0)
                 {
-                    continue; 
+                    continue;
                 }
 
-                double ipk = Math.Round(mhs.DaftarNilai.Average(x => x.Nilai) / 25, 2); 
+                double ipk = Math.Round(mhs.DaftarNilai.Average(x => x.Nilai) / 25, 2);
 
                 dataRangking.Add(new
                 {
@@ -154,6 +162,11 @@ namespace GradeApp
                     MessageBox.Show(detailText.ToString(), "Detail Mahasiswa", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
+        }
+
+        private void dgvMataKuliah_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // kosong
         }
     }
 }

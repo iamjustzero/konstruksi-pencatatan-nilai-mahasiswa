@@ -106,3 +106,30 @@ C:\Users\FTIB - LAB DIGIN 30\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\Grad
 C:\Users\FTIB - LAB DIGIN 30\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\GradeApp.pdb
 C:\Users\FTIB - LAB DIGIN 30\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\GradeApp.genruntimeconfig.cache
 C:\Users\FTIB - LAB DIGIN 30\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\ref\GradeApp.dll
+D:\semester4\KPL\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\bin\Debug\net8.0-windows\GradeApp.exe
+D:\semester4\KPL\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\bin\Debug\net8.0-windows\GradeApp.deps.json
+D:\semester4\KPL\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\bin\Debug\net8.0-windows\GradeApp.runtimeconfig.json
+D:\semester4\KPL\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\bin\Debug\net8.0-windows\GradeApp.dll
+D:\semester4\KPL\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\bin\Debug\net8.0-windows\GradeApp.pdb
+D:\semester4\KPL\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+D:\semester4\KPL\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\GradeApp.csproj.AssemblyReference.cache
+D:\semester4\KPL\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\GradeApp.Login.resources
+D:\semester4\KPL\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\GradeApp.MainApp.resources
+D:\semester4\KPL\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\GradeApp.Properties.Resources.resources
+D:\semester4\KPL\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\GradeApp.UC_Counter.resources
+D:\semester4\KPL\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\GradeApp.UC_Dashboard.resources
+D:\semester4\KPL\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\GradeApp.UC_Grade.resources
+D:\semester4\KPL\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\GradeApp.UC_Rangking.resources
+D:\semester4\KPL\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\GradeApp.UC_Subject.resources
+D:\semester4\KPL\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\GradeApp.csproj.GenerateResource.cache
+D:\semester4\KPL\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\GradeApp.GeneratedMSBuildEditorConfig.editorconfig
+D:\semester4\KPL\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\GradeApp.AssemblyInfoInputs.cache
+D:\semester4\KPL\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\GradeApp.AssemblyInfo.cs
+D:\semester4\KPL\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\GradeApp.csproj.CoreCompileInputs.cache
+D:\semester4\KPL\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\GradeApp.sourcelink.json
+D:\semester4\KPL\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\GradeApp.csproj.Up2Date
+D:\semester4\KPL\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\GradeApp.dll
+D:\semester4\KPL\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\refint\GradeApp.dll
+D:\semester4\KPL\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\GradeApp.pdb
+D:\semester4\KPL\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\GradeApp.genruntimeconfig.cache
+D:\semester4\KPL\konstruksi-pencatatan-nilai-mahasiswa\GradeApp\GradeApp\obj\Debug\net8.0-windows\ref\GradeApp.dll
