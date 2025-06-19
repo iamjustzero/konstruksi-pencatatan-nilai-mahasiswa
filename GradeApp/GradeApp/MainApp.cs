@@ -73,7 +73,7 @@ namespace GradeApp
 
         private void buttonCounter_Click(object sender, EventArgs e)
         {
-            ShowUserControl(new UC_Counter());
+            ShowUserControl(UC_Counter.Instance);
         }
 
         private void buttonRangking_Click(object sender, EventArgs e)
