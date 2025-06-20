@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GradeApp", "GradeApp\GradeA
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GradeAppTest", "..\GradeAppTest\GradeAppTest.csproj", "{1201C2BF-C679-4C40-A877-B634A29429FF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,6 +19,10 @@ Global
 		{61D4FAFF-4076-42FE-9971-C9B24DAB31FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61D4FAFF-4076-42FE-9971-C9B24DAB31FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{61D4FAFF-4076-42FE-9971-C9B24DAB31FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1201C2BF-C679-4C40-A877-B634A29429FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1201C2BF-C679-4C40-A877-B634A29429FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1201C2BF-C679-4C40-A877-B634A29429FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1201C2BF-C679-4C40-A877-B634A29429FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
